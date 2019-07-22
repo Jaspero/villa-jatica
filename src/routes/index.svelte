@@ -17,11 +17,15 @@
 <style>
 
  .hero {
-    background-image: url("../../static/assets/images/header-bg.jpg");
+    background-image: url("../../header-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100vw;
+    height: 100vh;
+ }
+ h1 {
+ font-size: 80px;
  }
 
 </style>
@@ -32,8 +36,9 @@
 
 
 <div class="wrapper">
-<div class="hero">
-<img src="assets/images/header-bg.jpg" alt="intro image">
+<div class="hero flex ai-center jc-center c-light fd-col">
+    <h1>VILLA JATICA</h1>
+    <h2><i>Luxury in the Wilderness</i></h2>
 </div>
     <Location/>
     <Features/>

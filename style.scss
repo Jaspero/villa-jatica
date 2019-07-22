@@ -30,3 +30,15 @@
 .feature {
   min-height: 17rem;
 }
+
+
+.bg-overlay:before {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #002;
+  opacity: .8;
+  position: absolute;
+}

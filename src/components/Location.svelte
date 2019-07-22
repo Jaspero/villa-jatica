@@ -12,6 +12,23 @@
   margin: 0 auto;
 }
 
+.bg-1 {
+    width: 300px;
+    height: 300px;
+    background-image: url("../../localarea1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-2 {
+    width: 300px;
+    height: 300px;
+    background-image: url("../../localarea2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
 
 </style>
@@ -28,11 +45,11 @@
         </div>
 
         <div class="col-8 flex m-t-l">
-            <div class="col-6 br-circle">
-                <img src="assets/images/localarea1.jpg" alt="">
+            <div class="col-6 br-circle bg-1">
+
             </div>
-            <div class="col-6 br-circle">
-                 <img src="assets/images/localarea2.jpg" alt="">
+            <div class="col-6 br-circle bg-2">
+
             </div>
         </div>
         <div class="col-4 m-t-l">

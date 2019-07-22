@@ -19,7 +19,7 @@
 		<a href=''>THE HOUSE</a>
 		<a href=''class="m-x-s">INTERIOR</a>
 		<a href='.'>INDULGE</a>
-		<a href='.'class="m-x-s">PRICE</a>
+		<a href='#price'class="m-x-s">PRICE</a>
 		<a href='.'>CONTACT</a>
 		<a class='m-x-s{segment === "book" ? "selected" : ""}' href='book'>BOOK NOW</a>
 		<a class='{segment === "gallery" ? "selected" : ""}' href='gallery'>SHOW GALLERY</a>
