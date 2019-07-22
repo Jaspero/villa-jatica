@@ -10,9 +10,6 @@
 z-index: 3;
 }
 
-.feature {
-min-height: 17rem;
-}
 
 </style>
 

@@ -1012,3 +1012,6 @@ h6 {
   background: #333;
   width: 100px;
   height: 6px; }
+
+.feature {
+  min-height: 17rem; }

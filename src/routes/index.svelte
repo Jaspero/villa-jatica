@@ -15,7 +15,7 @@
 <style>
 
  .hero {
-    background-image: url("../../../static/assets/images/header-bg.jpg");
+    background-image: url("../../static/assets/images/header-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -43,6 +43,7 @@
     <Location/>
     <Features/>
     <House/>
+    <Parallax/>
 </div>
 
 
