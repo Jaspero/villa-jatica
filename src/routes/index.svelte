@@ -6,6 +6,8 @@
     import Indulge from '../components/Indulge.svelte';
     import Contact from '../components/Contact.svelte';
     import Parallax from '../components/Parallax.svelte';
+    import Footer from '../components/Footer.svelte';
+    import Price from '../components/Price.svelte';
 
 
     let src = 'assets/images/header-bg.jpg';
@@ -21,14 +23,7 @@
     background-position: center;
     width: 100vw;
  }
- .grid {
- max-width: 2000px;
- }
 
-
-.grid  {
- max-width: 100%;
-}
 </style>
 
 <svelte:head>
@@ -45,6 +40,8 @@
     <House/>
     <Parallax/>
     <Interior/>
+    <Indulge/>
+    <Price />
 </div>
 
 

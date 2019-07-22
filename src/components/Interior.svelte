@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="col-4 m-t-l">
-                <h5>LOCAL AREasA</h5>
+                <h5>LOCAL AREA</h5>
                 <p class="font-secondary m-y-s">If you feel like sightseeing, you can choose from a number of exciting places whether you decide to drive up north towards the town of Split or down south towards the town of Dubrovnik. If you choose to visit Split, you will pass through beautiful small coastal places, as well as the town of Makarska and Omiš, both well worth of sightseeing. Also, you can visit the sunniest island of Hvar since ferry port Drvenik is merely several minutes drive from Zaostrog.</p>
                 <a href='/' class="c-accent"><i>...Read more</i></a>
             </div>
