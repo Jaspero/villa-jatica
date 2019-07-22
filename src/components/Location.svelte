@@ -20,7 +20,7 @@
 <section id="location" class="m-y-l">
     <div class="grid">
         <div class="col-6">
-            <h1 class="c-dark relative p-b-m headline">LOCATION</h1>
+            <h1 class="c-dark relative p-b-s headline">LOCATION</h1>
             <p class="ta-justify m-t-m font-secondary">Villa Jatica is located in the Southern Dalmatia, on the slopes of Biokovo Mountain. Perched on the heights above the village of Zaostrog, the villa offers fantastic view of the Adriatic Sea, the tip of Pelješac peninsula, and the islands of Korčula and Hvar. It is a perfect quiet getaway to leave the world behind and truly unwind in wilderness and natural beauty of this remote destination, yet to pamper yourself in complete comfort and luxury the house offers.</p>
         </div>
         <div class="col-5 ta-right">
