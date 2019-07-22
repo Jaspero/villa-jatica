@@ -44,11 +44,11 @@
             <img src="assets/images/map.png" alt="map with location">
         </div>
 
-        <div class="col-8 flex m-t-l">
+        <div class="col-8 flex  m-t-l">
             <div class="col-6 br-circle bg-1">
 
             </div>
-            <div class="col-6 br-circle bg-2">
+            <div class="col-6 br-circle bg-2 m-l-m">
 
             </div>
         </div>
