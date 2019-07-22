@@ -44,6 +44,7 @@
     <Features/>
     <House/>
     <Parallax/>
+    <Interior/>
 </div>
 
 
