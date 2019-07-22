@@ -18,7 +18,7 @@
   --warn-theme: #dc143c;
   --warn-primary: white;
   --warn-secondary: rgba(255, 255, 255, 0.7);
-  --light-theme: #f2f2f2;
+  --light-theme: white;
   --light-primary: rgba(0, 0, 0, 0.87);
   --light-secondary: rgba(0, 0, 0, 0.54);
   --dark-theme: #212121;
@@ -166,7 +166,8 @@ img {
 html {
   font-size: 16px;
   line-height: 1.5;
-  font-family: var(--font-primary); }
+  font-family: var(--font-primary);
+  scroll-behavior: smooth; }
 
 /* Headings
  *============================================================================*/
@@ -993,3 +994,21 @@ h6 {
 
 .m-l-xl {
   margin-left: calc(64px + 4vw); }
+
+.features:before {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #002;
+  opacity: .8;
+  position: absolute; }
+
+.headline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: #333;
+  width: 100px;
+  height: 6px; }

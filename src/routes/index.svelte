@@ -42,6 +42,7 @@
 </div>
     <Location/>
     <Features/>
+    <House/>
 </div>
 
 
