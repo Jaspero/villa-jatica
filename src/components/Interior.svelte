@@ -7,11 +7,29 @@
   max-width: 1200px;
 }
 
+.interior-1 {
+      background-image: url("../../assets/images/interior2.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+}
+.interior-2 {
+      background-image: url("../../assets/images/interior4.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+}
+
+
 </style>
 
 
 
-
+<section id="interior">
 <div class="grid m-y-l">
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">Interior</h1>
@@ -24,17 +42,15 @@
                 <h5 class="c-dark m-t-s  ta-left">BEAUTY OF MINIMALISM</h5>
                 <p class="font-secondary m-y-s">The interior of the house is all new and contemporary, with carefully chosen furniture and unobtrusive colours. The open plan upper floor with kitchen, dining room, and living room is spacious and with its four French windows offering wonderful views of the sea, the entire section is full of light throughout the day.</p>
                 <a href='/' class="c-accent"><i>...Read more</i></a>
-            <div class="gallery m-t-m">
-                <img src="assets/images/interior3.jpg" alt="Interior">
+            <div class="gallery m-t-m w-full">
+                <img src="assets/images/interior3.jpg" alt="Interior" class="w-full">
             </div>
         </div>
     </div>
     <div class="col-8 flex m-t-l">
-        <div class="col-6 br-circle">
-            <img src="assets/images/interior2.jpg" alt="Interior room">
+        <div class="col-6 br-circle interior-1">
         </div>
-        <div class="col-6 br-circle">
-            <img src="assets/images/interior4.jpg" alt="Interior bed">
+        <div class="col-6 br-circle interior-2 m-l-m">
         </div>
     </div>
     <div class="col-4 m-t-l">
@@ -43,3 +59,4 @@
         <a href='/' class="c-accent"><i>...Read more</i></a>
      </div>
 </div>
+</section>

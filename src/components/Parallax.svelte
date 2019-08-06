@@ -11,7 +11,7 @@ z-index: 3;
 
 </style>
 
-<section class="features relative p-y-m">
+<section class="features relative p-y-l">
     <div class="flex w-full jc-center">
         <h1 class="c-light">ADDITIONAL FEATURES</h1>
     </div>

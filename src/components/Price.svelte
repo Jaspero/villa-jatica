@@ -30,7 +30,7 @@
 
 </style>
 
-<section id="price" class="bg-overlay relative p-y-l">
+<section id="price" class="bg-overlay relative features p-y-l">
     <div class="grid">
         <div class="flex w-full jc-center">
             <h1 class="c-light z-index m-t-l">PRICE</h1>

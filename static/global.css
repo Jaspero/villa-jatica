@@ -1031,3 +1031,29 @@ h6 {
   border: none;
   padding: 10px;
   font-size: 20px; }
+
+.features {
+  background-image: url("../../assets/images/feature.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover; }
+
+.underline {
+  overflow: hidden;
+  display: inline-block;
+  position: relative; }
+  .underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: #002;
+    height: 0.1rem;
+    left: -100%;
+    bottom: 0;
+    transition: 0.5s ease; }
+
+.underline:hover {
+  left: 0; }
