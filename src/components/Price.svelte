@@ -4,7 +4,7 @@
 
 .br-circle {
      margin: 0 auto;
-     width: 40px;
+     width: 30px;
 }
 
 .z-index {
@@ -19,6 +19,11 @@
     font-weight: 100;
 }
 
+.price-card {
+    height: 350px;
+}
+
+
 </style>
 
 <section id="price" class="bg-overlay relative">
@@ -27,8 +32,9 @@
             <h1 class="c-light z-index m-t-l">PRICE</h1>
         </div>
         <div class="col-4 z-index">
-            <div class="date bg-light flex ai-center b-bottom">
-                <div class="from ta-center col-4">
+        <div class="price-card">
+            <div class="bg-light flex ai-center b-bottom">
+                <div class="ta-center col-4">
                     <h5 class="c-warn">1st</h5>
                      <p class="c-warn"><i>January</i></p>
                 </div>
@@ -42,8 +48,8 @@
                      <p class="c-warn"><i>May</i></p>
                 </div>
             </div>
-              <div class="date bg-light flex ai-center b-bottom">
-                    <div class="from ta-center col-4">
+              <div class="bg-light flex ai-center b-bottom">
+                    <div class="ta-center col-4">
                          <h5 class="c-warn">1st</h5>
                          <p class="c-warn"><i>October</i></p>
                     </div>
@@ -57,14 +63,40 @@
                         <p class="c-warn"><i>December</i></p>
                     </div>
               </div>
-              <div class="date bg-light ta-center b-bottom">
+              <div class="bg-light ta-center b-bottom">
                     <h1 class="fw-100 p-y-s">Low-Season</h1>
               </div>
-              <div class="date bg-light ta-center">
-                      <h1 class=" p-y-s">Low-Season</h1>
-                      <p>Per day</p>
+              <div class="bg-light ta-center">
+                      <h1 class=" p-y-s">400€</h1>
+                      <p><i>Per day</i></p>
               </div>
         </div>
-        <div class="col-4"></div>
+        </div>
+        <div class="col-4 z-index">
+        <div class="price-card bg-light">
+            <div class="flex ai-center b-bottom">
+                 <div class="ta-center col-4 p-y-m">
+                     <h5 class="c-warn">1st</h5>
+                     <p class="c-warn"><i>June</i></p>
+                 </div>
+                 <div class="col-4">
+                    <div class="br-circle bg-warn flex jc-center ai-center">
+                       <p class="c-light">to</p>
+                    </div>
+                 </div>
+                 <div class="col-4 ta-center p-y-s">
+                   <h5 class="c-warn">30th</h5>
+                   <p class="c-warn"><i>September</i></p>
+                 </div>
+            </div>
+                  <div class="ta-center b-bottom">
+                      <h1 class="fw-100 p-y-s">High-Season</h1>
+                  </div>
+                  <div class="ta-center">
+                      <h1 class=" p-y-s">200€</h1>
+                      <p><i>Per day</i></p>
+                   </div>
+         </div>
+    </div>
     </div>
 </section>
