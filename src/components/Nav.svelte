@@ -10,6 +10,10 @@
     box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
 }
 
+a {
+    font-size: 13px;
+}
+
 </style>
 
 <nav class="header p-y-s">
@@ -18,9 +22,9 @@
 		<a href='#location' class="m-x-s">lOCATION</a>
 		<a href=''>THE HOUSE</a>
 		<a href=''class="m-x-s">INTERIOR</a>
-		<a href='.'>INDULGE</a>
+		<a href='#indulge'>INDULGE</a>
 		<a href='#price'class="m-x-s">PRICE</a>
-		<a href='.'>CONTACT</a>
+		<a href='#contact'>CONTACT</a>
 		<a class='m-x-s{segment === "book" ? "selected" : ""}' href='book'>BOOK NOW</a>
 		<a class='{segment === "gallery" ? "selected" : ""}' href='gallery'>SHOW GALLERY</a>
     </div>

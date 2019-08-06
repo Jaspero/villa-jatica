@@ -10,6 +10,7 @@
     import Price from '../components/Price.svelte';
 
 
+
     let src = 'assets/images/header-bg.jpg';
 </script>
 
@@ -47,6 +48,7 @@
     <Interior/>
     <Indulge/>
     <Price />
+    <Contact />
 </div>
 
 

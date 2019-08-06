@@ -1025,3 +1025,9 @@ h6 {
   background: #002;
   opacity: .8;
   position: absolute; }
+
+.btn {
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 20px; }
