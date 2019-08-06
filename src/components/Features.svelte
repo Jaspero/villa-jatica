@@ -1,24 +1,37 @@
 
-
-
 <style>
 
+.features {
+   background-image: url("../../assets/images/feature.jpg");
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 100%;
+   background-attachment: fixed;
+   background-position: center center;
+   background-size: cover;
+}
+
+
+
+
 .grid {
-  max-width: 1200px;
+    max-width: 1200px;
 }
 .col-3,h1 {
-z-index: 3;
+    z-index: 3;
 }
+
 
 
 </style>
 
 
 
-<section class="features relative p-y-m">
+<section class="features relative p-y-xl parallax">
     <div class="flex w-full jc-center">
         <h1 class="c-light">KEY FEATURES</h1>
     </div>
+    <div class="col-12 bla p-y-m"></div>
     <div class="grid m-t-s">
         <div class="col-3 ta-center">
             <div class="bg-light br-rounded p-a-s feature">
