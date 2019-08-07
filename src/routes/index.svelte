@@ -9,13 +9,15 @@
     import Footer from '../components/Footer.svelte';
     import Price from '../components/Price.svelte';
 
+    let segment
 
 
-    let src = 'assets/images/header-bg.jpg';
 </script>
 
 
 <style>
+
+
 
  .hero {
     background-image: url("../../header-bg.jpg");
@@ -26,7 +28,30 @@
     height: 100vh;
  }
  h1 {
- font-size: 80px;
+    font-size: 80px;
+ }
+
+ .gallery {
+     position: fixed;
+     right: 0;
+     top: 10rem;
+     background: #e4e4e4;
+     box-shadow: 0px 10px 20px rgba(0,0,0,0.05);
+     z-index: 10;
+     color:black;
+     border-radius: 30px 0 0 30px;
+     padding: 20px;
+     transition: all 0.3s ease;
+ }
+ .gallery:hover {
+     padding-right: 3rem;
+     background: #c7b38e;
+     color: white;
+ }
+
+ a {
+     font-size: 13px;
+     color: white;
  }
 
 </style>
@@ -36,7 +61,36 @@
 </svelte:head>
 
 
+
+
 <div class="wrapper">
+<nav class="header p-y-s" id="header" onscroll="activeHeader()">
+    <div class="grid ai-center">
+        <span class="link-wrapper flex">
+		<a class='{segment === undefined ? "selected" : ""} underline ' href='.'>HOME</a>
+		</span>
+		<span class="link-wrapper flex">
+		<a href='#location' class="m-x-m underline">lOCATION</a>
+		</span>
+		<span class="link-wrapper flex">
+		<a href='#house' class="underline">THE HOUSE</a>
+		</span>
+		<span class="link-wrapper flex">
+		<a href='#interior'class="m-x-m underline">INTERIOR</a>
+		</span>
+		<span class="link-wrapper flex">
+		<a href='#indulge' class="underline">INDULGE</a>
+		</span>
+		<span class="link-wrapper flex">
+		<a href='#price'class="m-x-m underline">PRICE</a>
+		</span>
+		<span class="link-wrapper flex">
+		<a href='#contact' class="underline">CONTACT</a>
+		</span>
+		<a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s' href='book'>BOOK NOW</a>
+		<a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery'>SHOW GALLERY</a>
+    </div>
+</nav>
 <div class="hero flex ai-center jc-center c-light fd-col">
     <h1>VILLA JATICA</h1>
     <h2><i>Luxury in the Wilderness</i></h2>

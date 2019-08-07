@@ -1,7 +1,10 @@
 <script>
-	import Nav from '../components/Nav.svelte';
+		import Nav from '../components/Nav.svelte';
+    	import book from '../routes/book.svelte';
 
-	export let segment;
+    	let segment
+
+
 </script>
 
 <style>

@@ -9,7 +9,7 @@
 /* Generating CSS variables in :root
  *============================================================================*/
 :root {
-  --primary-theme: #3f51b5;
+  --primary-theme: #eee;
   --primary-primary: white;
   --primary-secondary: rgba(255, 255, 255, 0.7);
   --accent-theme: #c7b38e;
@@ -994,6 +994,11 @@ h6 {
 
 .m-l-xl {
   margin-left: calc(64px + 4vw); }
+
+/* custom styles
+ *============================================================================*/
+.z-index {
+  z-index: 3; }
 
 .features:before {
   content: '';

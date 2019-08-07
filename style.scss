@@ -5,6 +5,9 @@
 @import "scss/03-utilities/utilities";
 
 
+.z-index {
+  z-index: 3;
+}
 
 .features:before {
   content: '';

@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
+    "build:scss": "node-sass style.scss static/global.css",
     "watch:scss": "node-sass style.scss static/global.css -w",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
