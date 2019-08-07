@@ -68,10 +68,10 @@
     content: '';
     position: absolute;
     width: 100%;
-    background: #002;
-    height: 0.1rem;
+    background: white;
     left: -100%;
     bottom: 0;
+    height: 2px;
     transition: 0.5s ease;
   }
 }
@@ -79,7 +79,25 @@
 
 
 
-
-  .underline:hover {
-    left: 0;
+  .link-wrapper:hover{
+    .underline:after {
+      left: 0;
+    }
   }
+
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 5rem;
+  background: transparent;
+  .active {
+    background: white;
+    top: 0;
+    color: black;
+    width: 100%;
+    position: fixed;
+  }
+}
+
