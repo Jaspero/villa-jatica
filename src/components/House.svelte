@@ -30,6 +30,19 @@
 
 <style>
 
+.left {
+    position:absolute;
+    top: 47%;
+    left: -40px;
+    cursor:pointer;
+}
+.right {
+    cursor:pointer;
+    position:absolute;
+    top: 47%;
+    right: -40px;
+}
+
 .grid {
   max-width: 1200px;
 }
@@ -58,8 +71,10 @@
             Show less
             </a>
             {/if}
-        <div class="gallery m-t-m w-full">
+        <div class="gallery m-t-m w-full relative">
+            <img src="assets/icons/left-arrow.svg" class="left">
             <img src="assets/images/exterior.jpg" alt="" class="w-full obj-cover">
+            <img src="assets/icons/right-arrow.svg" class="right">
         </div>
     </div>
     </div>

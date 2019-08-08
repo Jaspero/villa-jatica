@@ -51,6 +51,18 @@
       height: 300px;
 }
 
+.left {
+    position:absolute;
+    top: 47%;
+    left: -40px;
+    cursor:pointer;
+}
+.right {
+    cursor:pointer;
+    position:absolute;
+    top: 47%;
+    right: -40px;
+}
 
 </style>
 
@@ -77,8 +89,10 @@
                 Show less
                 </a>
                 {/if}
-            <div class="gallery m-t-m w-full">
+            <div class="gallery m-t-m w-full relative">
+                <img src="assets/icons/left-arrow.svg" class="left">
                 <img src="assets/images/interior3.jpg" alt="Interior" class="w-full">
+                <img src="assets/icons/right-arrow.svg" class="right">
             </div>
         </div>
     </div>

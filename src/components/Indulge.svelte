@@ -34,6 +34,19 @@
   max-width: 1200px;
 }
 
+.left {
+    cursor:pointer;
+    position:absolute;
+    top: 47%;
+    left: -40px;
+}
+.right {
+    cursor:pointer;
+    position:absolute;
+    top: 47%;
+    right: -40px;
+}
+
 </style>
 
 
@@ -62,8 +75,10 @@
             Show less
             </a>
             {/if}
-        <div class="gallery m-t-m w-full">
+        <div class="gallery m-t-m w-full relative">
+            <img src="assets/icons/left-arrow.svg" class="left">
             <img src="assets/images/beach.jpg" alt="" class="w-full">
+            <img src="assets/icons/right-arrow.svg" class="right">
         </div>
     </div>
     </div>
