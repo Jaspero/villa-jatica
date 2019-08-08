@@ -1,6 +1,6 @@
 
 <script>
-
+    import { fade } from 'svelte/transition';
 </script>
 
 
@@ -81,8 +81,8 @@
 
 
 <nav class="navbar p-y-s flex bg-warn ai-center z-index">
-    <a href="#home" class="flex ai-center">
-        <img src="assets/icons/left.svg" alt="back">
+    <a href="#home" class="flex ai-center" transition:fade="">
+        <img src="assets/icons/left.svg" alt="back" class="m-l-s">
         <p class="font-secondary m-l-s">Back</p>
     </a>
     <p class="c-accent m-l-l"><i>Beautifull galleries of our villa Jatica, from interior to exterior!</i></p>

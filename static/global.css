@@ -1078,23 +1078,22 @@ h6 {
   position: fixed;
   transition: all 0.5s ease; }
 
-.header-active .underline {
-  color: black; }
-
-.header-active.underline {
-  overflow: hidden;
-  display: inline-block;
-  position: relative; }
-
-.header-active .underline:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  background: black;
-  left: -100%;
-  bottom: 0;
-  height: 2px;
-  transition: 0.5s ease; }
-
-.header-active.link-wrapper:hover .underline:after {
-  left: 0; }
+.header-active {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); }
+  .header-active .underline {
+    color: black; }
+  .header-active.underline {
+    overflow: hidden;
+    display: inline-block;
+    position: relative; }
+  .header-active .underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: black;
+    left: -100%;
+    bottom: 0;
+    height: 2px;
+    transition: 0.5s ease; }
+  .header-active.link-wrapper:hover .underline:after {
+    left: 0; }

@@ -1,5 +1,32 @@
 
 
+<script>
+
+    let readMore = true;
+
+    function expandText() {
+      readMore = false;
+      const hiddenEl = document.querySelectorAll('.hide-l');
+
+      hiddenEl.forEach(val => {
+          val.classList.remove('hide-l')
+          val.classList.add('visible');
+      });
+    }
+
+    function showLess() {
+
+        readMore = true;
+
+      const visibleEl = document.querySelectorAll('.visible');
+
+            visibleEl.forEach(val => {
+                val.classList.add('hide-l')
+                val.classList.remove('visible');
+            });
+    }
+
+</script>
 
 <style>
 
@@ -41,7 +68,15 @@
         <div class="col-7 flex fw-wrap">
                 <h5 class="c-dark m-t-s  ta-left">BEAUTY OF MINIMALISM</h5>
                 <p class="font-secondary m-y-s">The interior of the house is all new and contemporary, with carefully chosen furniture and unobtrusive colours. The open plan upper floor with kitchen, dining room, and living room is spacious and with its four French windows offering wonderful views of the sea, the entire section is full of light throughout the day.</p>
-                <a href='/' class="c-accent"><i>...Read more</i></a>
+                <p class="font-secondary hide-l">In the kitchen, one will find all the necessary appliances and gadgets needed for a home cooked meal. The dining section has a table that seats 6 people, and its abundant daylight comes through a glass wall that leads to the balcony facing west, equipped with beautiful comfortable lounges for relaxation in the setting sun.</p>
+                <p class="font-secondary m-y-s hide-l">There is absolute formative minimalism throughout the house, not to disturb the beauty of the very construction. Thus, all the installations, from stone washbasin to glass shelves, carefully chosen lighting or flooring, custom made dining table or wardrobes are all the result of contemplation with aim to provide luxury and at the same time not impose any overwhelming contents on your holidays.</p>
+                {#if readMore}
+                <a on:click={expandText} class="c-accent"><i>...Read more</i></a>
+                {:else}
+                <a on:click={showLess} class="c-accent">
+                Show less
+                </a>
+                {/if}
             <div class="gallery m-t-m w-full">
                 <img src="assets/images/interior3.jpg" alt="Interior" class="w-full">
             </div>
@@ -54,9 +89,8 @@
         </div>
     </div>
     <div class="col-4 m-t-l">
-        <h5>LOCAL AREA</h5>
-        <p class="font-secondary m-y-s">If you feel like sightseeing, you can choose from a number of exciting places whether you decide to drive up north towards the town of Split or down south towards the town of Dubrovnik. If you choose to visit Split, you will pass through beautiful small coastal places, as well as the town of Makarska and Omiš, both well worth of sightseeing. Also, you can visit the sunniest island of Hvar since ferry port Drvenik is merely several minutes drive from Zaostrog.</p>
-        <a href='/' class="c-accent"><i>...Read more</i></a>
+        <h5>BEDROOMS</h5>
+        <p class="font-secondary m-y-s">The lower floor accommodates three bedrooms: one double master bedroom and two single bedrooms (with extra bed available in each), bathroom and two toilettes. Furniture is custom made and charming, enabling sufficient space for belongings. The master bedroom has direct access to the terrace and swimming pool, a lovely detail for your pleasure!</p>
      </div>
 </div>
 </section>

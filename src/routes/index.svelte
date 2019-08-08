@@ -8,6 +8,7 @@
     import Parallax from '../components/Parallax.svelte';
     import Footer from '../components/Footer.svelte';
     import Price from '../components/Price.svelte';
+    import { fade } from 'svelte/transition';
 
     let segment
 
@@ -105,8 +106,8 @@
             <span class="link-wrapper flex">
 		<a href='#contact' class="underline">CONTACT</a>
 		</span>
-            <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s' href='book'>BOOK NOW</a>
-            <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery'>SHOW GALLERY</a>
+            <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s' href='book' transition:fade="">BOOK NOW</a>
+            <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery' transition:fade="" >SHOW GALLERY</a>
         </div>
     </nav>
     <div class="hero flex ai-center jc-center c-light fd-col">

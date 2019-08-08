@@ -1,4 +1,32 @@
 
+<script>
+
+    let readMore = true;
+
+    function expandText() {
+      readMore = false;
+      const hiddenEl = document.querySelectorAll('.hide-l');
+
+      hiddenEl.forEach(val => {
+          val.classList.remove('hide-l')
+          val.classList.add('visible');
+      });
+    }
+
+    function showLess() {
+
+        readMore = true;
+
+      const visibleEl = document.querySelectorAll('.visible');
+
+            visibleEl.forEach(val => {
+                val.classList.add('hide-l')
+                val.classList.remove('visible');
+            });
+    }
+
+</script>
+
 <style>
 
 
@@ -36,6 +64,10 @@
     left: 55%;
 }
 
+.visible {
+display: block;
+}
+
 
 </style>
 
@@ -65,7 +97,15 @@
         <div class="col-4 m-t-l">
             <h5>LOCAL AREA</h5>
             <p class="font-secondary m-y-s">If you feel like sightseeing, you can choose from a number of exciting places whether you decide to drive up north towards the town of Split or down south towards the town of Dubrovnik. If you choose to visit Split, you will pass through beautiful small coastal places, as well as the town of Makarska and Omiš, both well worth of sightseeing. Also, you can visit the sunniest island of Hvar since ferry port Drvenik is merely several minutes drive from Zaostrog.</p>
-            <a href='/' class="c-accent"><i>...Read more</i></a>
+            <p class="m-t-s hide-l">If you choose to go south, after a short drive you will reach the ferry port Ploče, connecting the mainland with the tip of Pelješac peninsula. Well-known for its wine and vineyards, especially one of the best and most intriguing Croatian wine sort Plavac Mali, Pelješac peninsula is certainly a Southern Dalmatian attraction.</p>
+            <p class="p-y-s hide-l">You can also visit the town of Ston, famous for the remnants of medieval defensive walls, a historical monument of distant past often called "the European Walls of China," winding for 5 kilometres all the way to Mali Ston, a village famous for its seashell cuisine, especially oysters and mussels. A trip to the south will bring you to the town of Dubrovnik, certainly the most famous Croatian spot on global scale, as well as UNESCO World Heritage Site.</p>
+            {#if readMore}
+            <a on:click={expandText} class="c-accent"><i>...Read more</i></a>
+            {:else}
+            <a on:click={showLess} class="c-accent">
+            Show less
+            </a>
+            {/if}
         </div>
 
     </div>
