@@ -11,23 +11,65 @@
     width: 400px;
     position: fixed;
     left: 0;
-    top: 55px;
     height: 100%;
     background: #cccccc;
+    align-content: flex-start;
 }
 
 .exterior {
-    background-image: url("../../assets/images/exterior-1.jpg");
+    background-image: url("../../header-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    height: 100px;
 }
 
-.album {
-background: white;
-height: 150px;
-width: 100%;
+.interior {
+    background-image: url("../../assets/images/house-interior.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
 }
+
+.village{
+    background-image: url("../../assets/images/village.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+}
+
+.details{
+    background-image: url("../../assets/images/details.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+}
+
+
+.nature{
+    background-image: url("../../assets/images/nature.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+}
+
+.photos{
+    background-image: url("../../assets/images/photos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+}
+
+.col-6 {
+    height: 150px;
+    cursor: pointer;
+}
+
 
 
 </style>
@@ -47,17 +89,47 @@ width: 100%;
 </nav>
 
 <div class="flex">
-    <div class="albums flex fw-wrap">
-    <div class="album col-6">
-        <div class="exterior">
-            <p><i>House exterior</i></p>
+    <div class="albums flex fw-wrap ac-flex">
+    <div class="col-6">
+        <div class="exterior"></div>
+        <div class="bg-light w-full">
+            <p class="ta-center"><i>House exterior</i></p>
         </div>
     </div>
-    <div class="col-6 interior"></div>
-    <div class="col-6 village"></div>
-    <div class="col-6 house"></div>
-    <div class="col-6 nature"></div>
-    <div class="col-6 photos"></div>
 
+    <div class="col-6">
+        <div class="interior"></div>
+        <div class="bg-light w-full">
+            <p class="ta-center"><i>House interior</i></p>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="village"></div>
+        <div class="bg-light w-full">
+            <p class="ta-center"><i>The old village</i></p>
+        </div>
+    </div>
+
+    <div class="col-6">
+    <div class="details"></div>
+    <div class="bg-light w-full">
+        <p class="ta-center"><i>House details</i></p>
+    </div>
+    </div>
+
+    <div class="col-6">
+    <div class="nature"></div>
+    <div class="bg-light w-full">
+        <p class="ta-center"><i>Beautiful nature</i></p>
+    </div>
+    </div>
+
+    <div class="col-6">
+    <div class="photos"></div>
+    <div class="bg-light w-full">
+        <p class="ta-center"><i>Guest photos</i></p>
+    </div>
+    </div>
     </div>
 </div>
