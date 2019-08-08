@@ -17,9 +17,9 @@
         const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
         if (scrollTop === 0) {
-            headerEl.classList.remove('active');
+            headerEl.classList.remove('header-active');
         } else {
-            headerEl.classList.add('active');
+            headerEl.classList.add('header-active');
         }}
 
     window.onscroll = (() => {
@@ -34,9 +34,8 @@
 
 <style>
 
-    .active {
-        background: white;
-    }
+
+
 
     .hero {
         background-image: url("../../header-bg.jpg");
