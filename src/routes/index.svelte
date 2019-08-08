@@ -11,101 +11,109 @@
 
     let segment
 
-	function activeHeader() {
-	const headerEl = document.querySelector('#header');
-	const activeEl = headerEl.pageYOffset;
+    function activeHeader() {
 
-   if (activeEl.pageYOffset > active) {
-     headerEl.classList.add("active");
-   } else {
-     headerEl.classList.remove("active");
-   }
+        const headerEl = document.querySelector('#header');
+        const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
-}
+        if (scrollTop === 0) {
+            headerEl.classList.remove('active');
+        } else {
+            headerEl.classList.add('active');
+        }}
+
+    window.onscroll = (() => {
+        activeHeader();
+    });
+
+
 
 </script>
 
 
+
 <style>
 
+    .active {
+        background: white;
+    }
 
+    .hero {
+        background-image: url("../../header-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    h1 {
+        font-size: 80px;
+    }
 
- .hero {
-    background-image: url("../../header-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
- }
- h1 {
-    font-size: 80px;
- }
+    .gallery {
+        position: fixed;
+        right: 0;
+        top: 10rem;
+        background: #e4e4e4;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.05);
+        z-index: 10;
+        color:black;
+        border-radius: 30px 0 0 30px;
+        padding: 20px;
+        transition: all 0.3s ease;
+    }
+    .gallery:hover {
+        padding-right: 3rem;
+        background: #c7b38e;
+        color: white;
+    }
 
- .gallery {
-     position: fixed;
-     right: 0;
-     top: 10rem;
-     background: #e4e4e4;
-     box-shadow: 0px 10px 20px rgba(0,0,0,0.05);
-     z-index: 10;
-     color:black;
-     border-radius: 30px 0 0 30px;
-     padding: 20px;
-     transition: all 0.3s ease;
- }
- .gallery:hover {
-     padding-right: 3rem;
-     background: #c7b38e;
-     color: white;
- }
-
- a {
-     font-size: 13px;
-     color: white;
- }
+    a {
+        font-size: 13px;
+        color: white;
+    }
 
 </style>
 
 <svelte:head>
-	<title>Villa Jatica</title>
+    <title>Villa Jatica</title>
 </svelte:head>
 
 
 
 
 <div class="wrapper">
-<nav class="header p-y-s" id="header" onscroll="activeHeader()">
-    <div class="grid ai-center">
+    <nav class="header p-y-s" id="header">
+        <div class="grid ai-center">
         <span class="link-wrapper flex">
 		<a class='{segment === undefined ? "selected" : ""} underline ' href='.'>HOME</a>
 		</span>
-		<span class="link-wrapper flex">
+            <span class="link-wrapper flex">
 		<a href='#location' class="m-x-m underline">lOCATION</a>
 		</span>
-		<span class="link-wrapper flex">
+            <span class="link-wrapper flex">
 		<a href='#house' class="underline">THE HOUSE</a>
 		</span>
-		<span class="link-wrapper flex">
+            <span class="link-wrapper flex">
 		<a href='#interior'class="m-x-m underline">INTERIOR</a>
 		</span>
-		<span class="link-wrapper flex">
+            <span class="link-wrapper flex">
 		<a href='#indulge' class="underline">INDULGE</a>
 		</span>
-		<span class="link-wrapper flex">
+            <span class="link-wrapper flex">
 		<a href='#price'class="m-x-m underline">PRICE</a>
 		</span>
-		<span class="link-wrapper flex">
+            <span class="link-wrapper flex">
 		<a href='#contact' class="underline">CONTACT</a>
 		</span>
-		<a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s' href='book'>BOOK NOW</a>
-		<a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery'>SHOW GALLERY</a>
+            <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s' href='book'>BOOK NOW</a>
+            <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery'>SHOW GALLERY</a>
+        </div>
+    </nav>
+    <div class="hero flex ai-center jc-center c-light fd-col">
+        <h1>VILLA JATICA</h1>
+        <h2><i>Luxury in the Wilderness</i></h2>
     </div>
-</nav>
-<div class="hero flex ai-center jc-center c-light fd-col">
-    <h1>VILLA JATICA</h1>
-    <h2><i>Luxury in the Wilderness</i></h2>
-</div>
     <Location/>
     <Features/>
     <House/>
