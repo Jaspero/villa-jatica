@@ -1097,3 +1097,26 @@ h6 {
     transition: 0.5s ease; }
   .header-active.link-wrapper:hover .underline:after {
     left: 0; }
+
+.left {
+  position: absolute;
+  top: 47%;
+  left: -40px;
+  cursor: pointer; }
+
+.right {
+  cursor: pointer;
+  position: absolute;
+  top: 47%;
+  right: -40px; }
+  @media screen and (max-width: 900px) {
+    .right {
+      right: 0; } }
+
+@media screen and (max-width: 900px) {
+  .left {
+    left: 0; }
+  .right {
+    right: 0; }
+  .bobo {
+    height: 100px; } }

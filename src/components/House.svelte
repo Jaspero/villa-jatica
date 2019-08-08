@@ -56,11 +56,11 @@
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">House</h1>
     </div>
-    <div class="flex w-full jc-between">
-    <div class="col-5">
+    <div class="flex  w-full jc-between fw-wrap">
+    <div class="col-5 col-s-12">
         <img src="assets/images/blue-doors.jpg" alt="House exterior">
     </div>
-    <div class="col-7 flex fw-wrap">
+    <div class="col-7 flex fw-wrap col-s-12">
             <h5 class="c-dark m-t-s  ta-left">AWESOME PLACE TO ENJOY</h5>
             <p class="font-secondary m-y-s">With its spectacular views of the sea and islands, the mountain and blue Mediterranean skies, this newly renovated house is a combination of traditional Dalmatian architecture and modern interventions, built with respect for and appreciation of the tradition, thus resulting in a new construction having that charming old Dalmatian feel. The exterior stones in warm light beige tone and blue window shutters are in complete harmony with the blue sea, rocky mountain and the surrounding Mediterranean vegetation.</p>
             <p class="font-secondary hide-l">You can also visit the town of Ston, famous for the remnants of medieval defensive walls, a historical monument of distant past often called "the European Walls of China," winding for 5 kilometres all the way to Mali Ston, a village famous for its seashell cuisine, especially oysters and mussels. A trip to the south will bring you to the town of Dubrovnik, certainly the most famous Croatian spot on global scale, as well as UNESCO World Heritage Site.</p>
@@ -78,11 +78,11 @@
         </div>
     </div>
     </div>
-    <div class="flex jc-between w-full m-t-m ai-center">
-        <div class="col-7">
+    <div class="flex jc-between w-full m-t-m ai-center fw-wrap">
+        <div class="col-7 col-s-12">
             <img src="assets/images/group.png" alt="Group fo exterior pictures">
         </div>
-        <div class="col-5">
+        <div class="col-5 col-s-12">
             <h5>OUTDOOR PLEASURE</h5>
             <p class="m-y-s">The exterior extends on three levels. The swimming pool (4.5x7.5m) with endless view is accompanied by a roofed terrace and lounges, as well as two swings.</p>
             <p class="hide-l">The sunny terrace or pool lounge with open fireplace table is on the level below, and in deep shade, beneath the house, there is an unexpected jewel - fully equipped outdoor kitchen with dining table made of stone seating 12 people, small garden with culinary herbs, large stone masonry barbecue and even more, a tavern having fully equipped kitchenette with dishwasher, double fridge with ice maker and dining table seating 8 people.</p>

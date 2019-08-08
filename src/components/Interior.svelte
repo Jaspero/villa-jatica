@@ -51,18 +51,7 @@
       height: 300px;
 }
 
-.left {
-    position:absolute;
-    top: 47%;
-    left: -40px;
-    cursor:pointer;
-}
-.right {
-    cursor:pointer;
-    position:absolute;
-    top: 47%;
-    right: -40px;
-}
+
 
 </style>
 
@@ -73,11 +62,11 @@
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">Interior</h1>
     </div>
-    <div class="flex w-full jc-between">
-        <div class="col-5">
+    <div class="flex w-full jc-between fw-wrap">
+        <div class="col-5 col-s-12">
             <img src="assets/images/interior.jpg" alt="Interior from outside">
         </div>
-        <div class="col-7 flex fw-wrap">
+        <div class="col-7 flex fw-wrap col-s-12">
                 <h5 class="c-dark m-t-s  ta-left">BEAUTY OF MINIMALISM</h5>
                 <p class="font-secondary m-y-s">The interior of the house is all new and contemporary, with carefully chosen furniture and unobtrusive colours. The open plan upper floor with kitchen, dining room, and living room is spacious and with its four French windows offering wonderful views of the sea, the entire section is full of light throughout the day.</p>
                 <p class="font-secondary hide-l">In the kitchen, one will find all the necessary appliances and gadgets needed for a home cooked meal. The dining section has a table that seats 6 people, and its abundant daylight comes through a glass wall that leads to the balcony facing west, equipped with beautiful comfortable lounges for relaxation in the setting sun.</p>
@@ -96,13 +85,13 @@
             </div>
         </div>
     </div>
-    <div class="col-8 flex m-t-l">
-        <div class="col-6 br-circle interior-1">
+    <div class="col-8 flex m-t-l col-s-12 fw-wrap">
+        <div class="col-6 br-circle interior-1 col-xs-12">
         </div>
-        <div class="col-6 br-circle interior-2 m-l-m">
+        <div class="col-6 br-circle interior-2 m-l-m col-xs-12">
         </div>
     </div>
-    <div class="col-4 m-t-l">
+    <div class="col-4 m-t-l col-s-12">
         <h5>BEDROOMS</h5>
         <p class="font-secondary m-y-s">The lower floor accommodates three bedrooms: one double master bedroom and two single bedrooms (with extra bed available in each), bathroom and two toilettes. Furniture is custom made and charming, enabling sufficient space for belongings. The master bedroom has direct access to the terrace and swimming pool, a lovely detail for your pleasure!</p>
      </div>

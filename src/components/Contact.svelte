@@ -28,8 +28,8 @@
          <div class="col-12 ta-left">
              <h1 class="c-dark p-y-m">CONTACT US</h1>
          </div>
-         <div class="contact-card bg-light flex w-full">
-            <div class="col-9 flex fw-wrap">
+         <div class="contact-card bg-light flex w-full fw-wrap">
+            <div class="col-9 flex fw-wrap col-s-12">
                 <div class="col-6 flex fd-col">
                    <label for="name" class="font-secondary">Full Name</label>
                    <input type="text" name="name" id="name" class="contact-input">
@@ -46,7 +46,7 @@
                     <button class="br-rounded bg-accent btn">Send message</button>
                 </div>
             </div>
-            <div class="col-3 bg-warn p-a-m ta-center">
+            <div class="col-3 bg-warn p-a-m ta-center col-s-12">
                 <h6 class="m-y-s">CONTACT INFORMATION</h6>
                 <div class="flex ai-start ta-left m-t-s">
                     <img src="assets/icons/adress.svg" alt="Adress">

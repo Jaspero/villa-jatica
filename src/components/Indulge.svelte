@@ -56,11 +56,11 @@
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">INDULGE</h1>
     </div>
-    <div class="flex w-full jc-between">
-    <div class="col-5">
+    <div class="flex w-full jc-between fw-wrap">
+    <div class="col-5 col-s-12">
         <img src="assets/images/indulge.jpg" alt="House exterior">
     </div>
-    <div class="col-7 flex fd-col fw-wrap">
+    <div class="col-7 flex fd-col fw-wrap col-s-12">
             <h5 class="c-dark m-t-s  ta-left">Enjoy in beautiful nature and delicious foodY</h5>
             <p class="font-secondary m-y-s">Since the population mainly lives from farming and agriculture (apart from tourism), you will find an exquisite offer of traditionally prepared Dalmatian dishes, which includes fish and seafood from the day's catch, fresh meat from local farms, and home grown vegetables.</p>
             <p class="font-secondary hide-l ">You should not miss the restaurant Galeb  a family owned business offering the finest quality produce prepared in traditional style, with the best black risotto with cuttlefish and red prawn risotto in the region, prepared by old traditional receipt. Certainly do not miss their best chocolate walnut cake! There you will taste only daily offer of the fish hooked early in the morning, and the vegetables from their garden. There is also possibility for our guests to be provided with catering from the restaurant "Galeb" if you do not feel like cooking on your holidays or leaving your gorgeous Villa Jatica. </p>
