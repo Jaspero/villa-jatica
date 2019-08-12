@@ -58,10 +58,10 @@ input {
         <img src="assets/icons/left.svg" alt="back" class="m-l-s">
         <p class="font-secondary m-l-s">Back</p>
     </a>
-    <p class="c-accent m-l-l"><i>Book your stay now and enjoy in our beautifull villa Jatica!</i></p>
+    <p class="c-accent m-l-l hide-s"><i>Book your stay now and enjoy in our beautifull villa Jatica!</i></p>
 </nav>
-    <div class="flex jc-center">
-        <div class="col-5 bg-primary p-a-l">
+    <div class="flex jc-center fw-wrap form-container">
+        <div class="col-5 bg-primary p-a-l col-s-12">
             <p class="c-dark">Please use the contact form below to send us your booking request. We will get back with you with confirmation promptly (during local working hours).</p>
             <div class="field m-y-s">
                 <label for="check" class="c-dark"><i>Check in/Check out</i></label>
@@ -91,7 +91,7 @@ input {
                  <button class="btn bg-accent br-rounded">SEND MESSAGE</button>
             </div>
         </div>
-        <div class="col-7 relative flex jc-center ai-center">
+        <div class="col-7 relative flex jc-center ai-center hide-s">
             <h2 class="c-light z-index">BOOK NOW</h2>
         </div>
     </div>

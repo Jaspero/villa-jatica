@@ -85,7 +85,7 @@
             </div>
         </div>
     </div>
-    <div class="col-8 flex m-t-l col-s-12 fw-wrap">
+    <div class="col-8 flex m-t-l col-s-12 fw-wrap circle-container">
         <div class="col-6 br-circle interior-1 col-xs-12">
         </div>
         <div class="col-6 br-circle interior-2 m-l-m col-xs-12">

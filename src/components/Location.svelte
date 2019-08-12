@@ -86,7 +86,7 @@ display: block;
             </div>
         </div>
 
-        <div class="col-8 flex  m-t-l col-s-12">
+        <div class="col-8 flex  m-t-l col-s-12 circle-container fw-wrap">
             <div class="col-6 br-circle bg-1 col-xs-12">
 
             </div>

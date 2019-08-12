@@ -35,7 +35,7 @@
         <div class="flex w-full jc-center">
             <h1 class="c-light z-index m-t-l">PRICE</h1>
         </div>
-        <div class="col-3 z-index col-s-12">
+        <div class="col-3 z-index col-xs-12 col-m-6">
             <div class="price-card bg-light">
                 <div class="flex ai-center b-bottom">
                     <div class="ta-center col-4">
@@ -76,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3 z-index col-s-12">
+        <div class="col-3 z-index col-xs-12 col-m-6">
             <div class="price-card bg-light flex fd-col jc-center">
                 <div class="flex ai-center b-bottom">
                      <div class="ta-center col-5 date">
