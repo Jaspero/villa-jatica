@@ -16,18 +16,23 @@
     function activeHeader() {
 
         const headerEl = document.querySelector('#header');
+        const hambEl   = document.querySelector('.line-active');
         const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
         if (scrollTop === 0) {
             headerEl.classList.remove('header-active');
+            hambEl.classList.remove('header-active');
         } else {
             headerEl.classList.add('header-active');
+            hambEl.classList.add('line-active');
         }}
 
         function mobileMenu () {
              const hamburgerMenu = document.querySelector('.hamburger');
              hamburgerMenu.classList.toggle('open');
 
+             const menuActive = document.querySelector('.mobile-menu');
+             menuActive.classList.toggle('active-mobile');
         }
 
     window.onscroll = (() => {
@@ -114,35 +119,37 @@
             <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s' href='book' transition:fade="">BOOK NOW</a>
             <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery' transition:fade="" >SHOW GALLERY</a>
         </div>
-        <div class="mobile-menu flex fd-col jc-center ai-center hide-s">
+        <div class="mobile-menu flex fd-col jc-center ai-center">
         <span class="link-wrapper flex">
-		<a class='{segment === undefined ? "selected" : ""} underline ' href='.'>HOME</a>
+		<a class='{segment === undefined ? "selected" : ""} underline m-t-xl' href='.'>HOME</a>
 		</span>
             <span class="link-wrapper flex">
-		<a href='#location' class="m-x-m underline">lOCATION</a>
+		<a href='#location' class="m-x-m m-y-m underline">lOCATION</a>
 		</span>
             <span class="link-wrapper flex">
 		<a href='#house' class="underline">THE HOUSE</a>
 		</span>
             <span class="link-wrapper flex">
-		<a href='#interior'class="m-x-m underline">INTERIOR</a>
+		<a href='#interior'class="m-x-m m-y-m underline">INTERIOR</a>
 		</span>
             <span class="link-wrapper flex">
 		<a href='#indulge' class="underline">INDULGE</a>
 		</span>
             <span class="link-wrapper flex">
-		<a href='#price'class="m-x-m underline">PRICE</a>
+		<a href='#price'class="m-x-m m-y-m underline">PRICE</a>
 		</span>
             <span class="link-wrapper flex">
 		<a href='#contact' class="underline">CONTACT</a>
 		</span>
-            <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s' href='book' transition:fade="">BOOK NOW</a>
-            <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery' transition:fade="" >SHOW GALLERY</a>
+            <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s m-y-m' href='book' transition:fade="">BOOK NOW</a>
         </div>
-            <div class="show-s flex fd-col ai-center jc-center hamburger relative"on:click={mobileMenu}>
-              <span class="line"></span>
-              <span class="line m-y-s"></span>
-              <span class="line"></span>
+            <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery' transition:fade="" >SHOW GALLERY</a>
+            <div class="show-s flex fd-col ai-center jc-center hamburger relative"on:click={mobileMenu} transition:fade>
+                <div class="relative w-full h-full">
+                  <span class="line"></span>
+                  <span class="line m-y-s"></span>
+                  <span class="line"></span>
+                </div>
             </div>
     </nav>
     <div class="hero flex ai-center jc-center c-light fd-col col-m-12 ta-center">
