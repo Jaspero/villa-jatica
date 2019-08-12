@@ -30,18 +30,7 @@
 
 <style>
 
-.left {
-    position:absolute;
-    top: 47%;
-    left: -40px;
-    cursor:pointer;
-}
-.right {
-    cursor:pointer;
-    position:absolute;
-    top: 47%;
-    right: -40px;
-}
+
 
 .grid {
   max-width: 1200px;
@@ -58,7 +47,7 @@
     </div>
     <div class="flex  w-full jc-between fw-wrap">
     <div class="col-5 col-s-12">
-        <img src="assets/images/blue-doors.jpg" alt="House exterior">
+        <img src="assets/images/blue-doors.jpg" alt="House exterior" class="image">
     </div>
     <div class="col-7 flex fw-wrap col-s-12">
             <h5 class="c-dark m-t-s  ta-left">AWESOME PLACE TO ENJOY</h5>

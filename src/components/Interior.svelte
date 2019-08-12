@@ -64,7 +64,7 @@
     </div>
     <div class="flex w-full jc-between fw-wrap">
         <div class="col-5 col-s-12">
-            <img src="assets/images/interior.jpg" alt="Interior from outside">
+            <img src="assets/images/interior.jpg" alt="Interior from outside" class="image">
         </div>
         <div class="col-7 flex fw-wrap col-s-12">
                 <h5 class="c-dark m-t-s  ta-left">BEAUTY OF MINIMALISM</h5>

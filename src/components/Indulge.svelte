@@ -34,18 +34,7 @@
   max-width: 1200px;
 }
 
-.left {
-    cursor:pointer;
-    position:absolute;
-    top: 47%;
-    left: -40px;
-}
-.right {
-    cursor:pointer;
-    position:absolute;
-    top: 47%;
-    right: -40px;
-}
+
 
 </style>
 
@@ -58,7 +47,7 @@
     </div>
     <div class="flex w-full jc-between fw-wrap">
     <div class="col-5 col-s-12">
-        <img src="assets/images/indulge.jpg" alt="House exterior">
+        <img src="assets/images/indulge.jpg" alt="House exterior" class="image">
     </div>
     <div class="col-7 flex fd-col fw-wrap col-s-12">
             <h5 class="c-dark m-t-s  ta-left">Enjoy in beautiful nature and delicious foodY</h5>

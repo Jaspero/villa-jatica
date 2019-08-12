@@ -5,10 +5,30 @@
 @import "scss/03-utilities/utilities";
 
 
+
+
+
+
+/* Custom styles
+ *============================================================================*/
+
 .z-index {
   z-index: 3;
 }
 
+.btn {
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+}
+
+
+
+
+
+/* Parallax,features,price
+ *============================================================================*/
 .features:before {
   content: '';
   top: 0;
@@ -32,8 +52,10 @@
 
 .feature {
   min-height: 17rem;
+  @media screen and (max-width: 900px) {
+    height: 300px;
+  }
 }
-
 
 .bg-overlay:before {
   content: '';
@@ -46,13 +68,6 @@
   position: absolute;
 }
 
-.btn {
-  outline: none;
-  border: none;
-  padding: 10px;
-  font-size: 20px;
-}
-
 .features {
   background-image: url("../../assets/images/feature.jpg");
   background-repeat: no-repeat;
@@ -63,6 +78,12 @@
   background-size: cover;
 }
 
+
+
+
+
+/* Header styles
+ *============================================================================*/
 .underline {
   overflow: hidden;
   display: inline-block;
@@ -79,15 +100,11 @@
   }
 }
 
-
-
-
   .link-wrapper:hover{
     .underline:after {
       left: 0;
     }
   }
-
 
 .header {
   position: fixed;
@@ -97,7 +114,6 @@
   background: transparent;
 }
 
-
 .header-active {
   background: white;
   top: 0;
@@ -106,7 +122,6 @@
   position: fixed;
   transition: all 0.5s ease;
 }
-
 
 .header-active {
   box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
@@ -136,11 +151,20 @@
 }
 
 
+
+
+
+/* Slider styles
+ *============================================================================*/
+
 .left {
   position:absolute;
   top: 47%;
   left: -40px;
   cursor:pointer;
+  @media screen and (max-width: 900px) {
+    left: 0;
+  }
 }
 .right {
   cursor:pointer;
@@ -153,15 +177,15 @@
 }
 
 
-@media screen and (max-width: 900px) {
-  .left {
-    left: 0;
-  }
-  .right {
-    right: 0;
-  }
 
-  .bobo {
-    height: 100px;
+
+
+/* Mobile
+ *============================================================================*/
+
+@media screen and (max-width: 600px) {
+  .image {
+    width: 100%;
   }
 }
+
