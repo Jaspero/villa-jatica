@@ -1008,6 +1008,9 @@ h6 {
   padding: 10px;
   font-size: 20px; }
 
+.heading {
+  font-size: 60px; }
+
 /* Parallax,features,price
  *============================================================================*/
 .features:before {
@@ -1173,7 +1176,8 @@ h6 {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   background: black;
-  top: 6px;
+  width: 35px;
+  top: 5px;
   left: 5px; }
 
 .hamburger.open .line:nth-child(2) {
@@ -1186,7 +1190,8 @@ h6 {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   background: black;
-  top: 33px;
+  width: 35px;
+  top: 30px;
   left: 5px; }
 
 .line {
@@ -1218,8 +1223,8 @@ h6 {
   transition: .4s;
   transform: translateX(-300px);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); }
-  .mobile-menu .underline {
-    color: #c7b38e; }
+  .mobile-menu .mobile-link {
+    color: black; }
   .mobile-menu.active-mobile {
     opacity: 1;
     visibility: visible;
@@ -1245,14 +1250,20 @@ h6 {
   .bg-2, .interior-2 {
     margin-top: 25px;
     margin-left: 0; }
-  .price-card .h5 {
-    font-size: 20px; }
-  .price-card p {
-    font-size: 14px; }
   .date {
     padding-bottom: 35px; }
   .form-container .col-5 {
     padding: 10px; }
   .header-active {
     background: none;
-    box-shadow: none; } }
+    box-shadow: none; }
+  p {
+    font-size: 14px; }
+  h1 {
+    font-size: 30px; }
+  h5 {
+    font-size: 20px; }
+  .heading {
+    font-size: 40px; }
+  h2 {
+    font-size: 26px; } }

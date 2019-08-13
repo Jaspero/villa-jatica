@@ -62,7 +62,9 @@
             {/if}
         <div class="gallery m-t-m w-full relative">
             <img src="assets/icons/left-arrow.svg" class="left">
-            <img src="assets/images/exterior.jpg" alt="" class="w-full obj-cover">
+            <img src="assets/images/exterior.jpg" alt="" class="w-full obj-cover hide-s">
+            <img src="assets/images/interior.jpg" alt="" class="w-full obj-cover">
+            <img src="assets/images/nature.jpg" alt="" class="w-full obj-cover hide-s">
             <img src="assets/icons/right-arrow.svg" class="right">
         </div>
     </div>

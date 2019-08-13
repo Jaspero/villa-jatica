@@ -85,7 +85,7 @@
         <img src="assets/icons/left.svg" alt="back" class="m-l-s">
         <p class="font-secondary m-l-s">Back</p>
     </a>
-    <p class="c-accent m-l-l"><i>Beautifull galleries of our villa Jatica, from interior to exterior!</i></p>
+    <p class="c-accent m-l-l hide-s"><i>Beautifull galleries of our villa Jatica, from interior to exterior!</i></p>
 </nav>
 
 <div class="flex">

@@ -61,9 +61,6 @@
         width: 100vw;
         height: 100vh;
     }
-    h1 {
-        font-size: 80px;
-    }
 
     .gallery {
         position: fixed;
@@ -77,6 +74,7 @@
         padding: 20px;
         transition: all 0.3s ease;
     }
+
     .gallery:hover {
         padding-right: 3rem;
         background: #c7b38e;
@@ -126,25 +124,25 @@
         </div>
         <div class="mobile-menu flex fd-col jc-center ai-center">
         <span class="link-wrapper flex">
-		<a class='{segment === undefined ? "selected" : ""} underline m-t-xl' href='.'>HOME</a>
+		<a class='{segment === undefined ? "selected" : ""} mobile-link m-t-xl' href='.'>HOME</a>
 		</span>
             <span class="link-wrapper flex">
-		<a href='#location' class="m-x-m m-y-m underline">lOCATION</a>
+		<a href='#location' class="m-x-m m-y-m mobile-link">lOCATION</a>
 		</span>
             <span class="link-wrapper flex">
-		<a href='#house' class="underline">THE HOUSE</a>
+		<a href='#house' class="mobile-link">THE HOUSE</a>
 		</span>
             <span class="link-wrapper flex">
-		<a href='#interior'class="m-x-m m-y-m underline">INTERIOR</a>
+		<a href='#interior'class="m-x-m m-y-m mobile-link">INTERIOR</a>
 		</span>
             <span class="link-wrapper flex">
-		<a href='#indulge' class="underline">INDULGE</a>
+		<a href='#indulge' class="mobile-link">INDULGE</a>
 		</span>
             <span class="link-wrapper flex">
-		<a href='#price'class="m-x-m m-y-m underline">PRICE</a>
+		<a href='#price'class="m-x-m m-y-m mobile-link">PRICE</a>
 		</span>
             <span class="link-wrapper flex">
-		<a href='#contact' class="underline">CONTACT</a>
+		<a href='#contact' class="mobile-link">CONTACT</a>
 		</span>
             <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s m-y-m' href='book' transition:fade="">BOOK NOW</a>
         </div>
@@ -158,8 +156,8 @@
             </div>
     </nav>
     <div class="hero flex ai-center jc-center c-light fd-col col-m-12 ta-center">
-        <h1 class="headline">VILLA JATICA</h1>
-        <h2><i>Luxury in the Wilderness</i></h2>
+        <h1 class="heading">VILLA JATICA</h1>
+        <h2 class="m-t-s"><i>Luxury in the Wilderness</i></h2>
     </div>
     <Location/>
     <Features/>
