@@ -359,3 +359,16 @@
   height: calc(100vh - 55px)
 }
 
+
+.exterior-image {
+  background-image: url("../../header-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 300px;
+  &:hover {
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2)
+  }
+}
