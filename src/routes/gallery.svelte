@@ -68,11 +68,6 @@
     cursor: pointer;
 }
 
-.small-gallery {
-    border: none;
-    outline: none;
-    background: none;
-}
 
 
 
@@ -96,59 +91,59 @@
 <div class="flex gallery-container">
     <div class="albums flex fw-wrap ac-flex col-4">
         <div class="col-6">
-            <button class="h-full w-full small-gallery" class:active="{tab === 0}" on:click={() => tab = 0}>
+            <div class="h-full w-full " class:active="{tab === 0}" on:click={() => tab = 0}>
             <div class="exterior"></div>
             <div class="bg-light w-full p-a-xs">
                 <p class="ta-center"><i>House exterior</i></p>
             </div>
-            </button>
+            </div>
         </div>
 
 
         <div class="col-6">
-            <button class="h-full w-full small-gallery" class:active="{tab === 1}" on:click={() => tab = 1}>
+            <div class="h-full w-full " class:active="{tab === 1}" on:click={() => tab = 1}>
             <div class="interior"></div>
             <div class="bg-light w-full p-a-xs">
                 <p class="ta-center"><i>House interior</i></p>
             </div>
-            </button>
+            </div>
         </div>
 
         <div class="col-6">
-            <button class="small-gallery w-full h-full" class:active="{tab === 2}" on:click={() => tab = 2}>
+            <div class=" w-full h-full" class:active="{tab === 2}" on:click={() => tab = 2}>
             <div class="village"></div>
             <div class="bg-light w-full p-a-xs">
                 <p class="ta-center"><i>The old village</i></p>
             </div>
-            </button>
+            </div>
         </div>
 
         <div class="col-6">
-            <button class="small-gallery w-full h-full" class:active="{tab === 3}" on:click={() => tab = 3}>
+            <div class=" w-full h-full" class:active="{tab === 3}" on:click={() => tab = 3}>
             <div class="details"></div>
             <div class="bg-light w-full p-a-xs">
                 <p class="ta-center"><i>House details</i></p>
             </div>
-            </button>
+            </div>
         </div>
 
-    <div class="col-6">
-    <button class="small-gallery w-full h-full" class:active="{tab === 4}" on:click={() => tab = 4}>
-    <div class="nature"></div>
-    <div class="bg-light w-full p-a-xs">
-        <p class="ta-center"><i>Beautiful nature</i></p>
-    </div>
-    </button>
-    </div>
+        <div class="col-6">
+            <div class=" w-full h-full" class:active="{tab === 4}" on:click={() => tab = 4}>
+            <div class="nature"></div>
+            <div class="bg-light w-full p-a-xs">
+                <p class="ta-center"><i>Beautiful nature</i></p>
+            </div>
+        </div>
+        </div>
 
-    <div class="col-6">
-    <button class="small-gallery w-full h-full" class:active="{tab === 5}" on:click={() => tab = 5}>
-    <div class="photos"></div>
-    <div class="bg-light w-full p-a-xs">
-        <p class="ta-center"><i>Guest photos</i></p>
-    </div>
-    </button>
-    </div>
+        <div class="col-6">
+            <div class=" w-full h-full" class:active="{tab === 5}" on:click={() => tab = 5}>
+            <div class="photos"></div>
+            <div class="bg-light w-full p-a-xs">
+                <p class="ta-center"><i>Guest photos</i></p>
+            </div>
+        </div>
+        </div>
     </div>
      <div class="col-12">
                         {#if tab === 0}
@@ -193,7 +188,7 @@
                             <div class="guest-container">
                                 <div class="grid">
                                     <div class="col-3">
-                                        <img src="assets/images/interior.jpg" alt="exterior" class="w-full">
+                                        <img src="assets/images/indulge.jpg" alt="exterior" class="w-full">
                                     </div>
                                 </div>
                             </div>

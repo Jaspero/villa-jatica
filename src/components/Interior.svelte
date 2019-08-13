@@ -2,6 +2,38 @@
 
 <script>
 
+    const interiorSlider = [
+        'assets/images/interior2.jpg',
+        'assets/images/interior3.jpg',
+        'assets/images/interior4.jpg'
+    ];
+
+    let activeIndex = 0;
+
+
+    function slideRightInterior() {
+        const imageSlider = document.querySelector('#slider-image-interior');
+
+        if (activeIndex < interiorSlider.length - 1) {
+            activeIndex++
+        } else {
+            activeIndex = 0;
+        }
+        imageSlider.src = interiorSlider[activeIndex]
+    }
+
+
+    function slideLeftInterior() {
+        const imageSlider = document.querySelector('#slider-image-interior');
+
+        if (activeIndex > 0) {
+            activeIndex--;
+        } else {
+            activeIndex = interiorSlider.length - 1;
+        }
+        imageSlider.src = interiorSlider[activeIndex]
+    }
+
     let readMore = true;
 
     function expandText() {
@@ -79,9 +111,9 @@
                 </a>
                 {/if}
             <div class="gallery m-t-m w-full relative">
-                <img src="assets/icons/left-arrow.svg" class="left">
-                <img src="assets/images/interior3.jpg" alt="Interior" class="w-full">
-                <img src="assets/icons/right-arrow.svg" class="right">
+            <img src="assets/icons/left-arrow.svg" on:click={slideLeftInterior} class="left">
+            <img id="slider-image-interior" src={interiorSlider[0]} alt="" class="w-full obj-cover" style="height: 500px">
+            <img src="assets/icons/right-arrow.svg" on:click={slideRightInterior} class="right">
             </div>
         </div>
     </div>

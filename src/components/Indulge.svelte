@@ -1,6 +1,36 @@
 
 <script >
 
+
+    const sliderIndulge = [
+        'assets/images/indulge.jpg',
+        'assets/images/beach.jpg',
+        'assets/images/exterior.jpg'
+    ];
+    let indexActive = 0;
+
+    function indulgeRight() {
+        const sliderImage = document.querySelector('#indulge-slider');
+
+        if (indexActive < sliderIndulge.length - 1) {
+            indexActive++
+        } else {
+            indexActive = 0;
+        }
+        sliderImage.src = sliderIndulge[indexActive]
+    }
+
+    function indulgeLeft() {
+        const sliderImage = document.querySelector('#indulge-slider');
+
+        if (indexActive > 0) {
+            indexActive--;
+        } else {
+            actIndex = sliderIndulge.length - 1;
+        }
+        sliderImage.src = sliderIndulge[indexActive]
+    }
+
     let readMore = true;
 
     function expandText() {
@@ -65,9 +95,9 @@
             </a>
             {/if}
         <div class="gallery m-t-m w-full relative">
-            <img src="assets/icons/left-arrow.svg" class="left">
-            <img src="assets/images/beach.jpg" alt="" class="w-full">
-            <img src="assets/icons/right-arrow.svg" class="right">
+             <img src="assets/icons/left-arrow.svg" on:click={indulgeLeft} class="left">
+            <img id="indulge-slider" src={sliderIndulge[0]} alt="" class="w-full obj-cover" style="height: 500px">
+            <img src="assets/icons/right-arrow.svg" on:click={indulgeRight} class="right">
         </div>
     </div>
     </div>

@@ -32,7 +32,7 @@
     }
 
     function slideRight() {
-        const sliderImage = document.querySelector('#slider-image')
+        const sliderImage = document.querySelector('#slider-image');
 
         if (actIndex < sliderExterior.length - 1) {
             actIndex++
@@ -43,7 +43,7 @@
     }
 
     function slideLeft() {
-        const sliderImage = document.querySelector('#slider-image')
+        const sliderImage = document.querySelector('#slider-image');
 
         if (actIndex > 0) {
             actIndex--;
@@ -91,7 +91,7 @@
             {/if}
         <div class="gallery m-t-m w-full relative">
             <img src="assets/icons/left-arrow.svg" on:click={slideLeft} class="left">
-            <img id="slider-image" src={sliderExterior[0]} alt="" class="w-full obj-cover">
+            <img id="slider-image" src={sliderExterior[0]} alt="" class="w-full obj-cover" style="height: 500px">
             <img src="assets/icons/right-arrow.svg" on:click={slideRight} class="right">
         </div>
     </div>
