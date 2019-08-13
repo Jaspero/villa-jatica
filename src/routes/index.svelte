@@ -16,15 +16,20 @@
     function activeHeader() {
 
         const headerEl = document.querySelector('#header');
-        const hambEl   = document.querySelector('.line-active');
+        const hambEl   = document.querySelectorAll('.line');
         const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
 
         if (scrollTop === 0) {
             headerEl.classList.remove('header-active');
-            hambEl.classList.remove('header-active');
+                hambEl.forEach(val => {
+                    val.classList.remove('line-active');
+                        });
         } else {
             headerEl.classList.add('header-active');
-            hambEl.classList.add('line-active');
+                hambEl.forEach(val => {
+                    val.classList.add('line-active');
+                        });
         }}
 
         function mobileMenu () {

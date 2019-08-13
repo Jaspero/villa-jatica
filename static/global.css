@@ -1134,7 +1134,7 @@ h6 {
   position: fixed;
   top: 15px;
   left: 25px;
-  width: 45px;
+  width: 40px;
   height: 45px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -1147,21 +1147,21 @@ h6 {
   cursor: pointer; }
 
 .hamburger .line:nth-child(1) {
-  top: 5px;
+  top: 3px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center; }
 
 .hamburger .line:nth-child(2) {
-  top: 10px;
+  top: 3px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center; }
 
 .hamburger .line:nth-child(3) {
-  top: 34px;
+  top: 23px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -1172,8 +1172,9 @@ h6 {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 5px;
-  left: 8px; }
+  background: black;
+  top: 6px;
+  left: 5px; }
 
 .hamburger.open .line:nth-child(2) {
   width: 0%;
@@ -1184,15 +1185,16 @@ h6 {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 35px;
-  left: 8px; }
+  background: black;
+  top: 33px;
+  left: 5px; }
 
 .line {
   position: absolute;
   display: block;
   height: 3px;
   width: 100%;
-  background: black;
+  background: white;
   border-radius: 9px;
   opacity: 1;
   -webkit-transform: rotate(0deg);
@@ -1214,13 +1216,22 @@ h6 {
   width: 300px;
   background: white;
   transition: .4s;
-  transform: translateX(-300px); }
+  transform: translateX(-300px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); }
   .mobile-menu .underline {
     color: #c7b38e; }
   .mobile-menu.active-mobile {
     opacity: 1;
     visibility: visible;
     transform: translateX(0px); }
+
+.line-active {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1; }
 
 /* Mobile
  *============================================================================*/
@@ -1241,4 +1252,7 @@ h6 {
   .date {
     padding-bottom: 35px; }
   .form-container .col-5 {
-    padding: 10px; } }
+    padding: 10px; }
+  .header-active {
+    background: none;
+    box-shadow: none; } }

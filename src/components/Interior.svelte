@@ -9,7 +9,7 @@
       const hiddenEl = document.querySelectorAll('.hide-l');
 
       hiddenEl.forEach(val => {
-          val.classList.remove('hide-l')
+          val.classList.remove('hide-l');
           val.classList.add('visible');
       });
     }
