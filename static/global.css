@@ -1267,3 +1267,6 @@ h6 {
     font-size: 40px; }
   h2 {
     font-size: 26px; } }
+
+.gallery-container {
+  height: calc(100vh - 55px); }
