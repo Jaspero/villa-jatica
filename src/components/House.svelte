@@ -2,6 +2,12 @@
 <script>
 
     let readMore = true;
+    const sliderExterior = [
+        'assets/images/interior.jpg',
+        'assets/images/exterior.jpg',
+        'assets/images/nature.jpg'
+    ];
+    let actIndex = 0;
 
     function expandText() {
       readMore = false;
@@ -24,6 +30,29 @@
                 val.classList.remove('visible');
             });
     }
+
+    function slideRight() {
+        const sliderImage = document.querySelector('#slider-image')
+
+        if (actIndex < sliderExterior.length - 1) {
+            actIndex++
+        } else {
+            actIndex = 0;
+        }
+        sliderImage.src = sliderExterior[actIndex]
+    }
+
+    function slideLeft() {
+        const sliderImage = document.querySelector('#slider-image')
+
+        if (actIndex > 0) {
+            actIndex--;
+        } else {
+            actIndex = sliderExterior.length - 1;
+        }
+        sliderImage.src = sliderExterior[actIndex]
+    }
+
 
 </script>
 
@@ -61,11 +90,9 @@
             </a>
             {/if}
         <div class="gallery m-t-m w-full relative">
-            <img src="assets/icons/left-arrow.svg" class="left">
-            <img src="assets/images/exterior.jpg" alt="" class="w-full obj-cover hide-s">
-            <img src="assets/images/interior.jpg" alt="" class="w-full obj-cover">
-            <img src="assets/images/nature.jpg" alt="" class="w-full obj-cover hide-s">
-            <img src="assets/icons/right-arrow.svg" class="right">
+            <img src="assets/icons/left-arrow.svg" on:click={slideLeft} class="left">
+            <img id="slider-image" src={sliderExterior[0]} alt="" class="w-full obj-cover">
+            <img src="assets/icons/right-arrow.svg" on:click={slideRight} class="right">
         </div>
     </div>
     </div>
