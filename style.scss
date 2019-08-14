@@ -312,6 +312,11 @@
   .image {
     width: 100%;
   }
+  .albums {
+    width: 50%;
+    height: 100%;
+    position: fixed;
+  }
 }
 
   @media screen and (max-width: 900px) {
@@ -349,16 +354,21 @@
     h2 {
       font-size: 26px;
     }
+    .gallery-container {
+      height: 100%!important;
+    }
   }
 
 
 
 
 
+/* Gallery
+ *============================================================================*/
+
 .gallery-container {
   height: calc(100vh - 55px)
 }
-
 
 .exterior-image {
   background-image: url("../../header-bg.jpg");
@@ -371,4 +381,26 @@
   &:hover {
     box-shadow: 0px 10px 20px rgba(0,0,0,0.2)
   }
+}
+
+
+@media screen and (max-width: 700px) {
+.albums {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  width: 300px;
+  background: #cccccc;
+  transition: .4s;
+  transform: translateX(-300px);
+  &.active-albums {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+    overflow: auto;
+  }
+}
 }
