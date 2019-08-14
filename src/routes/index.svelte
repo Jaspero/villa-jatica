@@ -38,6 +38,15 @@
 
              const menuActive = document.querySelector('.mobile-menu');
              menuActive.classList.toggle('active-mobile');
+             event.stopPropagation();
+
+               window.addEventListener('click', (event => {
+                 if (!menuActive.contains(event.target)) {
+                   menuActive.classList.remove('active-mobile');
+                   hamburgerMenu.classList.remove('open');
+                 }
+               }))
+
         }
 
     window.onscroll = (() => {

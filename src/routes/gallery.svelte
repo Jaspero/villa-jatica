@@ -7,7 +7,24 @@
         function albumsMenu() {
           const albumsEl = document.querySelector('.albums');
           albumsEl.classList.toggle('active-albums');
+
+          event.stopPropagation();
+
+          window.addEventListener('click', (event => {
+                     if (!albumsEl.contains(event.target)) {
+                       albumsEl.classList.remove('active-albums');
+
+                     }
+                   }))
         }
+
+
+
+
+
+
+
+
 
 </script>
 
@@ -96,7 +113,7 @@
 
 <div class="flex gallery-container">
 
-    <div class="albums flex fw-wrap ac-flex col-4 col-s-12 hide-xs">
+    <div class="albums flex fw-wrap ac-flex col-4 col-s-6 hide-xs">
         <div class="col-6 col-s-12">
             <div class="h-full w-full " class:active="{tab === 0}" on:click={() => tab = 0}>
             <div class="exterior"></div>
