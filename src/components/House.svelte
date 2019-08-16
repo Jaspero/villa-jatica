@@ -74,7 +74,7 @@
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">House</h1>
     </div>
-    <div class="flex  w-full jc-between fw-wrap">
+    <div class="flex  w-full jc-between fw-wrap z-index">
     <div class="col-5 col-s-12">
         <img src="assets/images/blue-doors.jpg" alt="House exterior" class="image">
     </div>
@@ -98,7 +98,7 @@
         </div>
     </div>
     </div>
-    <div class="flex jc-between w-full m-t-m ai-center fw-wrap">
+    <div class="flex jc-between w-full m-t-m ai-center fw-wrap z-index">
         <div class="col-7 col-s-12">
             <img src="assets/images/group.png" alt="Group fo exterior pictures">
         </div>

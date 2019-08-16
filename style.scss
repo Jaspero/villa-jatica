@@ -13,7 +13,7 @@
  *============================================================================*/
 
 .z-index {
-  z-index: 3;
+  z-index: 10;
 }
 
 .btn {
@@ -33,6 +33,14 @@
   overflow: hidden;
   height: 0;
 }
+
+.bla {
+  position: fixed;
+  right: 0;
+  bottom: 24.8rem;
+  left: 0;
+}
+
 
 
 
@@ -165,7 +173,9 @@
     }
   }
 }
-
+.link-active {
+  color: red;
+}
 
 
 
@@ -406,7 +416,7 @@
   display: flex;
   z-index: 11;
   position: fixed;
-  width: 50%;
+  width: 300px;
   height: 100%;
   top: 0;
   background: #cccccc;

@@ -1,6 +1,6 @@
 <script>
 
-    import { onMount } from 'svelte';
+
 
 </script>
 
@@ -27,7 +27,7 @@ p {
         <p>Copyright <span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> Villa Jatica</p>
     </div>
 <div class="col-6 ta-center">
-    <p>Made by <span class="c-accent"><i>Jaspero</i></span> </p>
+    <p>Made by <span class="c-accent"><i><a href="https://jaspero.co/"> Jaspero</a> </i></span> </p>
 </div>
 </div>
 </section>

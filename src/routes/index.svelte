@@ -18,7 +18,7 @@
         const headerEl = document.querySelector('#header');
         const hambEl   = document.querySelectorAll('.line');
         const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-
+        const indexEl = document.querySelector ('.bla-bla');
 
         if (scrollTop === 0) {
             headerEl.classList.remove('header-active');
@@ -48,6 +48,8 @@
                }))
 
         }
+
+
 
     window.onscroll = (() => {
         activeHeader();
@@ -94,6 +96,11 @@
     a {
         font-size: 13px;
         color: white;
+    }
+
+
+    .header {
+        z-index: 11;
     }
 
 
@@ -167,8 +174,10 @@
             </div>
     </nav>
     <div class="hero flex ai-center jc-center c-light fd-col col-m-12 ta-center">
+        <div class="col-6 col-s-12">
             <h1 class="heading">VILLA JATICA</h1>
             <h2 class="m-t-s"><i>Luxury in the Wilderness</i></h2>
+        </div>
     </div>
     <Location/>
     <Features/>

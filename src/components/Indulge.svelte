@@ -74,7 +74,7 @@
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">INDULGE</h1>
     </div>
-    <div class="flex w-full jc-between fw-wrap">
+    <div class="flex w-full jc-between fw-wrap z-index">
     <div class="col-5 col-s-12">
         <img src="assets/images/indulge.jpg" alt="House exterior" class="image">
     </div>

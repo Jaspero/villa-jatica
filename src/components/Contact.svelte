@@ -9,6 +9,7 @@
 }
 
 .contact {
+    z-index: 10;
     background: linear-gradient(180deg, #eee 50%, #fff 50%);
 }
 
@@ -22,13 +23,13 @@
 </style>
 
 
-
+<div class="wrapper">
 <section class="contact p-y-xl" id="contact">
     <div class="grid jc-start">
          <div class="col-12 ta-left">
              <h1 class="c-dark p-y-m">CONTACT US</h1>
          </div>
-         <div class="contact-card bg-light flex w-full fw-wrap">
+         <div class="contact-card z-index bg-light flex w-full fw-wrap">
             <div class="col-9 flex fw-wrap col-s-12">
                 <div class="col-6 flex fd-col">
                    <label for="name" class="font-secondary">Full Name</label>
@@ -62,5 +63,6 @@
                 </div>
             </div>
          </div>
-    </div>
+         </div>
 </section>
+</div>
