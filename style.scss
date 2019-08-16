@@ -25,6 +25,15 @@
 .heading {
   font-size: 60px;
 }
+.visible {
+  height: auto;
+}
+
+.expand {
+  overflow: hidden;
+  height: 0;
+}
+
 
 
 
@@ -81,6 +90,10 @@
   background-size: cover;
 }
 
+.date {
+  padding-bottom: 55px;
+  padding-top: 55px ;
+}
 
 
 
@@ -278,6 +291,7 @@
   z-index: 11;
   position: fixed;
   top: 0;
+  height: 100%;
   width: 300px;
   background: white;
   transition: .4s;
@@ -323,9 +337,9 @@
     .circle-container {
       justify-content: center;
     }
-    .bg-2, .interior-2 {
+    .bg-2, .bg-1, .interior-1 .interior-2 {
       margin-top: 25px;
-      margin-left: 0;
+      margin-left: 25px;
     }
     .date {
       padding-bottom: 35px;
@@ -356,6 +370,9 @@
     }
     .gallery-container {
       height: 100%!important;
+    }
+    .mobile-menu {
+      justify-content: flex-start;
     }
   }
 

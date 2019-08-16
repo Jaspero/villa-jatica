@@ -23,10 +23,6 @@
     height: 348px;
 }
 
-.date {
-    padding-bottom: 55px;
-    padding-top: 55px ;
-}
 
 </style>
 

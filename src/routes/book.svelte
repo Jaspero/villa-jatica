@@ -60,6 +60,7 @@ input {
     </a>
     <p class="c-accent m-l-l hide-s"><i>Book your stay now and enjoy in our beautifull villa Jatica!</i></p>
 </nav>
+<div class="wrapper bg-primary">
     <div class="flex jc-center fw-wrap form-container">
         <div class="col-5 bg-primary p-a-l col-s-12">
             <p class="c-dark">Please use the contact form below to send us your booking request. We will get back with you with confirmation promptly (during local working hours).</p>
@@ -95,3 +96,4 @@ input {
             <h2 class="c-light z-index">BOOK NOW</h2>
         </div>
     </div>
+</div>

@@ -38,10 +38,10 @@
 
     function expandText() {
       readMore = false;
-      const hiddenEl = document.querySelectorAll('.hide-l');
+      const hiddenEl = document.querySelectorAll('.expand');
 
       hiddenEl.forEach(val => {
-          val.classList.remove('hide-l');
+          val.classList.remove('expand');
           val.classList.add('visible');
       });
     }
@@ -53,7 +53,7 @@
       const visibleEl = document.querySelectorAll('.visible');
 
             visibleEl.forEach(val => {
-                val.classList.add('hide-l')
+                val.classList.add('expand');
                 val.classList.remove('visible');
             });
     }
@@ -101,8 +101,10 @@
         <div class="col-7 flex fw-wrap col-s-12">
                 <h5 class="c-dark m-t-s  ta-left">BEAUTY OF MINIMALISM</h5>
                 <p class="font-secondary m-y-s">The interior of the house is all new and contemporary, with carefully chosen furniture and unobtrusive colours. The open plan upper floor with kitchen, dining room, and living room is spacious and with its four French windows offering wonderful views of the sea, the entire section is full of light throughout the day.</p>
-                <p class="font-secondary hide-l">In the kitchen, one will find all the necessary appliances and gadgets needed for a home cooked meal. The dining section has a table that seats 6 people, and its abundant daylight comes through a glass wall that leads to the balcony facing west, equipped with beautiful comfortable lounges for relaxation in the setting sun.</p>
-                <p class="font-secondary m-y-s hide-l">There is absolute formative minimalism throughout the house, not to disturb the beauty of the very construction. Thus, all the installations, from stone washbasin to glass shelves, carefully chosen lighting or flooring, custom made dining table or wardrobes are all the result of contemplation with aim to provide luxury and at the same time not impose any overwhelming contents on your holidays.</p>
+                <div class="expand">
+                    <p class="font-secondary">In the kitchen, one will find all the necessary appliances and gadgets needed for a home cooked meal. The dining section has a table that seats 6 people, and its abundant daylight comes through a glass wall that leads to the balcony facing west, equipped with beautiful comfortable lounges for relaxation in the setting sun.</p>
+                    <p class="font-secondary m-y-s">There is absolute formative minimalism throughout the house, not to disturb the beauty of the very construction. Thus, all the installations, from stone washbasin to glass shelves, carefully chosen lighting or flooring, custom made dining table or wardrobes are all the result of contemplation with aim to provide luxury and at the same time not impose any overwhelming contents on your holidays.</p>
+                </div>
                 {#if readMore}
                 <a on:click={expandText} class="c-accent"><i>...Read more</i></a>
                 {:else}

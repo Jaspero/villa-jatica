@@ -11,7 +11,7 @@
     import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
 
-    let segment
+    let segment;
 
     function activeHeader() {
 
@@ -176,6 +176,7 @@
     <Indulge/>
     <Price />
     <Contact />
+    <Footer/>
 </div>
 
 

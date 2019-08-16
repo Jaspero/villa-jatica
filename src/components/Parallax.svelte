@@ -19,25 +19,25 @@ z-index: 3;
         <div class="col-3 col-xs-12 ta-center">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/router.svg" class="m-t-m" alt="Location">
-               <p class="m-t-s">Fabulous Mediterranean scenery, quite place in untouched nature + cycling and hiking trails</p>
+               <p class="m-t-s"> Tv with satellite antenna, Wi-Fi Internet, air conditioning for summer, central heating + indoor fireplace for winter</p>
             </div>
         </div>
         <div class="col-3 col-xs-12 ta-center">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/washing-machine.svg" class="m-t-m" alt="Bedroom">
-               <p class="m-t-s">Gorgeous double bedroom, two single bedrooms</p>
+               <p class="m-t-s">Washer/dryer, microwave, oven, coffee machine, 2 dishwashers, ice maker, hair dryer</p>
             </div>
         </div>
         <div class="col-3 col-xs-12 ta-center">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/swimming.svg" class="m-t-m" alt="bathroom">
-               <p class="m-t-s">Bathroom with shower and toilet + additional toilet</p>
+               <p class="m-t-s">Private endless swimming pool, roofed and sunny terrace, lounge area with open fireplace; outdoor dining area</p>
             </div>
         </div>
         <div class="col-3 col-xs-12 ta-center">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/cleaning.svg" class="m-t-m" alt="Location">
-               <p class="m-t-s">Full indoor kitchen, outdoor kitchen with large masonry barbecue, small kitchen with dishwasher in tavern</p>
+               <p class="m-t-s">Staff and services included: pool maintenance and gardener</p>
             </div>
         </div>
     </div>

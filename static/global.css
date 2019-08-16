@@ -1011,6 +1011,13 @@ h6 {
 .heading {
   font-size: 60px; }
 
+.visible {
+  height: auto; }
+
+.expand {
+  overflow: hidden;
+  height: 0; }
+
 /* Parallax,features,price
  *============================================================================*/
 .features:before {
@@ -1055,6 +1062,10 @@ h6 {
   background-attachment: fixed;
   background-position: center center;
   background-size: cover; }
+
+.date {
+  padding-bottom: 55px;
+  padding-top: 55px; }
 
 /* Header styles
  *============================================================================*/
@@ -1218,6 +1229,7 @@ h6 {
   z-index: 11;
   position: fixed;
   top: 0;
+  height: 100%;
   width: 300px;
   background: white;
   transition: .4s;
@@ -1251,9 +1263,9 @@ h6 {
 @media screen and (max-width: 900px) {
   .circle-container {
     justify-content: center; }
-  .bg-2, .interior-2 {
+  .bg-2, .bg-1, .interior-1 .interior-2 {
     margin-top: 25px;
-    margin-left: 0; }
+    margin-left: 25px; }
   .date {
     padding-bottom: 35px; }
   .form-container .col-5 {
@@ -1272,7 +1284,9 @@ h6 {
   h2 {
     font-size: 26px; }
   .gallery-container {
-    height: 100% !important; } }
+    height: 100% !important; }
+  .mobile-menu {
+    justify-content: flex-start; } }
 
 /* Gallery
  *============================================================================*/
