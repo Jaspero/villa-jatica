@@ -89,7 +89,7 @@
 
 
 
-<section id="interior">
+<section id="interior" class="z-index">
 <div class="grid m-y-l">
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">Interior</h1>

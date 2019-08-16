@@ -326,11 +326,6 @@
   .image {
     width: 100%;
   }
-  .albums {
-    width: 50%;
-    height: 100%;
-    position: fixed;
-  }
 }
 
   @media screen and (max-width: 900px) {
@@ -374,6 +369,9 @@
     .mobile-menu {
       justify-content: flex-start;
     }
+    .book {
+      height: calc(100vh - 40px)
+    }
   }
 
 
@@ -401,15 +399,16 @@
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
 .albums {
   opacity: 0;
   visibility: hidden;
   display: flex;
   z-index: 11;
   position: fixed;
+  width: 50%;
+  height: 100%;
   top: 0;
-  width: 300px;
   background: #cccccc;
   transition: .4s;
   transform: translateX(-300px);

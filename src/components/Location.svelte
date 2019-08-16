@@ -5,10 +5,10 @@
 
     function expandText() {
       readMore = false;
-      const hiddenEl = document.querySelectorAll('.hide-l');
+      const hiddenEl = document.querySelectorAll('.expand');
 
       hiddenEl.forEach(val => {
-          val.classList.remove('hide-l')
+          val.classList.remove('expand');
           val.classList.add('visible');
       });
     }
@@ -20,7 +20,7 @@
       const visibleEl = document.querySelectorAll('.visible');
 
             visibleEl.forEach(val => {
-                val.classList.add('hide-l')
+                val.classList.add('expand');
                 val.classList.remove('visible');
             });
     }
@@ -72,7 +72,7 @@ display: block;
 </style>
 
 
-<section id="location" class="m-y-l">
+<section id="location" class="m-y-l z-index">
     <div class="grid">
         <div class="col-6 col-s-12">
             <h1 class="c-dark relative p-b-s m-y-m headline">LOCATION</h1>
@@ -97,8 +97,10 @@ display: block;
         <div class="col-4 m-t-l col-s-12">
             <h5>LOCAL AREA</h5>
             <p class="font-secondary m-y-s">If you feel like sightseeing, you can choose from a number of exciting places whether you decide to drive up north towards the town of Split or down south towards the town of Dubrovnik. If you choose to visit Split, you will pass through beautiful small coastal places, as well as the town of Makarska and Omiš, both well worth of sightseeing. Also, you can visit the sunniest island of Hvar since ferry port Drvenik is merely several minutes drive from Zaostrog.</p>
-            <p class="m-t-s hide-l">If you choose to go south, after a short drive you will reach the ferry port Ploče, connecting the mainland with the tip of Pelješac peninsula. Well-known for its wine and vineyards, especially one of the best and most intriguing Croatian wine sort Plavac Mali, Pelješac peninsula is certainly a Southern Dalmatian attraction.</p>
-            <p class="p-y-s hide-l">You can also visit the town of Ston, famous for the remnants of medieval defensive walls, a historical monument of distant past often called "the European Walls of China," winding for 5 kilometres all the way to Mali Ston, a village famous for its seashell cuisine, especially oysters and mussels. A trip to the south will bring you to the town of Dubrovnik, certainly the most famous Croatian spot on global scale, as well as UNESCO World Heritage Site.</p>
+            <div class="expand">
+                <p class="m-t-s">If you choose to go south, after a short drive you will reach the ferry port Ploče, connecting the mainland with the tip of Pelješac peninsula. Well-known for its wine and vineyards, especially one of the best and most intriguing Croatian wine sort Plavac Mali, Pelješac peninsula is certainly a Southern Dalmatian attraction.</p>
+                <p class="p-y-s">You can also visit the town of Ston, famous for the remnants of medieval defensive walls, a historical monument of distant past often called "the European Walls of China," winding for 5 kilometres all the way to Mali Ston, a village famous for its seashell cuisine, especially oysters and mussels. A trip to the south will bring you to the town of Dubrovnik, certainly the most famous Croatian spot on global scale, as well as UNESCO World Heritage Site.</p>
+            </div>
             {#if readMore}
             <a on:click={expandText} class="c-accent"><i>...Read more</i></a>
             {:else}

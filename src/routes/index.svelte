@@ -69,6 +69,7 @@
         background-position: center;
         width: 100vw;
         height: 100vh;
+        background-attachment: fixed;
     }
 
     .gallery {
@@ -94,6 +95,7 @@
         font-size: 13px;
         color: white;
     }
+
 
 </style>
 
@@ -165,8 +167,8 @@
             </div>
     </nav>
     <div class="hero flex ai-center jc-center c-light fd-col col-m-12 ta-center">
-        <h1 class="heading">VILLA JATICA</h1>
-        <h2 class="m-t-s"><i>Luxury in the Wilderness</i></h2>
+            <h1 class="heading">VILLA JATICA</h1>
+            <h2 class="m-t-s"><i>Luxury in the Wilderness</i></h2>
     </div>
     <Location/>
     <Features/>

@@ -20,7 +20,7 @@
 }
 
 .price-card {
-    height: 348px;
+    height: 355px;
 }
 
 

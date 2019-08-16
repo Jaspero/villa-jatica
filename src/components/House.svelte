@@ -69,7 +69,7 @@
 
 
 
-<section id="house">
+<section id="house" class="z-index">
 <div class="grid m-y-l">
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">House</h1>
