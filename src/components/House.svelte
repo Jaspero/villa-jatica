@@ -69,17 +69,17 @@
 
 
 
-<section id="house" class="z-index">
+<section id="house" class="relative">
 <div class="grid m-y-l">
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">House</h1>
     </div>
-    <div class="flex  w-full jc-between fw-wrap z-index">
+    <div class="flex  w-full jc-between fw-wrap">
     <div class="col-5 col-s-12">
         <img src="assets/images/blue-doors.jpg" alt="House exterior" class="image">
     </div>
     <div class="col-7 flex fw-wrap col-s-12">
-            <h5 class="c-dark m-t-s  ta-left">AWESOME PLACE TO ENJOY</h5>
+            <h5 class="c-dark m-t-s ta-left">AWESOME PLACE TO ENJOY</h5>
             <p class="font-secondary m-y-s">With its spectacular views of the sea and islands, the mountain and blue Mediterranean skies, this newly renovated house is a combination of traditional Dalmatian architecture and modern interventions, built with respect for and appreciation of the tradition, thus resulting in a new construction having that charming old Dalmatian feel. The exterior stones in warm light beige tone and blue window shutters are in complete harmony with the blue sea, rocky mountain and the surrounding Mediterranean vegetation.</p>
             <div class="expand">
             <p class="font-secondary">You can also visit the town of Ston, famous for the remnants of medieval defensive walls, a historical monument of distant past often called "the European Walls of China," winding for 5 kilometres all the way to Mali Ston, a village famous for its seashell cuisine, especially oysters and mussels. A trip to the south will bring you to the town of Dubrovnik, certainly the most famous Croatian spot on global scale, as well as UNESCO World Heritage Site.</p>
@@ -98,7 +98,7 @@
         </div>
     </div>
     </div>
-    <div class="flex jc-between w-full m-t-m ai-center fw-wrap z-index">
+    <div class="flex jc-between w-full m-t-m ai-center fw-wrap">
         <div class="col-7 col-s-12">
             <img src="assets/images/group.png" alt="Group fo exterior pictures">
         </div>

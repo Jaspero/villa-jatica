@@ -9,7 +9,6 @@
 }
 
 .contact {
-    z-index: 10;
     background: linear-gradient(180deg, #eee 50%, #fff 50%);
 }
 
@@ -23,7 +22,7 @@
 </style>
 
 
-<div class="wrapper">
+<div class="wrapper relative">
 <section class="contact p-y-xl" id="contact">
     <div class="grid jc-start">
          <div class="col-12 ta-left">
@@ -31,11 +30,11 @@
          </div>
          <div class="contact-card z-index bg-light flex w-full fw-wrap">
             <div class="col-9 flex fw-wrap col-s-12">
-                <div class="col-6 flex fd-col">
+                <div class="col-6 flex fd-col col-xs-12">
                    <label for="name" class="font-secondary">Full Name</label>
                    <input type="text" name="name" id="name" class="contact-input">
                 </div>
-                <div class="col-6 flex fd-col">
+                <div class="col-6 flex fd-col col-xs-12">
                     <label for="mail" class="font-secondary">Email adress</label>
                     <input type="text" name="mail" id="mail" class="contact-input">
                 </div>
@@ -59,7 +58,7 @@
                 </div>
                 <div class="flex ai-start ta-left">
                     <img src="assets/icons/mail.svg" alt="Adress">
-                    <a href="" class="m-l-s">  info@villa-jatica.com</a>
+                    <a href="mailto:info@villa-jatica.com" class="m-l-s">  info@villa-jatica.com</a>
                 </div>
             </div>
          </div>

@@ -89,12 +89,12 @@
 
 
 
-<section id="interior" class="z-index">
+<section id="interior" class="relative">
 <div class="grid m-y-l">
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">Interior</h1>
     </div>
-    <div class="flex w-full jc-between fw-wrap z-index">
+    <div class="flex w-full jc-between fw-wrap">
         <div class="col-5 col-s-12">
             <img src="assets/images/interior.jpg" alt="Interior from outside" class="image">
         </div>
@@ -119,7 +119,7 @@
             </div>
         </div>
     </div>
-    <div class="col-8 flex m-t-l col-s-12 fw-wrap circle-container z-index">
+    <div class="col-8 flex m-t-l col-s-12 fw-wrap circle-container">
         <div class="col-6 br-circle interior-1 col-xs-12">
         </div>
         <div class="col-6 br-circle interior-2 m-l-m col-xs-12">

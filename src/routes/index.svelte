@@ -51,6 +51,8 @@
 
 
 
+        let current = 'mobile-link';
+
     window.onscroll = (() => {
         activeHeader();
     });
@@ -102,6 +104,13 @@
     .header {
         z-index: 11;
     }
+    .col-6 {
+        position: fixed;
+    }
+
+    .active {
+        color:red;
+    }
 
 
 </style>
@@ -117,25 +126,25 @@
     <nav class="header p-y-s" id="header">
         <div class="grid ai-center hide-s">
         <span class="link-wrapper flex">
-		<a class='{segment === undefined ? "selected" : ""} underline ' href='.'>HOME</a>
+		<a class='{segment === undefined ? "selected" : ""} underline' href='.'>HOME</a>
 		</span>
-            <span class="link-wrapper flex">
-		<a href='#location' class="m-x-m underline">lOCATION</a>
+        <span class="link-wrapper flex">
+		    <a href='#location' class="m-x-m underline">LOCATION</a>
 		</span>
-            <span class="link-wrapper flex">
-		<a href='#house' class="underline">THE HOUSE</a>
+        <span class="link-wrapper flex">
+		    <a href='#house' class="underline">THE HOUSE</a>
 		</span>
-            <span class="link-wrapper flex">
-		<a href='#interior'class="m-x-m underline">INTERIOR</a>
+        <span class="link-wrapper flex">
+		    <a href='#interior'class="m-x-m underline">INTERIOR</a>
 		</span>
-            <span class="link-wrapper flex">
-		<a href='#indulge' class="underline">INDULGE</a>
+        <span class="link-wrapper flex">
+		    <a href='#indulge' class="underline">INDULGE</a>
 		</span>
-            <span class="link-wrapper flex">
-		<a href='#price'class="m-x-m underline">PRICE</a>
+        <span class="link-wrapper flex">
+		    <a href='#price'class="m-x-m underline">PRICE</a>
 		</span>
-            <span class="link-wrapper flex">
-		<a href='#contact' class="underline">CONTACT</a>
+         <span class="link-wrapper flex">
+		    <a href='#contact' class="underline">CONTACT</a>
 		</span>
             <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s' href='book' transition:fade="">BOOK NOW</a>
             <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery' transition:fade="" >SHOW GALLERY</a>
@@ -145,7 +154,7 @@
 		<a class='{segment === undefined ? "selected" : ""} mobile-link m-t-xl' href='.'>HOME</a>
 		</span>
             <span class="link-wrapper flex">
-		<a href='#location' class="m-x-m m-y-m mobile-link">lOCATION</a>
+		<a href='#location' class="m-x-m m-y-m mobile-link">LOCATION</a>
 		</span>
             <span class="link-wrapper flex">
 		<a href='#house' class="mobile-link">THE HOUSE</a>

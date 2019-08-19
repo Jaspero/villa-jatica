@@ -1012,7 +1012,8 @@ h6 {
   font-size: 60px; }
 
 .visible {
-  height: auto; }
+  height: auto;
+  overflow: hidden; }
 
 .expand {
   overflow: hidden;
@@ -1068,10 +1069,6 @@ h6 {
   background-attachment: fixed;
   background-position: center center;
   background-size: cover; }
-
-.date {
-  padding-bottom: 55px;
-  padding-top: 55px; }
 
 /* Header styles
  *============================================================================*/
@@ -1265,14 +1262,14 @@ h6 {
   .image {
     width: 100%; } }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .circle-container {
-    justify-content: center; }
-  .bg-2, .bg-1, .interior-1 .interior-2 {
-    margin-top: 25px;
-    margin-left: 25px; }
-  .date {
-    padding-bottom: 35px; }
+    justify-content: center; } }
+
+@media screen and (max-width: 900px) {
+  .bg-2, .bg-1, .interior-1, .interior-2 {
+    margin-top: 25px !important;
+    margin-left: 25px !important; }
   .form-container .col-5 {
     padding: 10px; }
   .header-active {
@@ -1288,8 +1285,6 @@ h6 {
     font-size: 40px; }
   h2 {
     font-size: 26px; }
-  .gallery-container {
-    height: 100% !important; }
   .mobile-menu {
     justify-content: flex-start; }
   .book {
@@ -1298,7 +1293,11 @@ h6 {
 /* Gallery
  *============================================================================*/
 .gallery-container {
-  height: calc(100vh - 55px); }
+  height: calc(100vh - 52px); }
+
+@media screen and (max-width: 1200px) {
+  .gallery-container {
+    height: 100%; } }
 
 .exterior-image {
   background-image: url("../../header-bg.jpg");

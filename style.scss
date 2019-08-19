@@ -27,6 +27,7 @@
 }
 .visible {
   height: auto;
+  overflow: hidden;
 }
 
 .expand {
@@ -98,10 +99,7 @@
   background-size: cover;
 }
 
-.date {
-  padding-bottom: 55px;
-  padding-top: 55px ;
-}
+
 
 
 
@@ -337,17 +335,15 @@
     width: 100%;
   }
 }
-
-  @media screen and (max-width: 900px) {
-    .circle-container {
-      justify-content: center;
-    }
-    .bg-2, .bg-1, .interior-1 .interior-2 {
-      margin-top: 25px;
-      margin-left: 25px;
-    }
-    .date {
-      padding-bottom: 35px;
+@media screen and (max-width: 1000px) {
+  .circle-container {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 900px) {
+    .bg-2, .bg-1, .interior-1, .interior-2 {
+      margin-top:  25px!important;
+      margin-left: 25px!important;
     }
     .form-container {
       .col-5 {
@@ -373,9 +369,6 @@
     h2 {
       font-size: 26px;
     }
-    .gallery-container {
-      height: 100%!important;
-    }
     .mobile-menu {
       justify-content: flex-start;
     }
@@ -392,7 +385,12 @@
  *============================================================================*/
 
 .gallery-container {
-  height: calc(100vh - 55px)
+  height: calc(100vh - 52px)
+}
+@media screen and (max-width: 1200px) {
+  .gallery-container {
+    height: 100%;
+  }
 }
 
 .exterior-image {
