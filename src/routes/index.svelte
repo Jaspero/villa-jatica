@@ -174,7 +174,7 @@
             <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s m-y-m' href='book' transition:fade="">BOOK NOW</a>
         </div>
             <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery' transition:fade="" >SHOW GALLERY</a>
-            <div class="show-s flex fd-col ai-center jc-center hamburger relative"on:click={mobileMenu} transition:fade>
+            <div class="show-s  hamburger relative"on:click={mobileMenu} transition:fade>
                 <div class="relative w-full h-full">
                   <span class="line"></span>
                   <span class="line m-y-s"></span>
