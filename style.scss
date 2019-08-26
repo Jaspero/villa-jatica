@@ -23,11 +23,17 @@
   font-size: 20px;
 }
 .heading {
-  font-size: 60px;
+  font-size: 120px;
 }
 .visible {
   height: auto;
   overflow: hidden;
+}
+
+.italic-text {
+  font-style: italic;
+  font-size: 15px;
+  color: #6d6d6d;
 }
 
 .expand {
@@ -42,8 +48,10 @@
   left: 0;
 }
 
-
-
+.headline {
+  font-size: 70px;
+  font-weight: 700;
+}
 
 
 
@@ -72,7 +80,11 @@
 
 
 .feature {
+  font-size: 15px;
+  font-family: Georgia, sans-serif;
+  font-style: italic;
   min-height: 17rem;
+  color: #6d6d6d;
   @media screen and (max-width: 900px) {
     height: 300px;
   }
@@ -131,8 +143,8 @@
 .header {
   position: fixed;
   width: 100%;
-  z-index: 10;
-  top: 5rem;
+  z-index: 11;
+  top: 3rem;
   background: transparent;
 }
 
@@ -170,9 +182,6 @@
       left: 0;
     }
   }
-}
-.link-active {
-  color: red;
 }
 
 
@@ -366,6 +375,9 @@
     .heading {
       font-size: 40px;
     }
+  .headline {
+    font-size: 30px;
+  }
     h2 {
       font-size: 26px;
     }
@@ -427,4 +439,18 @@
     overflow: auto;
   }
 }
+}
+
+
+
+
+/* Flatpicker
+ *============================================================================*/
+
+.flatpickr-prev-month:hover svg,
+.flatpickr-next-month:hover svg {
+  fill: rgba(0,0,0,0.9)!important;
+}
+.flatpickr-current-month .flatpickr-monthDropdown-months:hover {
+  background: transparent!important;
 }

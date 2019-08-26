@@ -24,8 +24,8 @@
   --dark-theme: #212121;
   --dark-primary: white;
   --dark-secondary: rgba(255, 255, 255, 0.7);
-  --font-primary: 'Roboto', sans-serif;
-  --font-secondary: Georgia, serif; }
+  --font-primary: Roboto, sans-serif;
+  --font-secondary: Georgia, sans-serif; }
 
 /* Generating theme classes
  *============================================================================*/
@@ -188,7 +188,7 @@ h4 {
   font-size: 28px; }
 
 h5 {
-  font-size: 24px; }
+  font-size: 23px; }
 
 h6 {
   font-size: 20px; }
@@ -1009,11 +1009,16 @@ h6 {
   font-size: 20px; }
 
 .heading {
-  font-size: 60px; }
+  font-size: 120px; }
 
 .visible {
   height: auto;
   overflow: hidden; }
+
+.italic-text {
+  font-style: italic;
+  font-size: 15px;
+  color: #6d6d6d; }
 
 .expand {
   overflow: hidden;
@@ -1024,6 +1029,10 @@ h6 {
   right: 0;
   bottom: 24.8rem;
   left: 0; }
+
+.headline {
+  font-size: 70px;
+  font-weight: 700; }
 
 /* Parallax,features,price
  *============================================================================*/
@@ -1046,7 +1055,11 @@ h6 {
   height: 6px; }
 
 .feature {
-  min-height: 17rem; }
+  font-size: 15px;
+  font-family: Georgia, sans-serif;
+  font-style: italic;
+  min-height: 17rem;
+  color: #6d6d6d; }
   @media screen and (max-width: 900px) {
     .feature {
       height: 300px; } }
@@ -1092,8 +1105,8 @@ h6 {
 .header {
   position: fixed;
   width: 100%;
-  z-index: 10;
-  top: 5rem;
+  z-index: 11;
+  top: 3rem;
   background: transparent; }
 
 .header-active {
@@ -1123,9 +1136,6 @@ h6 {
     transition: 0.5s ease; }
   .header-active.link-wrapper:hover .underline:after {
     left: 0; }
-
-.link-active {
-  color: red; }
 
 /* Slider styles
  *============================================================================*/
@@ -1283,6 +1293,8 @@ h6 {
     font-size: 20px; }
   .heading {
     font-size: 40px; }
+  .headline {
+    font-size: 30px; }
   h2 {
     font-size: 26px; }
   .mobile-menu {
@@ -1328,3 +1340,12 @@ h6 {
       visibility: visible;
       transform: translateX(0px);
       overflow: auto; } }
+
+/* Flatpicker
+ *============================================================================*/
+.flatpickr-prev-month:hover svg,
+.flatpickr-next-month:hover svg {
+  fill: rgba(0, 0, 0, 0.9) !important; }
+
+.flatpickr-current-month .flatpickr-monthDropdown-months:hover {
+  background: transparent !important; }

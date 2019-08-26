@@ -100,10 +100,10 @@
         </div>
         <div class="col-7 flex fw-wrap col-s-12">
                 <h5 class="c-dark m-t-s  ta-left">BEAUTY OF MINIMALISM</h5>
-                <p class="font-secondary m-y-s">The interior of the house is all new and contemporary, with carefully chosen furniture and unobtrusive colours. The open plan upper floor with kitchen, dining room, and living room is spacious and with its four French windows offering wonderful views of the sea, the entire section is full of light throughout the day.</p>
-                <div class="expand">
-                    <p class="font-secondary">In the kitchen, one will find all the necessary appliances and gadgets needed for a home cooked meal. The dining section has a table that seats 6 people, and its abundant daylight comes through a glass wall that leads to the balcony facing west, equipped with beautiful comfortable lounges for relaxation in the setting sun.</p>
-                    <p class="font-secondary m-y-s">There is absolute formative minimalism throughout the house, not to disturb the beauty of the very construction. Thus, all the installations, from stone washbasin to glass shelves, carefully chosen lighting or flooring, custom made dining table or wardrobes are all the result of contemplation with aim to provide luxury and at the same time not impose any overwhelming contents on your holidays.</p>
+                <p class="font-secondary m-y-s italic-text">The interior of the house is all new and contemporary, with carefully chosen furniture and unobtrusive colours. The open plan upper floor with kitchen, dining room, and living room is spacious and with its four French windows offering wonderful views of the sea, the entire section is full of light throughout the day.</p>
+                <div class="expand font-secondary italic-text">
+                    <p>In the kitchen, one will find all the necessary appliances and gadgets needed for a home cooked meal. The dining section has a table that seats 6 people, and its abundant daylight comes through a glass wall that leads to the balcony facing west, equipped with beautiful comfortable lounges for relaxation in the setting sun.</p>
+                    <p class="m-y-s">There is absolute formative minimalism throughout the house, not to disturb the beauty of the very construction. Thus, all the installations, from stone washbasin to glass shelves, carefully chosen lighting or flooring, custom made dining table or wardrobes are all the result of contemplation with aim to provide luxury and at the same time not impose any overwhelming contents on your holidays.</p>
                 </div>
                 {#if readMore}
                 <a on:click={expandText} class="c-accent"><i>...Read more</i></a>
@@ -127,7 +127,7 @@
     </div>
     <div class="col-4 m-t-l col-s-12">
         <h5>BEDROOMS</h5>
-        <p class="font-secondary m-y-s">The lower floor accommodates three bedrooms: one double master bedroom and two single bedrooms (with extra bed available in each), bathroom and two toilettes. Furniture is custom made and charming, enabling sufficient space for belongings. The master bedroom has direct access to the terrace and swimming pool, a lovely detail for your pleasure!</p>
+        <p class="font-secondary italic-text m-y-s">The lower floor accommodates three bedrooms: one double master bedroom and two single bedrooms (with extra bed available in each), bathroom and two toilettes. Furniture is custom made and charming, enabling sufficient space for belongings. The master bedroom has direct access to the terrace and swimming pool, a lovely detail for your pleasure!</p>
      </div>
 </div>
 </section>

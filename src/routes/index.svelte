@@ -49,21 +49,17 @@
 
         }
 
-
-
-        let current = 'mobile-link';
-
+    if (process.browser) {
     window.onscroll = (() => {
         activeHeader();
     });
-
+    }
 
 </script>
 
 
 
 <style>
-
 
 
 
@@ -80,7 +76,7 @@
     .gallery {
         position: fixed;
         right: 0;
-        top: 10rem;
+        top: 7rem;
         background: #e4e4e4;
         box-shadow: 0px 10px 20px rgba(0,0,0,0.05);
         z-index: 10;
@@ -101,17 +97,6 @@
         color: white;
     }
 
-
-    .header {
-        z-index: 11;
-    }
-    .col-6 {
-        position: fixed;
-    }
-
-    .active {
-        color:red;
-    }
 
 
 </style>
@@ -145,7 +130,6 @@
 		    <a href='#contact' class="underline">CONTACT</a>
 		</span>
             <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s' href='book' transition:fade="">BOOK NOW</a>
-            <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery' transition:fade="" >SHOW GALLERY</a>
         </div>
         <div class="mobile-menu flex fd-col jc-center ai-center">
         <span class="link-wrapper flex">
@@ -171,7 +155,7 @@
 		</span>
             <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s m-y-m' href='book' transition:fade="">BOOK NOW</a>
         </div>
-            <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery' transition:fade="" >SHOW GALLERY</a>
+            <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery' transition:fade="" ><i>Show gallery</i></a>
             <div class="show-s  hamburger relative"on:click={mobileMenu} transition:fade>
                 <div class="relative w-full h-full">
                   <span class="line"></span>
@@ -181,7 +165,7 @@
             </div>
     </nav>
     <div class="hero flex ai-center jc-center c-light fd-col col-m-12 ta-center">
-        <div class="col-6 col-s-12">
+        <div class="col-12 m-t-xl">
             <h1 class="heading">VILLA JATICA</h1>
             <h2 class="m-t-s"><i>Luxury in the Wilderness</i></h2>
         </div>

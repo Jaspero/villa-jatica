@@ -96,7 +96,7 @@ height:200px;
                      <h1 class="fw-100 p-y-s">High-Season</h1>
                 </div>
                 <div class="ta-center">
-                     <h1 class=" p-y-s">200€</h1>
+                     <h1 class=" p-y-s">600€</h1>
                      <p class="m-b-xs"><i>Per day</i></p>
                 </div>
             </div>

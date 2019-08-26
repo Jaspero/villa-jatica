@@ -2,7 +2,6 @@
 import { fade } from 'svelte/transition';
 
     if (process.browser) {
-        console.log(2, document.getElementById('Date'));
         flatpickr(document.getElementById('Date'), {
                 dateFormat: "Y-m-d",
                 mode: "range",
@@ -26,6 +25,7 @@ import { fade } from 'svelte/transition';
     background-position: center;
     height: calc(100vh - 55px);
 }
+
 .col-7:after {
     content: "";
     background: #002;
@@ -76,7 +76,7 @@ select  {
             <p class="c-dark">Please use the contact form below to send us your booking request. We will get back with you with confirmation promptly (during local working hours).</p>
             <div class="field m-y-s">
                 <label for="Date" class="c-dark"><i>Check in/Check out</i></label>
-                <input class="w-full input flatpickr" name="check" id="Date">
+                <input class="w-full input" name="check" id="Date">
             </div>
             <div class="field">
                 <label for="name" class="c-dark"><i>Full name*</i></label>
@@ -93,7 +93,7 @@ select  {
             <div class="field m-y-s">
                 <label for="people" class="c-dark"><i>People*</i></label>
                 <select name="people" id="people" class="c-dark input w-full">
-                    <option></option>
+                    <option style="display: none"></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

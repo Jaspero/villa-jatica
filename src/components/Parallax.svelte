@@ -19,11 +19,11 @@ z-index: 3;
         <div class="col-3 col-xs-12 ta-center">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/router.svg" class="m-t-m" alt="Location">
-               <p class="m-t-s"> Tv with satellite antenna, Wi-Fi Internet, air conditioning for summer, central heating + indoor fireplace for winter</p>
+               <p class="m-t-s"><i>Tv with satellite antenna, Wi-Fi Internet, air conditioning for summer, central heating + indoor fireplace for winter</i></p>
             </div>
         </div>
         <div class="col-3 col-xs-12 ta-center">
-            <div class="bg-light br-rounded p-a-s feature">
+            <div class="bg-light br-rounded p-a-s feature italic-text font-secondary">
                <img src="assets/icons/washing-machine.svg" class="m-t-m" alt="Bedroom">
                <p class="m-t-s">Washer/dryer, microwave, oven, coffee machine, 2 dishwashers, ice maker, hair dryer</p>
             </div>
