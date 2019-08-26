@@ -19,34 +19,39 @@
     border-bottom: 1px solid #ccc;
 }
 
+h1  {
+    font-weight: 700;
+}
+
 </style>
 
 
 <div class="wrapper relative">
 <section class="contact p-y-xl" id="contact">
-    <div class="grid jc-start">
-         <div class="col-12 ta-left">
+    <div class="grid">
+         <div class="col-10 ta-left">
              <h1 class="c-dark p-y-m">CONTACT US</h1>
          </div>
-         <div class="contact-card z-index bg-light flex w-full fw-wrap">
-            <div class="col-9 flex fw-wrap col-s-12">
+         <div class="col-10">
+         <div class="contact-card z-index bg-light flex">
+            <div class="col-8 flex fw-wrap col-s-12">
                 <div class="col-6 flex fd-col col-xs-12">
-                   <label for="name" class="font-secondary">Full Name</label>
+                   <label for="name" class="font-secondary"><i>Full Name</i></label>
                    <input type="text" name="name" id="name" class="contact-input">
                 </div>
                 <div class="col-6 flex fd-col col-xs-12">
-                    <label for="mail" class="font-secondary">Email adress</label>
+                    <label for="mail" class="font-secondary"><i>Email adress</i></label>
                     <input type="text" name="mail" id="mail" class="contact-input">
                 </div>
                 <div class="col-12">
-                    <label for="message" class="font-secondary">Message</label>
+                    <label for="message" class="font-secondary"><i>Message</i></label>
                     <textarea name="message" id="message" cols="30" rows="10" class="contact-input w-full"></textarea>
                 </div>
                 <div class="col-12 ta-left">
                     <button class="br-rounded bg-accent btn">Send message</button>
                 </div>
             </div>
-            <div class="col-3 bg-warn p-a-m ta-center col-s-12">
+            <div class="col-4 bg-warn p-a-m ta-center col-s-12">
                 <h6 class="m-y-s">CONTACT INFORMATION</h6>
                 <div class="flex ai-start ta-left m-t-s">
                     <img src="assets/icons/adress.svg" alt="Adress">
@@ -58,9 +63,10 @@
                 </div>
                 <div class="flex ai-start ta-left">
                     <img src="assets/icons/mail.svg" alt="Adress">
-                    <a href="mailto:info@villa-jatica.com" class="m-l-s">  info@villa-jatica.com</a>
+                    <a href="mailto:info@villa-jatica.com" class="m-l-s">info@villa-jatica.com</a>
                 </div>
             </div>
+         </div>
          </div>
          </div>
 </section>

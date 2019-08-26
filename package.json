@@ -5,8 +5,8 @@
   "scripts": {
     "target-setup": "firebase target:apply hosting website villa-jatica",
     "dev": "sapper dev",
-    "build:scss": "node-sass index.scss static/global.css",
-    "watch:scss": "node-sass index.scss static/global.css -w",
+    "build:scss": "node-sass style.scss static/global.css",
+    "watch:scss": "node-sass style.scss static/global.css -w",
     "build": "sapper build --legacy && cp -r ./__sapper__/ ./functions/__sapper__",
     "prebuild": "rm -rf functions/__sapper__/build && node-sass style.scss static/global.css --output-style=compressed",
     "export": "sapper export --legacy",
@@ -21,6 +21,7 @@
     "compression": "1.7.1",
     "firebase": "6.3.3",
     "firebase-admin": "8.3.0",
+    "flatpickr": "^4.6.2",
     "nodemailer": "6.2.1",
     "polka": "0.5.0",
     "sirv": "0.4.0"

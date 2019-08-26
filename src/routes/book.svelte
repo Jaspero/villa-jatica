@@ -1,9 +1,21 @@
-
 <script>
+import { fade } from 'svelte/transition';
 
-    import { fade } from 'svelte/transition';
+    if (process.browser) {
+        console.log(2, document.getElementById('Date'));
+        flatpickr(document.getElementById('Date'), {
+                dateFormat: "Y-m-d",
+                mode: "range",
+        });
+    }
 
 </script>
+
+<svelte:head>
+    <title>Book Now | Villa Jatica</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</svelte:head>
 
 <style>
 
@@ -26,16 +38,20 @@
 }
 
 
-input {
+.input,textarea{
+    font-size: 15px;
     background: white;
     border: none;
-    padding: 8px;
+    padding: 10px;
     display: inline-block;
     width: 100%;
     outline: none;
-    font-size: 1.5rem;
     font-family: "Georgia",sans-serif;
     font-weight: 300;
+}
+
+select  {
+    -webkit-appearance: none;
 }
 
 .b-0 {
@@ -46,12 +62,6 @@ input {
 
 
 </style>
-
-
-
-<svelte:head>
-	<title>Book now</title>
-</svelte:head>
 
 <nav class="navbar p-y-s flex bg-warn ai-center">
     <a href="#home" class="flex ai-center" transition:fade="">
@@ -65,27 +75,35 @@ input {
         <div class="col-5 bg-primary p-a-l col-s-12">
             <p class="c-dark">Please use the contact form below to send us your booking request. We will get back with you with confirmation promptly (during local working hours).</p>
             <div class="field m-y-s">
-                <label for="check" class="c-dark"><i>Check in/Check out</i></label>
-                <input class="w-full" type="text" name="check">
+                <label for="Date" class="c-dark"><i>Check in/Check out</i></label>
+                <input class="w-full input flatpickr" name="check" id="Date">
             </div>
             <div class="field">
-                <label for="name" class="c-dark">Full name*</label>
-                <input class="w-full" type="text" name="name" id="name">
+                <label for="name" class="c-dark"><i>Full name*</i></label>
+                <input class="w-full input" type="text" name="name" id="name">
             </div>
             <div class="field m-y-s">
-                <label for="email" class="c-dark">Email*</label>
-                <input class="w-full" type="text" name="email" id="email">
+                <label for="email" class="c-dark"><i>Email*</i></label>
+                <input class="w-full input" type="text" name="email" id="email">
             </div>
             <div class="field">
-                <label for="phone" class="c-dark">Phone*</label>
-                <input class="w-full" type="text" name="phone" id="phone">
+                <label for="phone" class="c-dark"><i>Phone*</i></label>
+                <input class="w-full input" type="text" name="phone" id="phone">
             </div>
             <div class="field m-y-s">
-                <label for="people" class="c-dark">People*</label>
-                <input class="w-full" type="text" name="people" id="people">
+                <label for="people" class="c-dark"><i>People*</i></label>
+                <select name="people" id="people" class="c-dark input w-full">
+                    <option></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
             </div>
             <div class="field">
-                <label for="message" class="c-dark">Additional Information</label>
+                <label for="message" class="c-dark"><i>Additional Information</i></label>
                 <textarea name="message" id="message" cols="30" rows="10" class="w-full b-0"></textarea>
             </div>
             <div class="w-full ta-left m-t-s">

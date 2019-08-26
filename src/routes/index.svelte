@@ -57,6 +57,7 @@
         activeHeader();
     });
 
+
 </script>
 
 
@@ -118,9 +119,6 @@
 <svelte:head>
     <title>Villa Jatica</title>
 </svelte:head>
-
-
-
 
 <div class="wrapper relative">
     <nav class="header p-y-s" id="header">
