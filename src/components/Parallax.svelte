@@ -12,7 +12,7 @@ z-index: 3;
 </style>
 
 <section class="features relative p-y-l">
-    <div class="flex w-full jc-center">
+    <div class="col-12 ta-center relative">
         <h1 class="c-light ta-center">ADDITIONAL FEATURES</h1>
     </div>
     <div class="grid m-t-s">

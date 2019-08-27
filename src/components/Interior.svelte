@@ -112,22 +112,24 @@
                 Show less
                 </a>
                 {/if}
-            <div class="gallery m-t-m w-full relative">
+            <div class="m-t-m w-full relative">
             <img src="assets/icons/left-arrow.svg" on:click={slideLeftInterior} class="left">
             <img id="slider-image-interior" src={interiorSlider[0]} alt="" class="w-full obj-cover" style="height: 500px">
             <img src="assets/icons/right-arrow.svg" on:click={slideRightInterior} class="right">
             </div>
         </div>
     </div>
-    <div class="col-8 flex m-t-l col-s-12 fw-wrap circle-container">
-        <div class="col-6 br-circle interior-1 col-xs-12">
+    <div class="w-full flex ai-center">
+        <div class="col-8 flex m-t-l col-s-12 fw-wrap circle-container">
+            <div class="col-6 br-circle interior-1 col-xs-12">
+            </div>
+            <div class="col-6 br-circle interior-2 m-l-m col-xs-12">
+            </div>
         </div>
-        <div class="col-6 br-circle interior-2 m-l-m col-xs-12">
-        </div>
-    </div>
-    <div class="col-4 m-t-l col-s-12">
-        <h5>BEDROOMS</h5>
-        <p class="font-secondary italic-text m-y-s">The lower floor accommodates three bedrooms: one double master bedroom and two single bedrooms (with extra bed available in each), bathroom and two toilettes. Furniture is custom made and charming, enabling sufficient space for belongings. The master bedroom has direct access to the terrace and swimming pool, a lovely detail for your pleasure!</p>
+        <div class="col-4 m-t-l col-s-12">
+            <h5 class="w-full">BEDROOMS</h5>
+            <p class="font-secondary italic-text m-y-s">The lower floor accommodates three bedrooms: one double master bedroom and two single bedrooms (with extra bed available in each), bathroom and two toilettes. Furniture is custom made and charming, enabling sufficient space for belongings. The master bedroom has direct access to the terrace and swimming pool, a lovely detail for your pleasure!</p>
+         </div>
      </div>
 </div>
 </section>

@@ -13,8 +13,8 @@
 
 
 
-<section class="features relative p-y-l parallax">
-    <div class="flex w-full jc-center">
+<section class="features relative p-y-l">
+    <div class="col-12 ta-center relative">
         <h1 class="c-light">KEY FEATURES</h1>
     </div>
     <div class="grid m-t-s">

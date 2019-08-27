@@ -97,6 +97,10 @@
         color: white;
     }
 
+    p {
+    font-size: 40px;
+    }
+
 
 
 </style>
@@ -108,25 +112,25 @@
 <div class="wrapper relative">
     <nav class="header p-y-s" id="header">
         <div class="grid ai-center hide-s">
-        <span class="link-wrapper flex">
+        <span class="link-wrapper ">
 		<a class='{segment === undefined ? "selected" : ""} underline' href='.'>HOME</a>
 		</span>
-        <span class="link-wrapper flex">
+        <span class="link-wrapper ">
 		    <a href='#location' class="m-x-m underline">LOCATION</a>
 		</span>
-        <span class="link-wrapper flex">
+        <span class="link-wrapper ">
 		    <a href='#house' class="underline">THE HOUSE</a>
 		</span>
-        <span class="link-wrapper flex">
+        <span class="link-wrapper ">
 		    <a href='#interior'class="m-x-m underline">INTERIOR</a>
 		</span>
-        <span class="link-wrapper flex">
+        <span class="link-wrapper ">
 		    <a href='#indulge' class="underline">INDULGE</a>
 		</span>
-        <span class="link-wrapper flex">
+        <span class="link-wrapper ">
 		    <a href='#price'class="m-x-m underline">PRICE</a>
 		</span>
-         <span class="link-wrapper flex">
+         <span class="link-wrapper ">
 		    <a href='#contact' class="underline">CONTACT</a>
 		</span>
             <a class='m-x-m{segment === "book" ? "selected" : ""} br-pill c-light bg-accent p-a-xs p-x-s' href='book' transition:fade="">BOOK NOW</a>
@@ -164,10 +168,10 @@
                 </div>
             </div>
     </nav>
-    <div class="hero flex ai-center jc-center c-light fd-col col-m-12 ta-center">
-        <div class="col-12 m-t-xl">
+    <div class="hero flex ai-end jc-center c-light col-m-12">
+        <div class="col-12 m-b-xl ta-center">
             <h1 class="heading">VILLA JATICA</h1>
-            <h2 class="m-t-s"><i>Luxury in the Wilderness</i></h2>
+            <p class="m-t-s"><i>Luxury in the Wilderness</i></p>
         </div>
     </div>
     <Location/>

@@ -164,7 +164,7 @@ img {
 /* HTML
  *============================================================================*/
 html {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   font-family: var(--font-primary);
   scroll-behavior: smooth; }
@@ -995,8 +995,6 @@ h6 {
 .m-l-xl {
   margin-left: calc(64px + 4vw); }
 
-/* custom styles
- *============================================================================*/
 /* Custom styles
  *============================================================================*/
 .z-index {
@@ -1033,6 +1031,9 @@ h6 {
 .headline {
   font-size: 70px;
   font-weight: 700; }
+  @media screen and (max-width: 900px) {
+    .headline {
+      font-size: 30px; } }
 
 /* Parallax,features,price
  *============================================================================*/
@@ -1293,8 +1294,6 @@ h6 {
     font-size: 20px; }
   .heading {
     font-size: 40px; }
-  .headline {
-    font-size: 30px; }
   h2 {
     font-size: 26px; }
   .mobile-menu {

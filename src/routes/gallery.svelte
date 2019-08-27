@@ -166,10 +166,10 @@
     {#if tab === 0}
         <div class="exterior-container">
             <div class="grid jc-start">
-                <div class="col-3 col-s-6">
+                <div class="col-3 col-s-6 col-xs-12">
                     <div class="exterior-image w-full h-full"></div>
                 </div>
-                <div class="col-3 col-s-6">
+                <div class="col-3 col-s-6 col-xs-12">
                     <div class="exterior-image w-full h-full"></div>
                 </div>
             </div>
