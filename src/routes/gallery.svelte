@@ -1,6 +1,6 @@
 
 <script>
-
+    import admin from 'firebase-admin';
     import { fade } from 'svelte/transition';
 
     export let tab = 0;
@@ -17,6 +17,20 @@
 
             }
         }))
+    }
+
+    function openGallery (){
+        const closeEl = document.querySelector('.close-gallery');
+        const backdropEl = document.querySelector('.gallery-backdrop');
+        backdropEl.classList.toggle('active-gallery');
+
+
+
+         closeEl.addEventListener('click', ()=> {
+         if (!backdropEl.contains(closeEl.target)) {
+            backdropEl.classList.remove('active-gallery');
+            }
+          })
     }
 
 </script>
@@ -166,10 +180,10 @@
     {#if tab === 0}
         <div class="exterior-container">
             <div class="grid jc-start">
-                <div class="col-3 col-s-6 col-xs-12">
+                <div class="col-3 col-s-6 col-xs-12" on:click={openGallery}>
                     <div class="exterior-image w-full h-full"></div>
                 </div>
-                <div class="col-3 col-s-6 col-xs-12">
+                <div class="col-3 col-s-6 col-xs-12" on:click={openGallery}>
                     <div class="exterior-image w-full h-full"></div>
                 </div>
             </div>
@@ -215,4 +229,14 @@
         </div>
     {/if}
 </div>
+</div>
+<div class="gallery-backdrop ">
+    <div class="gallery-wrapper relative ai-center jc-center">
+        <div class="gallery-view">
+            <img src="assets/images/indulge.jpg" alt="exterior">
+        </div>
+        <div class="close-gallery">
+            <img src="assets/icons/cancel.svg" alt="Close gallery">
+        </div>
+    </div>
 </div>

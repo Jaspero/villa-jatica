@@ -18,7 +18,7 @@
         const headerEl = document.querySelector('#header');
         const hambEl   = document.querySelectorAll('.line');
         const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-        const indexEl = document.querySelector ('.bla-bla');
+
 
         if (scrollTop === 0) {
             headerEl.classList.remove('header-active');
