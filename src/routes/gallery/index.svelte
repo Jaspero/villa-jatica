@@ -6,10 +6,12 @@
 </script>
 
 <script>
-   import { fade } from 'svelte/transition';
+   import { fade, fly } from 'svelte/transition';
 
     export let galleries = [];
     let selected = galleries[0].gallery;
+    let images = selected;
+
 
 
     function albumsMenu() {
@@ -25,23 +27,23 @@
         }))
     }
         let totalLengthRound;
-        let slidePage = 0;
+        let select = 0;
         let galleryOpen = null;
 
         function nextSlide() {
-            if (slidePage < totalLengthRound - 1){
-                slidePage++;
+            if (select< totalLengthRound - 1){
+                select++;
 
             } else {
-                slidePage = 0;
+                select= 0;
             }
         }
 
         function prevSlide() {
-           if (slidePage > 0){
-               slidePage--;
+           if (select> 0){
+               select--;
            } else {
-               slidePage = totalLengthRound - 1;
+               select= totalLengthRound - 1;
            }
         }
 
@@ -107,7 +109,7 @@
                     <div class="col-12 col-s-6 col-xs-12">
                         <div class="flex fw-wrap">
                         {#each selected as select}
-                          <img src="{select}" alt="Gallery preview" class="obj-cover m-a-s exterior-image" on:click={() => galleryOpen = select }>
+                          <img src="{select}" alt="Gallery preview" class="obj-cover m-a-s exterior-image" on:click={() => galleryOpen = selected}>
                           {/each}
                         </div>
                     </div>
@@ -118,11 +120,13 @@
 
 
 {#if galleryOpen}
-<div class="gallery-backdrop">
-    <div class="gallery-wrapper relative ai-center jc-center">
-        <div class="gallery-view">
-            <img src={galleryOpen} alt="exterior">
-        </div>
+<div class="gallery-backdrop" in:fade="{{duration: 200}}" out:fade="{{duration: 200}}">
+    <div class="gallery-wrapper relative ai-center jc-center" in:fly="{{y: 200, duration: 600}}">
+        <div class="gallery-view flex ai-center jc-center">
+                        {#each selected as select}
+                          <img src="{select}" alt="Gallery view" class="obj-cover m-a-s exterior-image">
+                          {/each}
+                        </div>
         <div class="close-gallery">
             <img src="assets/icons/cancel.svg" alt="Close gallery" on:click={() => galleryOpen = null}>
         </div>
