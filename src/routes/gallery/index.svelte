@@ -24,18 +24,26 @@
             }
         }))
     }
+        let totalLengthRound;
+        let slidePage = 0;
+        let galleryOpen = null;
 
-    function openGallery() {
-        const closeEl = document.querySelector('.close-gallery');
-        const backdropEl = document.querySelector('.gallery-backdrop');
-        backdropEl.classList.toggle('active-gallery');
+        function nextSlide() {
+            if (slidePage < totalLengthRound - 1){
+                slidePage++;
 
-         closeEl.addEventListener('click', ()=> {
-         if (!backdropEl.contains(closeEl.target)) {
-            backdropEl.classList.remove('active-gallery');
+            } else {
+                slidePage = 0;
             }
-          })
-    }
+        }
+
+        function prevSlide() {
+           if (slidePage > 0){
+               slidePage--;
+           } else {
+               slidePage = totalLengthRound - 1;
+           }
+        }
 
 </script>
 
@@ -79,7 +87,6 @@
     <div class="albums flex fw-wrap ac-flex col-4 col-s-6 hide-xs">
         {#each galleries as gallery}
             <div class="col-6 col-m-12 m-y-s">
-
                 <div class="h-full w-full" on:click={() => selected = gallery.gallery}>
                     <div class="preview">
                         <img src="{gallery.gallery}" alt="Gallery preview" class="obj-cover preview-img">
@@ -90,8 +97,7 @@
                 </div>
             </div>
         {/each}
-
-        </div>
+    </div>
 
 
     <div class="col-12">
@@ -100,27 +106,26 @@
                 <div class="grid">
                     <div class="col-12 col-s-6 col-xs-12">
                         <div class="flex fw-wrap">
-                        {#each selected as gallery}
-                          <img src="{gallery}" alt="Gallery preview" class="obj-cover m-a-s exterior-image" on:click={openGallery}>
+                        {#each selected as select}
+                          <img src="{select}" alt="Gallery preview" class="obj-cover m-a-s exterior-image" on:click={() => galleryOpen = select }>
                           {/each}
                         </div>
-
-                    </div>
-                    <div class="col-3 col-s-6 col-xs-12" on:click={openGallery}>
-                        <div class=" w-full h-full"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+{#if galleryOpen}
 <div class="gallery-backdrop">
     <div class="gallery-wrapper relative ai-center jc-center">
         <div class="gallery-view">
-            <img src="assets/images/indulge.jpg" alt="exterior">
+            <img src={galleryOpen} alt="exterior">
         </div>
         <div class="close-gallery">
-            <img src="assets/icons/cancel.svg" alt="Close gallery">
+            <img src="assets/icons/cancel.svg" alt="Close gallery" on:click={() => galleryOpen = null}>
         </div>
     </div>
 </div>
+{/if}

@@ -1316,7 +1316,7 @@ h6 {
   height: 300px;
   width: 250px; }
   .exterior-image:hover {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.28); }
   .exterior-image img {
     width: 250px; }
 
@@ -1341,13 +1341,13 @@ h6 {
 
 .gallery-backdrop {
   position: fixed;
-  display: none;
+  display: block;
   width: 100%;
   z-index: 3;
   height: 100%;
   top: 0;
   background: transparent;
-  opacity: 0; }
+  opacity: 1; }
   .gallery-backdrop:before {
     position: absolute;
     content: '';
@@ -1381,6 +1381,7 @@ h6 {
     object-fit: contain; }
 
 .close-gallery {
+  z-index: 22;
   position: absolute;
   top: 10%;
   right: 5%;
