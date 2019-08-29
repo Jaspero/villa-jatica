@@ -1311,15 +1311,14 @@ h6 {
     height: 100%; } }
 
 .exterior-image {
-  background-image: url("../../header-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   transition: all 0.3s ease;
   cursor: pointer;
-  height: 300px; }
+  height: 300px;
+  width: 250px; }
   .exterior-image:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); }
+  .exterior-image img {
+    width: 250px; }
 
 @media screen and (max-width: 600px) {
   .albums {
@@ -1386,6 +1385,10 @@ h6 {
   top: 10%;
   right: 5%;
   cursor: pointer; }
+
+.preview-img {
+  height: 115px;
+  width: 100%; }
 
 /* Flatpicker
  *============================================================================*/

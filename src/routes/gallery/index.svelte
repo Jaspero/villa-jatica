@@ -9,8 +9,8 @@
    import { fade } from 'svelte/transition';
 
     export let galleries = [];
+    let selected = galleries[0].gallery;
 
-    export let tab = 0;
 
     function albumsMenu() {
         const albumsEl = document.querySelector('.albums');
@@ -48,54 +48,6 @@
         align-content: flex-start;
     }
 
-    .exterior {
-        background-image: url("../../header-bg.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100px;
-    }
-
-    .interior {
-        background-image: url("../../assets/images/house-interior.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100px;
-    }
-
-    .village{
-        background-image: url("../../assets/images/village.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100px;
-    }
-
-    .details{
-        background-image: url("../../assets/images/details.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100px;
-    }
-
-
-    .nature{
-        background-image: url("../../assets/images/nature.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100px;
-    }
-
-    .photos{
-        background-image: url("../../assets/images/photos.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100px;
-    }
 
     .col-6 {
         height: 150px;
@@ -125,82 +77,42 @@
 
 
     <div class="albums flex fw-wrap ac-flex col-4 col-s-6 hide-xs">
-        {#each galleries as gallery, i}
-            <div class="col-6 col-m-12">
-                <div class="h-full w-full" class:active="{tab === 0}" on:click={() => tab = i}>
-                    <div class="exterior"></div>
+        {#each galleries as gallery}
+            <div class="col-6 col-m-12 m-y-s">
+
+                <div class="h-full w-full" on:click={() => selected = gallery.gallery}>
+                    <div class="preview">
+                        <img src="{gallery.gallery}" alt="Gallery preview" class="obj-cover preview-img">
+                    </div>
                     <div class="bg-light w-full p-a-xs">
-                        <p class="ta-center"><i>{gallery.title}</i></p>
+                        <p class="ta-center"><i>{gallery.name}</i></p>
                     </div>
                 </div>
             </div>
         {/each}
 
-        <div class="col-6 col-m-12">
-            <div class="h-full w-full " class:active="{tab === 1}" on:click={() => tab = 1}>
-                <div class="interior"></div>
-                <div class="bg-light w-full p-a-xs">
-                    <p class="ta-center"><i></i></p>
+        </div>
+
+
+    <div class="col-12">
+        <button class="album-open w-full show-xs btn bg-accent m-b-m"on:click={albumsMenu}>Choose gallery</button>
+            <div class="exterior-container">
+                <div class="grid">
+                    <div class="col-12 col-s-6 col-xs-12">
+                        <div class="flex fw-wrap">
+                        {#each selected as gallery}
+                          <img src="{gallery}" alt="Gallery preview" class="obj-cover m-a-s exterior-image" on:click={openGallery}>
+                          {/each}
+                        </div>
+
+                    </div>
+                    <div class="col-3 col-s-6 col-xs-12" on:click={openGallery}>
+                        <div class=" w-full h-full"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="col-12">
-        <button class="album-open w-full show-xs btn bg-accent m-b-m"on:click={albumsMenu}>Choose gallery</button>
-        {#if tab === 0}
-            <div class="exterior-container">
-                <div class="grid jc-start">
-                    <div class="col-3 col-s-6 col-xs-12" on:click={openGallery}>
-                        <div class="exterior-image w-full h-full"></div>
-                    </div>
-                    <div class="col-3 col-s-6 col-xs-12" on:click={openGallery}>
-                        <div class="exterior-image w-full h-full"></div>
-                    </div>
-                </div>
-            </div>
-        {:else if tab === 1}
-            <div class="interior-container">
-                <div class="grid jc-start">
-                    <div class="col-3 exterior-image">
-                    </div>
-                </div>
-            </div>
-        {:else if tab === 2}
-            <div class="interior-container">
-                <div class="grid jc-start">
-                    <div class="col-3">
-                        <img src="assets/images/village.jpg" alt="exterior" class="w-full">
-                    </div>
-                </div>
-            </div>
-        {:else if tab === 3}
-            <div class="details-container">
-                <div class="grid jc-start">
-                    <div class="col-3">
-                        <img src="assets/images/details.jpg" alt="exterior" class="w-full">
-                    </div>
-                </div>
-            </div>
-        {:else if tab === 4}
-            <div class="nature-container">
-                <div class="grid jc-start">
-                    <div class="col-3">
-                        <img src="assets/images/interior.jpg" alt="exterior" class="w-full">
-                    </div>
-                </div>
-            </div>
-        {:else if tab === 5}
-            <div class="guest-container">
-                <div class="grid jc-start">
-                    <div class="col-3">
-                        <img src="assets/images/indulge.jpg" alt="exterior" class="w-full">
-                    </div>
-                </div>
-            </div>
-        {/if}
-    </div>
-</div>
 
 <div class="gallery-backdrop">
     <div class="gallery-wrapper relative ai-center jc-center">
