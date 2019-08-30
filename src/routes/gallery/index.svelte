@@ -6,11 +6,16 @@
 </script>
 
 <script>
+   import Carousel from '@beyonk/svelte-carousel'
    import { fade, fly } from 'svelte/transition';
+
 
     export let galleries = [];
     let selected = galleries[0].gallery;
-    let images = selected;
+
+    let slides = galleries;
+
+
 
 
 
@@ -27,15 +32,20 @@
         }))
     }
         let totalLengthRound;
-        let select = 0;
         let galleryOpen = null;
 
-        function nextSlide() {
-            if (select< totalLengthRound - 1){
-                select++;
 
+
+
+        function nextSlide() {
+            galleryOpen = '/assets/images/beach.jpg';
+            if (select < selected.length - 1){
+                console.log(selected.length, 123);
+                console.log(select, 'if');
+                select++;
             } else {
-                select= 0;
+                console.log(select, 'else');
+                select = 0;
             }
         }
 
@@ -43,7 +53,7 @@
            if (select> 0){
                select--;
            } else {
-               select= totalLengthRound - 1;
+               select= selected.length - 1;
            }
         }
 
@@ -78,7 +88,7 @@
 <nav class="navbar p-y-s flex bg-warn ai-center z-index">
     <a href="#home" class="flex ai-center" transition:fade="">
         <img src="assets/icons/left.svg" alt="back" class="m-l-s">
-        <p class="font-secondary m-l-s">Back</p>
+        <p class="font-secondary m-l-s c-accent">Back</p>
     </a>
     <p class="c-accent m-l-l hide-s"><i>Beautifull galleries of our villa Jatica, from interior to exterior!</i></p>
 </nav>
@@ -123,13 +133,28 @@
 <div class="gallery-backdrop" in:fade="{{duration: 200}}" out:fade="{{duration: 200}}">
     <div class="gallery-wrapper relative ai-center jc-center" in:fly="{{y: 200, duration: 600}}">
         <div class="gallery-view flex ai-center jc-center">
-                        {#each selected as select}
-                          <img src="{select}" alt="Gallery view" class="obj-cover m-a-s exterior-image">
-                          {/each}
-                        </div>
+
+<Carousel>
+  <span class="control" slot="left-control">
+    <img src="assets/icons/left-arrow.svg" alt="">
+  </span>
+
+          {#each slides as slide, i}
+              <div class="slide-content">
+                  <img  src="{galleryOpen}" alt="Gallery view" class="obj-cover m-a-s exterior-image">
+              </div>
+          {/each}
+
+  <span class="control" slot="right-control">
+  <img src="assets/icons/right-arrow.svg" alt="">
+  </span>
+</Carousel>
+        </div>
         <div class="close-gallery">
             <img src="assets/icons/cancel.svg" alt="Close gallery" on:click={() => galleryOpen = null}>
         </div>
     </div>
 </div>
 {/if}
+
+
