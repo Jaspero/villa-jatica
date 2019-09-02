@@ -57,23 +57,7 @@
         cursor: pointer;
     }
 
-.gallery-image {
-    width: 700px;
-}
 
-	.slide-content {
-		width: 100vw;
-		display: flex;
-		justify-content: center;
-		height: 800px;
-	}
-
-
-
-	.slide-content section {
-		height: 40px;
-		padding: 12px;
-	}
 
 
 
@@ -115,12 +99,14 @@
         <button class="album-open w-full show-xs btn bg-accent m-b-m"on:click={albumsMenu}>Choose gallery</button>
             <div class="exterior-container">
                 <div class="grid">
-                    <div class="col-12 col-s-6 col-xs-12">
-                        <div class="flex fw-wrap">
+                    <div class="col-12 flex fw-wrap">
+
                         {#each selected as select}
-                          <img src="{select}" alt="Gallery preview" class="obj-cover m-a-s exterior-image" on:click={() => galleryOpen = selected}>
+                        <div class="col-4 col-s-6 col-xs-12">
+                          <img src="{select}" alt="Gallery preview" class="obj-cover exterior-image w-full" on:click={() => galleryOpen = selected}>
+                             </div>
                           {/each}
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -132,16 +118,16 @@
 <div class="gallery-backdrop" in:fade="{{duration: 200}}" out:fade="{{duration: 200}}">
     <div class="gallery-wrapper relative ai-center jc-center" in:fly="{{y: 200, duration: 600}}">
         <div class="gallery-view flex ai-center jc-center">
-            <Carousel perPage="{1}">
-                  <span class="control" slot="left-control">
+            <Carousel perPage="{1}" class="relative">
+                  <span class="control left" slot="left-control">
                     <img src="assets/icons/gallery-arrow-left.svg" alt="">
                   </span>
                   {#each selected as select}
-                      <div class="slide-content ta-center h-full w-full">
+                      <div class="slide-content ta-center">
                           <img src="{select}" alt="Gallery view" class="obj-cover  gallery-image">
                       </div>
                   {/each}
-                  <span class="control" slot="right-control">
+                  <span class="control right" slot="right-control">
                     <img src="assets/icons/gallery-arrow-right.svg" alt="">
                   </span>
             </Carousel>
