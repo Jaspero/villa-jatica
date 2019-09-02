@@ -14,7 +14,6 @@
     let selected = galleries[0].gallery;
 
     let slides = galleries;
-    console.log('selected', selected);
 
 
 
@@ -35,6 +34,7 @@
 
         let galleryOpen = null;
 
+    let tab;
 
 
 
@@ -53,10 +53,11 @@
 
 
     .col-6 {
-        height: 150px;
         cursor: pointer;
     }
-
+.active {
+ border: 3px solid red;
+}
 
 
 
@@ -81,8 +82,8 @@
 
     <div class="albums flex fw-wrap ac-flex col-4 col-s-6 hide-xs">
         {#each galleries as gallery}
-            <div class="col-6 col-m-12 m-y-s">
-                <div class="h-full w-full" on:click={() => selected = gallery.gallery}>
+            <div class="col-6 col-m-12">
+                <div class="h-full w-full" class:active="{galleries}" on:click={() => selected = gallery.gallery}>
                     <div class="preview">
                         <img src="{gallery.gallery}" alt="Gallery preview" class="obj-cover preview-img">
                     </div>
@@ -100,13 +101,11 @@
             <div class="exterior-container">
                 <div class="grid">
                     <div class="col-12 flex fw-wrap">
-
                         {#each selected as select}
                         <div class="col-4 col-s-6 col-xs-12">
                           <img src="{select}" alt="Gallery preview" class="obj-cover exterior-image w-full" on:click={() => galleryOpen = selected}>
                              </div>
                           {/each}
-
                     </div>
                 </div>
             </div>

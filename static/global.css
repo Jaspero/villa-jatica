@@ -276,6 +276,9 @@ h6 {
   top: 10%;
   right: 5%;
   cursor: pointer; }
+  @media screen and (max-width: 700px) {
+    .close-gallery {
+      width: 30px; } }
 
 .preview-img {
   height: 115px;
@@ -1273,6 +1276,9 @@ h6 {
     .right {
       width: 25px;
       height: 25px; } }
+
+ul.svelte-6pleld li.svelte-6pleld {
+  display: none; }
 
 /* Hamburger menu for mobile
  *============================================================================*/
