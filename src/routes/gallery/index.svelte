@@ -14,6 +14,7 @@
     let selected = galleries[0].gallery;
 
     let slides = galleries;
+    console.log('selected', selected);
 
 
 
@@ -31,31 +32,13 @@
             }
         }))
     }
-        let totalLengthRound;
+
         let galleryOpen = null;
 
 
 
 
-        function nextSlide() {
-            galleryOpen = '/assets/images/beach.jpg';
-            if (select < selected.length - 1){
-                console.log(selected.length, 123);
-                console.log(select, 'if');
-                select++;
-            } else {
-                console.log(select, 'else');
-                select = 0;
-            }
-        }
 
-        function prevSlide() {
-           if (select> 0){
-               select--;
-           } else {
-               select= selected.length - 1;
-           }
-        }
 
 </script>
 
@@ -74,7 +57,23 @@
         cursor: pointer;
     }
 
+.gallery-image {
+    width: 700px;
+}
 
+	.slide-content {
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		height: 800px;
+	}
+
+
+
+	.slide-content section {
+		height: 40px;
+		padding: 12px;
+	}
 
 
 
@@ -88,7 +87,7 @@
 <nav class="navbar p-y-s flex bg-warn ai-center z-index">
     <a href="#home" class="flex ai-center" transition:fade="">
         <img src="assets/icons/left.svg" alt="back" class="m-l-s">
-        <p class="font-secondary m-l-s c-accent">Back</p>
+        <p class="font-secondary m-l-s">Back</p>
     </a>
     <p class="c-accent m-l-l hide-s"><i>Beautifull galleries of our villa Jatica, from interior to exterior!</i></p>
 </nav>
@@ -133,22 +132,19 @@
 <div class="gallery-backdrop" in:fade="{{duration: 200}}" out:fade="{{duration: 200}}">
     <div class="gallery-wrapper relative ai-center jc-center" in:fly="{{y: 200, duration: 600}}">
         <div class="gallery-view flex ai-center jc-center">
-
-<Carousel>
-  <span class="control" slot="left-control">
-    <img src="assets/icons/left-arrow.svg" alt="">
-  </span>
-
-          {#each slides as slide, i}
-              <div class="slide-content">
-                  <img  src="{galleryOpen}" alt="Gallery view" class="obj-cover m-a-s exterior-image">
-              </div>
-          {/each}
-
-  <span class="control" slot="right-control">
-  <img src="assets/icons/right-arrow.svg" alt="">
-  </span>
-</Carousel>
+            <Carousel perPage="{1}">
+                  <span class="control" slot="left-control">
+                    <img src="assets/icons/gallery-arrow-left.svg" alt="">
+                  </span>
+                  {#each selected as select}
+                      <div class="slide-content ta-center h-full w-full">
+                          <img src="{select}" alt="Gallery view" class="obj-cover  gallery-image">
+                      </div>
+                  {/each}
+                  <span class="control" slot="right-control">
+                    <img src="assets/icons/gallery-arrow-right.svg" alt="">
+                  </span>
+            </Carousel>
         </div>
         <div class="close-gallery">
             <img src="assets/icons/cancel.svg" alt="Close gallery" on:click={() => galleryOpen = null}>
