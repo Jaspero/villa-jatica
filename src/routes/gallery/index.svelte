@@ -14,9 +14,7 @@
     let selected = galleries[0].gallery;
 
     let slides = galleries;
-
-
-
+    let galleryOpen = null;
 
 
     function albumsMenu() {
@@ -32,9 +30,9 @@
         }))
     }
 
-        let galleryOpen = null;
 
-    let tab;
+
+
 
 
 
@@ -81,9 +79,9 @@
 
 
     <div class="albums flex fw-wrap ac-flex col-4 col-s-6 hide-xs">
-        {#each galleries as gallery}
+        {#each galleries as gallery, i}
             <div class="col-6 col-m-12">
-                <div class="h-full w-full" class:active="{galleries}" on:click={() => selected = gallery.gallery}>
+                <div class="h-full w-full" class:active="{gallery}" on:click={() => selected = gallery.gallery}>
                     <div class="preview">
                         <img src="{gallery.gallery}" alt="Gallery preview" class="obj-cover preview-img">
                     </div>

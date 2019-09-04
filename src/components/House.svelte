@@ -1,13 +1,16 @@
 
 <script>
 
+    import Carousel from '@beyonk/svelte-carousel'
     let readMore = true;
-    const sliderExterior = [
-        'assets/images/interior.jpg',
-        'assets/images/exterior.jpg',
-        'assets/images/nature.jpg'
+    const slides = [
+        'assets/images/exterior/exterior.jpg',
+        'assets/images/exterior/exterior-2.jpg',
+        'assets/images/exterior/exterior-3.jpg',
+        'assets/images/exterior/exterior-4.jpg',
+        'assets/images/exterior/exterior-5.jpg',
+
     ];
-    let actIndex = 0;
 
     function expandText() {
       readMore = false;
@@ -31,27 +34,6 @@
             });
     }
 
-    function slideRight() {
-        const sliderImage = document.querySelector('#slider-image');
-
-        if (actIndex < sliderExterior.length - 1) {
-            actIndex++
-        } else {
-            actIndex = 0;
-        }
-        sliderImage.src = sliderExterior[actIndex]
-    }
-
-    function slideLeft() {
-        const sliderImage = document.querySelector('#slider-image');
-
-        if (actIndex > 0) {
-            actIndex--;
-        } else {
-            actIndex = sliderExterior.length - 1;
-        }
-        sliderImage.src = sliderExterior[actIndex]
-    }
 
 
 </script>
@@ -59,6 +41,13 @@
 
 <style>
 
+
+.right {
+    right: -75px;
+}
+.left {
+    left: -75px;
+}
 
 
 .grid {
@@ -92,9 +81,18 @@
                 </a>
                 {/if}
             <div class="m-t-m w-full relative">
-                <img src="assets/icons/left-arrow.svg" on:click={slideLeft} class="left">
-                <img id="slider-image" src={sliderExterior[0]} alt="" class="w-full obj-cover" style="height: 500px">
-                <img src="assets/icons/right-arrow.svg" on:click={slideRight} class="right">
+                <Carousel perPage="{1}" class="relative">
+                    <span class="control left" slot="left-control">
+                        <img src="assets/icons/left-arrow.svg">
+                    </span>
+                        {#each slides as slide}
+                    <img  src={slide} id="slider-image" alt="" class="w-full obj-cover" style="height: 500px">
+                        {/each}
+
+                    <span class="control right" slot="right-control">
+                        <img src="assets/icons/right-arrow.svg">
+                    </span>
+                </Carousel>
             </div>
         </div>
     </div>

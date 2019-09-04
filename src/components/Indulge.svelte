@@ -1,10 +1,12 @@
 
 <script >
-
-    const sliderIndulge = [
-        'assets/images/indulge.jpg',
-        'assets/images/beach.jpg',
-        'assets/images/exterior.jpg'
+        import Carousel from '@beyonk/svelte-carousel'
+    const slides = [
+        'assets/images/indulge/indulge-2.jpg',
+        'assets/images/indulge/indulge-3.jpg',
+        'assets/images/indulge/indulge-4.jpg',
+        'assets/images/indulge/indulge-1.jpg',
+        'assets/images/indulge/indulge-5.jpg',
     ];
     let indexActive = 0;
 
@@ -63,6 +65,13 @@
   max-width: 1200px;
 }
 
+.right {
+    right: -75px;
+}
+.left {
+    left: -75px;
+}
+
 
 
 </style>
@@ -98,9 +107,18 @@
                 {/if}
 
             <div class="gallery m-t-m w-full relative">
-                 <img src="assets/icons/left-arrow.svg" on:click={indulgeLeft} class="left">
-                <img id="indulge-slider" src={sliderIndulge[0]} alt="" class="w-full obj-cover" style="height: 500px">
-                <img src="assets/icons/right-arrow.svg" on:click={indulgeRight} class="right">
+                           <Carousel perPage="{1}" class="relative">
+                                <span class="control left" slot="left-control">
+                                    <img src="assets/icons/left-arrow.svg">
+                                </span>
+                                   {#each slides as slide}
+                                <img  src={slide}  alt="gallery" class="w-full obj-cover" style="height: 500px">
+                                   {/each}
+
+                                <span class="control right" slot="right-control">
+                                    <img src="assets/icons/right-arrow.svg">
+                                </span>
+                           </Carousel>
             </div>
         </div>
     </div>
