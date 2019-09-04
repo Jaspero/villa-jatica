@@ -1,5 +1,17 @@
 
+<script context="module">
+	export function preload({}) {
+		return this.fetch('home.json')
+				.then(r => r.json());
+	}
+</script>
+
+
+
+
 <script>
+
+    export  let home = 0;
 
     import Carousel from '@beyonk/svelte-carousel'
     let readMore = true;
@@ -9,7 +21,6 @@
         'assets/images/exterior/exterior-3.jpg',
         'assets/images/exterior/exterior-4.jpg',
         'assets/images/exterior/exterior-5.jpg',
-
     ];
 
     function expandText() {
@@ -90,9 +101,8 @@
                         <img src="assets/icons/left-arrow.svg">
                     </span>
                         {#each slides as slide}
-                    <img  src={slide} id="slider-image" alt="" class="w-full obj-cover" style="height: 500px">
+                            <img  src={slide} id="slider-image" alt="" class="w-full obj-cover" style="height: 500px">
                         {/each}
-
                     <span class="control right" slot="right-control">
                         <img src="assets/icons/right-arrow.svg">
                     </span>

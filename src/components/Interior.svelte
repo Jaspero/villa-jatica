@@ -12,31 +12,6 @@
         'assets/images/interior/interior-5.jpg'
     ];
 
-    let activeIndex = 0;
-
-
-    // function slideRightInterior() {
-    //     const imageSlider = document.querySelector('#slider-image-interior');
-    //
-    //     if (activeIndex < interiorSlider.length - 1) {
-    //         activeIndex++
-    //     } else {
-    //         activeIndex = 0;
-    //     }
-    //     imageSlider.src = interiorSlider[activeIndex]
-    // }
-    //
-    //
-    // function slideLeftInterior() {
-    //     const imageSlider = document.querySelector('#slider-image-interior');
-    //
-    //     if (activeIndex > 0) {
-    //         activeIndex--;
-    //     } else {
-    //         activeIndex = interiorSlider.length - 1;
-    //     }
-    //     imageSlider.src = interiorSlider[activeIndex]
-    // }
 
     let readMore = true;
 
@@ -128,18 +103,18 @@
                 </a>
                 {/if}
             <div class="m-t-m w-full relative">
-                           <Carousel perPage="{1}" class="relative">
-                                <span class="control left" slot="left-control">
-                                    <img src="assets/icons/left-arrow.svg">
-                                </span>
-                               {#each slides as slide}
-                                    <img  src={slide} id="slider-image" alt="" class="w-full obj-cover" style="height: 500px">
-                               {/each}
+                 <Carousel perPage="{1}" class="relative">
+                    <span class="control left" slot="left-control">
+                        <img src="assets/icons/left-arrow.svg">
+                    </span>
+                        {#each slides as slide}
+                            <img  src={slide} id="slider-image" alt="" class="w-full obj-cover" style="height: 500px">
+                        {/each}
 
-                               <span class="control right" slot="right-control">
-                                    <img src="assets/icons/right-arrow.svg">
-                               </span>
-                           </Carousel>
+                    <span class="control right" slot="right-control">
+                        <img src="assets/icons/right-arrow.svg">
+                    </span>
+                 </Carousel>
             </div>
         </div>
     </div>

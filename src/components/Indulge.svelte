@@ -1,5 +1,5 @@
 
-<script >
+<script>
         import Carousel from '@beyonk/svelte-carousel'
     const slides = [
         'assets/images/indulge/indulge-2.jpg',
@@ -91,18 +91,17 @@
                 {/if}
 
             <div class="gallery m-t-m w-full relative">
-                           <Carousel perPage="{1}" class="relative">
-                                <span class="control left" slot="left-control">
-                                    <img src="assets/icons/left-arrow.svg">
-                                </span>
-                                   {#each slides as slide}
-                                <img  src={slide}  alt="gallery" class="w-full obj-cover" style="height: 500px">
-                                   {/each}
-
-                                <span class="control right" slot="right-control">
-                                    <img src="assets/icons/right-arrow.svg">
-                                </span>
-                           </Carousel>
+                <Carousel perPage="{1}" class="relative">
+                    <span class="control left" slot="left-control">
+                        <img src="assets/icons/left-arrow.svg">
+                    </span>
+                        {#each slides as slide}
+                           <img  src={slide}  alt="gallery" class="w-full obj-cover" style="height: 500px">
+                        {/each}
+                <span class="control right" slot="right-control">
+                        <img src="assets/icons/right-arrow.svg">
+                    </span>
+                </Carousel>
             </div>
         </div>
     </div>
