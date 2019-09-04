@@ -8,29 +8,7 @@
         'assets/images/indulge/indulge-1.jpg',
         'assets/images/indulge/indulge-5.jpg',
     ];
-    let indexActive = 0;
 
-    function indulgeRight() {
-        const sliderImage = document.querySelector('#indulge-slider');
-
-        if (indexActive < sliderIndulge.length - 1) {
-            indexActive++
-        } else {
-            indexActive = 0;
-        }
-        sliderImage.src = sliderIndulge[indexActive]
-    }
-
-    function indulgeLeft() {
-        const sliderImage = document.querySelector('#indulge-slider');
-
-        if (indexActive > 0) {
-            indexActive--;
-        } else {
-            indexActive = sliderIndulge.length - 1;
-        }
-        sliderImage.src = sliderIndulge[indexActive]
-    }
 
     let readMore = true;
 
@@ -66,11 +44,17 @@
 }
 
 .right {
-    right: -75px;
-}
+    right: -75px;}
+          @media (max-width: 1270px) {
+            .right {
+              right: 0px } }
 .left {
-    left: -75px;
-}
+    left: -75px;}
+      @media (max-width: 1270px) {
+        .left {
+          left: 0px } }
+
+
 
 
 

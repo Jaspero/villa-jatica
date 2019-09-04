@@ -88,11 +88,15 @@
 }
 
 .right {
-    right: -75px;
-}
+    right: -75px;}
+          @media (max-width: 1270px) {
+            .right {
+              right: 0px } }
 .left {
-    left: -75px;
-}
+    left: -75px;}
+      @media (max-width: 1270px) {
+        .left {
+          left: 0px } }
 
 
 
@@ -139,7 +143,7 @@
             </div>
         </div>
     </div>
-    <div class="w-full flex ai-center">
+    <div class="w-full flex ai-center fw-wrap">
         <div class="col-8 flex m-t-l col-s-12 fw-wrap circle-container">
             <div class="col-6 br-circle interior-1 col-xs-12">
             </div>

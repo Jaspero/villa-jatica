@@ -133,3 +133,37 @@ ul.svelte-6pleld li.svelte-6pleld {
   height: 40px;
   padding: 12px;
 }
+
+
+
+
+
+/* Slider styles
+ *============================================================================*/
+
+.left {
+  position:absolute;
+  top: 47%;
+  width: 40px;
+  height: 40px;
+  left: 2%;
+  z-index: 20;
+  cursor:pointer;
+  @media screen and (max-width: 700px) {
+    width: 25px;
+    height: 25px;
+  }
+}
+.right {
+  cursor:pointer;
+  position:absolute;
+  top: 47%;
+  right: 2%;
+  width: 40px;
+  height: 40px;
+  z-index: 20;
+  @media screen and (max-width: 700px) {
+    width: 25px;
+    height: 25px;
+  }
+}

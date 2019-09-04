@@ -37,8 +37,8 @@ h1  {
              <h1 class="c-dark p-y-m">CONTACT US</h1>
          </div>
             <div class="col-10">
-            <div class="contact-card z-index bg-light flex">
-                    <div class="col-8 flex fw-wrap col-s-12">
+            <div class="contact-card z-index bg-light flex fw-wrap">
+                    <div class="col-8 flex fw-wrap col-xs-12">
                         <div class="col-6 flex fd-col col-xs-12">
                            <label for="name" class="font-secondary"><i>Full Name</i></label>
                            <input type="text" name="name" id="name" class="contact-input p-y-s">

@@ -1,0 +1,197 @@
+/* Header styles
+ *============================================================================*/
+.underline {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: white;
+    left: -100%;
+    bottom: 0;
+    height: 2px;
+    transition: 0.5s ease;
+  }
+}
+
+.link-wrapper:hover{
+  .underline:after {
+    left: 0;
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+  top: 3rem;
+  background: transparent;
+}
+
+.header-active {
+  background: white;
+  top: 0;
+  color: black;
+  width: 100%;
+  position: fixed;
+  transition: all 0.5s ease;
+}
+
+.header-active {
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+  .underline {
+    color: black;
+  }
+  &.underline {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+  }
+  .underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: black;
+    left: -100%;
+    bottom: 0;
+    height: 2px;
+    transition: 0.5s ease;
+  }
+  &.link-wrapper:hover{
+    .underline:after {
+      left: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Hamburger menu for mobile
+ *============================================================================*/
+.hamburger {
+  z-index: 12;
+  position: fixed;
+  top: 15px;
+  left: 25px;
+  width: 40px;
+  height: 45px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger .line:nth-child(1) {
+  top: 3px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.hamburger .line:nth-child(2) {
+  top: 3px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.hamburger .line:nth-child(3) {
+  top: 25px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.hamburger.open .line:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: black;
+  width: 35px;
+  top:  5px;
+  left: 5px;
+}
+
+.hamburger.open .line:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.hamburger.open .line:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: black;
+  width: 35px;
+  top: 30px;
+  left: 5px;
+}
+
+.line {
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background: white;
+  transition: .4s;
+  transform: translateX(-300px);
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+  .mobile-link {
+    color: black;
+  }
+  &.active-mobile {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+
+.line-active {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+}

@@ -43,11 +43,15 @@
 
 
 .right {
-    right: -75px;
-}
+    right: -75px;}
+          @media (max-width: 1270px) {
+            .right {
+                right: 0; } }
 .left {
-    left: -75px;
-}
+    left: -75px;}
+          @media (max-width: 1270px) {
+            .left {
+                left: 0; } }
 
 
 .grid {
@@ -97,7 +101,7 @@
         </div>
     </div>
     <div class="flex jc-between w-full m-t-m ai-center fw-wrap">
-        <div class="col-7 col-s-12">
+        <div class="col-7 col-s-12 ta-center">
             <img src="assets/images/group.png" alt="Group fo exterior pictures">
         </div>
         <div class="col-5 col-s-12">
