@@ -7,16 +7,7 @@
     export let interiorExpand;
     export let interiorExpandable;
     export let interiorBedroom;
-
-
-    const slides = [
-        'assets/images/interior/interior-1.jpg',
-        'assets/images/interior/interior-2.jpg',
-        'assets/images/interior/interior-3.jpg',
-        'assets/images/interior/interior-4.jpg',
-        'assets/images/interior/interior-5.jpg'
-    ];
-
+    export let interiorSlider = [];
 
     let readMore = true;
 
@@ -112,10 +103,9 @@
                     <span class="control left" slot="left-control">
                         <img src="assets/icons/left-arrow.svg">
                     </span>
-                        {#each slides as slide}
-                            <img  src={slide} id="slider-image" alt="" class="w-full obj-cover" style="height: 500px">
+                        {#each interiorSlider as slide}
+                            <img src="{slide}" alt="Gallery view" class="obj-cover  gallery-image">
                         {/each}
-
                     <span class="control right" slot="right-control">
                         <img src="assets/icons/right-arrow.svg">
                     </span>

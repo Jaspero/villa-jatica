@@ -7,6 +7,10 @@
     export let area;
     export let expand;
     export let expandArea;
+    export let locationImg = [];
+
+    const images = locationImg;
+
 
     let readMore = true;
 
@@ -91,8 +95,8 @@
         </div>
 
         <div class="col-8 flex  m-t-l col-s-12 circle-container fw-wrap ">
-            <div class="col-6 br-circle bg-1 col-xs-12">
 
+            <div class="col-6 br-circle bg-1 col-xs-12">
             </div>
             <div class="col-6 br-circle bg-2 m-l-m col-xs-12">
 

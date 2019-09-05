@@ -1,18 +1,11 @@
 
 <script>
-        import Carousel from '@beyonk/svelte-carousel'
-    const slides = [
-        'assets/images/indulge/indulge-2.jpg',
-        'assets/images/indulge/indulge-3.jpg',
-        'assets/images/indulge/indulge-4.jpg',
-        'assets/images/indulge/indulge-1.jpg',
-        'assets/images/indulge/indulge-5.jpg',
-    ];
-
+    import Carousel from '@beyonk/svelte-carousel'
 
     export let indulge;
     export let indulgeExpand;
     export let indulgeExpandable;
+    export let indulgeSlider = [];
 
     let readMore = true;
 
@@ -99,8 +92,8 @@
                     <span class="control left" slot="left-control">
                         <img src="assets/icons/left-arrow.svg">
                     </span>
-                        {#each slides as slide}
-                           <img  src={slide}  alt="gallery" class="w-full obj-cover" style="height: 500px">
+                        {#each indulgeSlider as slide}
+                            <img src="{slide}" alt="Gallery view" class="obj-cover  gallery-image">
                         {/each}
                 <span class="control right" slot="right-control">
                         <img src="assets/icons/right-arrow.svg">

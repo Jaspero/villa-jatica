@@ -183,12 +183,12 @@
             <p class="m-t-s"><i>{home.subTitle}</i></p>
         </div>
     </div>
-    <Location location="{home.location}" area="{home.locationArea}" expand="{home.locationExpand}" expandArea="{home.locationExpandArea}"/>
-    <Features/>
-    <House house="{home.house}" expand="{home.houseExpand}" outdoor="{home.outdoor}" outdoorExpand="{home.outdoorExpand}" outdoorRead="{home.outdoorRead}"/>
-    <Parallax/>
-    <Interior interior="{home.interior}" interiorExpand="{home.interiorExpand}" interiorExpandable="{home.interiorExpandable}" interiorBedroom="{home.interiorBedroom}"/>
-    <Indulge indulge="{home.indulge}" indulgeExpand="{home.indulgeExpand}" indulgeExpandable="{home.indulgeExpandable}"/>
+    <Location location="{home.location}" area="{home.locationArea}" expand="{home.locationExpand}" expandArea="{home.locationExpandArea}" locationImg="{home.locationImg}"/>
+    <Features feature="{home.keyFeature1}" feature2="{home.keyFeature2}" feature3="{home.keyFeature3}" feature4="{home.keyFeature4}"/>
+    <House house="{home.house}" expand="{home.houseExpand}" outdoor="{home.outdoor}" outdoorExpand="{home.outdoorExpand}" outdoorRead="{home.outdoorRead}" slider="{home.slider}"/>
+    <Parallax feature="{home.addFeature1}" feature2="{home.addFeature2}" feature3="{home.addFeature3}" feature4="{home.addFeature4}"/>
+    <Interior interior="{home.interior}" interiorExpand="{home.interiorExpand}" interiorExpandable="{home.interiorExpandable}" interiorBedroom="{home.interiorBedroom}" interiorSlider="{home.interiorSlider}"/>
+    <Indulge indulge="{home.indulge}" indulgeExpand="{home.indulgeExpand}" indulgeExpandable="{home.indulgeExpandable}" indulgeSlider="{home.indulgeSlider}"/>
     <Price lowPrice="{home.lowSeasonPrice}" highPrice="{home.highSeasonPrice}"/>
     <Contact />
     <Footer/>

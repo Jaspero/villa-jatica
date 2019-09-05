@@ -4,17 +4,12 @@
     export let outdoor;
     export let outdoorExpand;
     export let outdoorRead;
+    export let slider = [];
 
 
     import Carousel from '@beyonk/svelte-carousel'
     let readMore = true;
-    const slides = [
-        'assets/images/exterior/exterior.jpg',
-        'assets/images/exterior/exterior-2.jpg',
-        'assets/images/exterior/exterior-3.jpg',
-        'assets/images/exterior/exterior-4.jpg',
-        'assets/images/exterior/exterior-5.jpg',
-    ];
+
 
     function expandText() {
       readMore = false;
@@ -93,8 +88,8 @@
                     <span class="control left" slot="left-control">
                         <img src="assets/icons/left-arrow.svg">
                     </span>
-                        {#each slides as slide}
-                            <img  src={slide} id="slider-image" alt="" class="w-full obj-cover" style="height: 500px">
+                        {#each slider as slide}
+                                 <img src="{slide}" alt="Gallery view" class="obj-cover  gallery-image">
                         {/each}
                     <span class="control right" slot="right-control">
                         <img src="assets/icons/right-arrow.svg">

@@ -1,4 +1,14 @@
 
+
+<script>
+
+    export let feature;
+    export let feature2;
+    export let feature3;
+    export let feature4;
+
+</script>
+
 <style>
 .grid {
     max-width: 1200px;
@@ -21,25 +31,25 @@
         <div class="col-3 ta-center col-xs-12">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/location.svg" class="m-t-m" alt="Location">
-               <p class="m-t-s">Fabulous Mediterranean scenery, quite place in untouched nature + cycling and hiking trails</p>
+               <p class="m-t-s">{feature}</p>
             </div>
         </div>
         <div class="col-3 ta-center col-xs-12">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/bedroom.svg" class="m-t-m" alt="Bedroom">
-               <p class="m-t-s">Gorgeous double bedroom, two single bedrooms</p>
+               <p class="m-t-s">{feature2}</p>
             </div>
         </div>
         <div class="col-3 ta-center col-xs-12">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/bathroom.svg" class="m-t-m" alt="bathroom">
-               <p class="m-t-s">Bathroom with shower and toilet + additional toilet</p>
+               <p class="m-t-s">{feature3}</p>
             </div>
         </div>
         <div class="col-3 ta-center col-xs-12">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/kitchen.svg" class="m-t-m" alt="Location">
-               <p class="m-t-s">Full indoor kitchen, outdoor kitchen with large masonry barbecue, small kitchen with dishwasher in tavern</p>
+               <p class="m-t-s">{feature4}</p>
             </div>
         </div>
     </div>

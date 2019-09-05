@@ -1,4 +1,13 @@
 
+<script>
+
+    export let feature;
+    export let feature2;
+    export let feature3;
+    export let feature4;
+
+</script>
+
 <style>
 
 .grid {
@@ -19,25 +28,25 @@ z-index: 3;
         <div class="col-3 col-xs-12 ta-center">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/router.svg" class="m-t-m" alt="Location">
-               <p class="m-t-s"><i>Tv with satellite antenna, Wi-Fi Internet, air conditioning for summer, central heating + indoor fireplace for winter</i></p>
+               <p class="m-t-s"><i>{feature}</i></p>
             </div>
         </div>
         <div class="col-3 col-xs-12 ta-center">
             <div class="bg-light br-rounded p-a-s feature italic-text font-secondary">
                <img src="assets/icons/washing-machine.svg" class="m-t-m" alt="Bedroom">
-               <p class="m-t-s">Washer/dryer, microwave, oven, coffee machine, 2 dishwashers, ice maker, hair dryer</p>
+               <p class="m-t-s">{feature2}</p>
             </div>
         </div>
         <div class="col-3 col-xs-12 ta-center">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/swimming.svg" class="m-t-m" alt="bathroom">
-               <p class="m-t-s">Private endless swimming pool, roofed and sunny terrace, lounge area with open fireplace; outdoor dining area</p>
+               <p class="m-t-s">{feature3}</p>
             </div>
         </div>
         <div class="col-3 col-xs-12 ta-center">
             <div class="bg-light br-rounded p-a-s feature">
                <img src="assets/icons/cleaning.svg" class="m-t-m" alt="Location">
-               <p class="m-t-s">Staff and services included: pool maintenance and gardener</p>
+               <p class="m-t-s">{feature4}</p>
             </div>
         </div>
     </div>
