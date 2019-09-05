@@ -10,6 +10,10 @@
     ];
 
 
+    export let indulge;
+    export let indulgeExpand;
+    export let indulgeExpandable;
+
     let readMore = true;
 
     function expandText() {
@@ -73,10 +77,10 @@
         </div>
         <div class="col-7 flex fd-col col-s-12">
                 <h5 class="c-dark m-t-s  ta-left">Enjoy in beautiful nature and delicious food</h5>
-                <p class="font-secondary italic-text m-y-s">Since the population mainly lives from farming and agriculture (apart from tourism), you will find an exquisite offer of traditionally prepared Dalmatian dishes, which includes fish and seafood from the day's catch, fresh meat from local farms, and home grown vegetables.</p>
+                <p class="font-secondary italic-text m-y-s">{indulge}</p>
                <div class="expand font-secondary italic-text">
-                <p>You should not miss the restaurant Galeb  a family owned business offering the finest quality produce prepared in traditional style, with the best black risotto with cuttlefish and red prawn risotto in the region, prepared by old traditional receipt. Certainly do not miss their best chocolate walnut cake! There you will taste only daily offer of the fish hooked early in the morning, and the vegetables from their garden. There is also possibility for our guests to be provided with catering from the restaurant "Galeb" if you do not feel like cooking on your holidays or leaving your gorgeous Villa Jatica. </p>
-                <p class=" m-y-s">For those who like to explore new places through local offer of food, there is a multitude of delightful taverns, restaurants and wine cellars offering local specialties, beautiful light and healthy Dalmatian meals, part of Mediterranean cuisine. For meat lovers, there is also an excellent offer of grilled highest quality meats from local farms. We can recommend a few spots in the vicinity we hope will be to your taste.</p>
+                <p>{indulgeExpand}</p>
+                <p class=" m-y-s">{indulgeExpandable}</p>
                 <p>Restaurant <b class="c-dark"><a href="http://www.restaurant-jeny.hr/contact.html">Jeny</a> </b> in Gornji Tučepi</p>
                 <p class=" m-y-s">Restaurant <b class="c-dark"><a href="https://www.bota-sare.hr/">Bota Šare</a></b> in Mali Sotin</p>
                 <p class=" m-b-s">Restaurant <b class="c-dark"><a href="http://www.ranc-tucepi.hr/">Ranč</a></b> in Tučepi</p>

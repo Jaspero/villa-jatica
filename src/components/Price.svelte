@@ -1,12 +1,11 @@
-<script context="module">
-	export function preload({}) {
-		return this.fetch('home.json')
-				.then(r => r.json());
-	}
-</script>
+
 
 <script >
-    export let highSeasonPrice = 300;
+    export let lowPrice;
+    export let highPrice;
+
+
+
 </script>
 
 
@@ -88,7 +87,7 @@ p {
                     <h1 class="fw-100 p-y-s">Low-Season</h1>
                 </div>
                 <div class="ta-center">
-                      <h1 class=" p-y-s price">{highSeasonPrice}€</h1>
+                      <h1 class=" p-y-s price">{lowPrice}€</h1>
                       <p class="m-b-xs"><i>Per day</i></p>
                 </div>
             </div>
@@ -114,7 +113,7 @@ p {
                      <h1 class="fw-100 p-y-s">High-Season</h1>
                 </div>
                 <div class="ta-center">
-                     <h1 class=" p-y-s price">600€</h1>
+                     <h1 class=" p-y-s price">{highPrice}€</h1>
                      <p class="m-b-xs"><i>Per day</i></p>
                 </div>
             </div>

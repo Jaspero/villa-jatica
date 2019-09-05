@@ -1,3 +1,10 @@
+<script context="module">
+	export function preload({}) {
+		return this.fetch('index.json')
+				.then(r => r.json());
+	}
+</script>
+
 <script>
     import Location from '../components/Location.svelte';
     import Features from '../components/Features.svelte';
@@ -11,6 +18,8 @@
     import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
 
+    export let home;
+    console.log('home', home);
     let segment;
 
     function activeHeader() {
@@ -170,17 +179,17 @@
     </nav>
     <div class="hero flex ai-end jc-center c-light col-m-12">
         <div class="col-12 m-b-xl ta-center">
-            <h1 class="heading">VILLA JATICA</h1>
-            <p class="m-t-s"><i>Luxury in the Wilderness</i></p>
+            <h1 class="heading">{home.title}</h1>
+            <p class="m-t-s"><i>{home.subTitle}</i></p>
         </div>
     </div>
-    <Location/>
+    <Location location="{home.location}" area="{home.locationArea}" expand="{home.locationExpand}" expandArea="{home.locationExpandArea}"/>
     <Features/>
-    <House/>
+    <House house="{home.house}" expand="{home.houseExpand}" outdoor="{home.outdoor}" outdoorExpand="{home.outdoorExpand}" outdoorRead="{home.outdoorRead}"/>
     <Parallax/>
-    <Interior/>
-    <Indulge/>
-    <Price />
+    <Interior interior="{home.interior}" interiorExpand="{home.interiorExpand}" interiorExpandable="{home.interiorExpandable}" interiorBedroom="{home.interiorBedroom}"/>
+    <Indulge indulge="{home.indulge}" indulgeExpand="{home.indulgeExpand}" indulgeExpandable="{home.indulgeExpandable}"/>
+    <Price lowPrice="{home.lowSeasonPrice}" highPrice="{home.highSeasonPrice}"/>
     <Contact />
     <Footer/>
 </div>
