@@ -26,27 +26,27 @@ z-index: 3;
     </div>
     <div class="grid m-t-s">
         <div class="col-3 col-xs-12 ta-center">
-            <div class="bg-light br-rounded p-a-s feature">
-               <img src="assets/icons/router.svg" class="m-t-m" alt="Location">
+            <div class="bg-light br-rounded p-a-s font-secondary feature">
+               <img src="assets/icons/router.svg" class="m-t-m" alt="Router">
                <p class="m-t-s"><i>{feature}</i></p>
             </div>
         </div>
         <div class="col-3 col-xs-12 ta-center">
             <div class="bg-light br-rounded p-a-s feature italic-text font-secondary">
-               <img src="assets/icons/washing-machine.svg" class="m-t-m" alt="Bedroom">
-               <p class="m-t-s">{feature2}</p>
+               <img src="assets/icons/washing-machine.svg" class="m-t-m" alt="washing-machine">
+               <p class="m-t-s"><i>{feature2}</i></p>
             </div>
         </div>
         <div class="col-3 col-xs-12 ta-center">
-            <div class="bg-light br-rounded p-a-s feature">
-               <img src="assets/icons/swimming.svg" class="m-t-m" alt="bathroom">
-               <p class="m-t-s">{feature3}</p>
+            <div class="bg-light br-rounded p-a-s feature font-secondary">
+               <img src="assets/icons/swimming.svg" class="m-t-m" alt="swimming">
+               <p class="m-t-s"><i>{feature3}</i></p>
             </div>
         </div>
         <div class="col-3 col-xs-12 ta-center">
-            <div class="bg-light br-rounded p-a-s feature">
-               <img src="assets/icons/cleaning.svg" class="m-t-m" alt="Location">
-               <p class="m-t-s">{feature4}</p>
+            <div class="bg-light br-rounded p-a-s feature font-secondary">
+               <img src="assets/icons/cleaning.svg" class="m-t-m" alt="cleaning">
+               <p class="m-t-s"><i>{feature4}</i></p>
             </div>
         </div>
     </div>

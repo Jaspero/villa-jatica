@@ -57,9 +57,19 @@
   }
 }
 
+.round-img {
+  border-radius: 50%;
+}
+
 .carousel {
   z-index: 2;
 }
+
+.location {
+  cursor: pointer;
+}
+
+
 
 
 
@@ -85,11 +95,8 @@
     height: 6px;
 }
 
-
 .feature {
-  font-size: 15px;
-  font-family: Georgia, sans-serif;
-  font-style: italic;
+
   min-height: 17rem;
   color: #6d6d6d;
   @media screen and (max-width: 900px) {
@@ -170,6 +177,9 @@
     }
     .book {
       height: calc(100vh - 40px)
+    }
+    .ta-center-s {
+      text-align: center;
     }
   }
 

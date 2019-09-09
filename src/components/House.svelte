@@ -3,7 +3,7 @@
     export let expand;
     export let outdoor;
     export let outdoorExpand;
-    export let outdoorRead;
+    export let outdoorExpand1;
     export let slider = [];
 
 
@@ -107,7 +107,7 @@
             <p class="m-y-s italic-text font-secondary">{outdoor}</p>
             <div class="expand italic-text font-secondary">
             <p class="">{outdoorExpand}</p>
-            <p class=" m-y-s">{outdoorRead}</p>
+            <p class=" m-y-s">{outdoorExpand1}</p>
             </div>
             {#if readMore}
             <a on:click={expandText} class="c-accent font-secondary"><i>...Read more</i></a>

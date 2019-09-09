@@ -29,27 +29,27 @@
     </div>
     <div class="grid m-t-s">
         <div class="col-3 ta-center col-xs-12">
-            <div class="bg-light br-rounded p-a-s feature">
+            <div class="bg-light br-rounded p-a-s font-secondary feature">
                <img src="assets/icons/location.svg" class="m-t-m" alt="Location">
-               <p class="m-t-s">{feature}</p>
+               <p class="m-t-s"><i>{feature}</i></p>
             </div>
         </div>
         <div class="col-3 ta-center col-xs-12">
-            <div class="bg-light br-rounded p-a-s feature">
+            <div class="bg-light br-rounded p-a-s font-secondary feature">
                <img src="assets/icons/bedroom.svg" class="m-t-m" alt="Bedroom">
-               <p class="m-t-s">{feature2}</p>
+               <p class="m-t-s"><i>{feature2}</i></p>
             </div>
         </div>
         <div class="col-3 ta-center col-xs-12">
-            <div class="bg-light br-rounded p-a-s feature">
+            <div class="bg-light br-rounded p-a-s font-secondary feature">
                <img src="assets/icons/bathroom.svg" class="m-t-m" alt="bathroom">
-               <p class="m-t-s">{feature3}</p>
+               <p class="m-t-s"><i>{feature3}</i></p>
             </div>
         </div>
         <div class="col-3 ta-center col-xs-12">
-            <div class="bg-light br-rounded p-a-s feature">
+            <div class="bg-light br-rounded p-a-s font-secondary feature">
                <img src="assets/icons/kitchen.svg" class="m-t-m" alt="Location">
-               <p class="m-t-s">{feature4}</p>
+               <p class="m-t-s"><i>{feature4}</i>/p>
             </div>
         </div>
     </div>

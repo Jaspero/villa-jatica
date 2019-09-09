@@ -4,7 +4,7 @@
 
     export let indulge;
     export let indulgeExpand;
-    export let indulgeExpandable;
+    export let indulgeExpand1;
     export let indulgeSlider = [];
 
     let readMore = true;
@@ -73,7 +73,7 @@
                 <p class="font-secondary italic-text m-y-s">{indulge}</p>
                <div class="expand font-secondary italic-text">
                 <p>{indulgeExpand}</p>
-                <p class=" m-y-s">{indulgeExpandable}</p>
+                <p class=" m-y-s">{indulgeExpand1}</p>
                 <p>Restaurant <b class="c-dark"><a href="http://www.restaurant-jeny.hr/contact.html">Jeny</a> </b> in Gornji Tučepi</p>
                 <p class=" m-y-s">Restaurant <b class="c-dark"><a href="https://www.bota-sare.hr/">Bota Šare</a></b> in Mali Sotin</p>
                 <p class=" m-b-s">Restaurant <b class="c-dark"><a href="http://www.ranc-tucepi.hr/">Ranč</a></b> in Tučepi</p>
@@ -87,7 +87,7 @@
                 </a>
                 {/if}
 
-            <div class="gallery m-t-m w-full relative">
+            <div class="m-t-m w-full relative">
                 <Carousel perPage="{1}" class="relative">
                     <span class="control left" slot="left-control">
                         <img src="assets/icons/left-arrow.svg">

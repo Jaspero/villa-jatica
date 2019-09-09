@@ -6,10 +6,11 @@
     export let location;
     export let area;
     export let expand;
-    export let expandArea;
+    export let locationExpand1;
     export let locationImg = [];
+    export let locationImg1 = [];
 
-    const images = locationImg;
+
 
 
     let readMore = true;
@@ -51,23 +52,6 @@
   margin: 0 auto;
 }
 
-.bg-1 {
-    width: 300px;
-    height: 300px;
-    background-image: url("../../localarea1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.bg-2 {
-    width: 300px;
-    height: 300px;
-    background-image: url("../../localarea2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
 
 .location {
     position:absolute;
@@ -96,18 +80,21 @@
 
         <div class="col-8 flex  m-t-l col-s-12 circle-container fw-wrap ">
 
-            <div class="col-6 br-circle bg-1 col-xs-12">
+            <div class="col-6 col-xs-12 ta-center-s">
+                <img src="{locationImg}" alt="local area" class="round-img">
             </div>
-            <div class="col-6 br-circle bg-2 m-l-m col-xs-12">
 
+            <div class="col-6 col-xs-12 ta-center-s">
+                <img src="{locationImg1}" alt="local area" class="round-img">
             </div>
+
         </div>
         <div class="col-4 m-t-l col-s-12">
             <h5>LOCAL AREA</h5>
             <p class="font-secondary italic-text m-y-s">{area}</p>
             <div class="expand italic-text font-secondary">
                 <p  class="m-t-s">{expand}</p>
-                <p class="m-y-s">{expandArea}</p>
+                <p class="m-y-s">{locationExpand1}</p>
             </div>
             {#if readMore}
             <a on:click={expandText} class="c-accent font-secondary"><i>...Read more</i></a>

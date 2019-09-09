@@ -307,6 +307,23 @@ ul.svelte-6pleld li.svelte-6pleld {
   height: 40px;
   padding: 12px; }
 
+.gallery {
+  position: fixed;
+  right: 0;
+  top: 7rem;
+  background: #e4e4e4;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  color: black !important;
+  border-radius: 30px 0 0 30px;
+  padding: 20px;
+  transition: all 0.3s ease; }
+
+.gallery:hover {
+  padding-right: 3rem;
+  background: #c7b38e;
+  color: white !important; }
+
 /* Slider styles
  *============================================================================*/
 .left {
@@ -1340,8 +1357,14 @@ ul.svelte-6pleld li.svelte-6pleld {
     .headline {
       font-size: 30px; } }
 
+.round-img {
+  border-radius: 50%; }
+
 .carousel {
   z-index: 2; }
+
+.location {
+  cursor: pointer; }
 
 /* Parallax,features,price
  *============================================================================*/
@@ -1364,9 +1387,6 @@ ul.svelte-6pleld li.svelte-6pleld {
   height: 6px; }
 
 .feature {
-  font-size: 15px;
-  font-family: Georgia, sans-serif;
-  font-style: italic;
   min-height: 17rem;
   color: #6d6d6d; }
   @media screen and (max-width: 900px) {
@@ -1424,7 +1444,9 @@ ul.svelte-6pleld li.svelte-6pleld {
   .mobile-menu {
     justify-content: flex-start; }
   .book {
-    height: calc(100vh - 40px); } }
+    height: calc(100vh - 40px); }
+  .ta-center-s {
+    text-align: center; } }
 
 /* Flatpicker
  *============================================================================*/

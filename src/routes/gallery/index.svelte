@@ -62,10 +62,10 @@
 
 </style>
 
-
 <svelte:head>
-    <title>Gallery</title>
+    <title>Gallery | Villa Jatica</title>
 </svelte:head>
+
 
 <nav class="navbar p-y-s flex bg-warn ai-center z-index">
     <a href="#home" class="flex ai-center" transition:fade="">

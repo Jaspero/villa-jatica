@@ -19,7 +19,7 @@ import { fade } from 'svelte/transition';
 <style>
 
 .col-7 {
-    background-image: url("../../assets/images/exterior-1.jpg");
+    background-image: url("../../assets/images/exterior.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

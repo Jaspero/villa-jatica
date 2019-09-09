@@ -5,9 +5,11 @@
 
     export let interior;
     export let interiorExpand;
-    export let interiorExpandable;
+    export let interiorExpand1;
     export let interiorBedroom;
     export let interiorSlider = [];
+    export let interiorImg = [];
+    export let interiorImg1 = [];
 
     let readMore = true;
 
@@ -89,7 +91,7 @@
                 <p class="font-secondary m-y-s italic-text">{interior}</p>
                 <div class="expand font-secondary italic-text">
                     <p>{interiorExpand}</p>
-                    <p class="m-y-s">{interiorExpandable}</p>
+                    <p class="m-y-s">{interiorExpand1}</p>
                 </div>
                 {#if readMore}
                 <a on:click={expandText} class="c-accent"><i>...Read more</i></a>
@@ -115,9 +117,11 @@
     </div>
     <div class="w-full flex ai-center fw-wrap">
         <div class="col-8 flex m-t-l col-s-12 fw-wrap circle-container">
-            <div class="col-6 br-circle interior-1 col-xs-12">
+            <div class="col-6 ta-center-s col-xs-12">
+            <img src="{interiorImg}" alt="interior image" class="round-img">
             </div>
-            <div class="col-6 br-circle interior-2 m-l-m col-xs-12">
+            <div class="col-6 ta-center-s col-xs-12">
+            <img src="{interiorImg1}" alt="interior image" class="round-img">
             </div>
         </div>
         <div class="col-4 m-t-l col-s-12">
