@@ -207,7 +207,7 @@ h6 {
   cursor: pointer;
   height: 300px; }
   .exterior-image:hover {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.28); }
+    box-shadow: 5px 4px 10px 5px rgba(0, 0, 0, 0.28); }
   .exterior-image img {
     width: 250px; }
 

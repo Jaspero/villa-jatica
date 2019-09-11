@@ -15,6 +15,7 @@
     import Parallax from '../components/Parallax.svelte';
     import Footer from '../components/Footer.svelte';
     import Price from '../components/Price.svelte';
+    import Signup from '../components/Signup.svelte';
     import { fade } from 'svelte/transition';
     import { onMount } from 'svelte';
 
@@ -171,6 +172,7 @@
     <Price lowPrice="{home.lowSeasonPrice}" highPrice="{home.highSeasonPrice}"/>
     <Contact />
     <Footer/>
+    <Signup/>
 </div>
 
 
