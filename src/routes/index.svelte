@@ -20,7 +20,6 @@
     import { onMount } from 'svelte';
 
     export let home;
-    console.log('home', home);
     let segment;
 
     function activeHeader() {
@@ -150,7 +149,7 @@
         </div>
             <a class='{segment === "gallery" ? "selected" : ""} gallery font-secondary' href='gallery' transition:fade="" ><i>Show gallery</i></a>
             <div class="show-s  hamburger relative"on:click={mobileMenu} transition:fade>
-                <div class="relative w-full h-full">
+                <div class="relative h-full">
                   <span class="line"></span>
                   <span class="line m-y-s"></span>
                   <span class="line"></span>
@@ -158,9 +157,9 @@
             </div>
     </nav>
     <div class="hero flex ai-end jc-center c-light col-m-12">
-        <div class="col-12 m-b-xl ta-center">
-            <h1 class="heading">{home.title}</h1>
-            <p class="m-t-s"><i>{home.subTitle}</i></p>
+        <div class="col-12 m-b-xl ta-center intro">
+            <h1 class="heading"><b>{home.title}</b></h1>
+            <p class="m-t-s subheading"><i>{home.subTitle}</i></p>
         </div>
     </div>
     <Location location="{home.location}" area="{home.locationArea}" expand="{home.locationExpand}" locationExpand1="{home.locationExpand1}" locationImg="{home.locationImg}" locationImg1="{home.locationImg1}"/>

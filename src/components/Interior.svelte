@@ -60,17 +60,13 @@
       height: 300px;
 }
 
-.right {
-    right: -75px;}
-          @media (max-width: 1270px) {
-            .right {
-              right: 0px } }
-.left {
-    left: -75px;}
-      @media (max-width: 1270px) {
-        .left {
-          left: 0px } }
 
+#interior {
+  background-image: url("../../assets/images/exterier-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 
 </style>
@@ -78,7 +74,7 @@
 
 
 <section id="interior" class="relative">
-<div class="grid m-y-l">
+<div class="grid p-y-l">
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">Interior</h1>
     </div>
@@ -102,13 +98,13 @@
                 {/if}
             <div class="m-t-m w-full relative">
                  <Carousel perPage="{1}" class="relative">
-                    <span class="control left" slot="left-control">
+                    <span class="control flex ai-center jc-center" slot="left-control">
                         <img src="assets/icons/left-arrow.svg">
                     </span>
                         {#each interiorSlider as slide}
                             <img src="{slide}" alt="Gallery view" class="obj-cover  gallery-image">
                         {/each}
-                    <span class="control right" slot="right-control">
+                    <span class="control flex ai-center jc-center" slot="right-control">
                         <img src="assets/icons/right-arrow.svg">
                     </span>
                  </Carousel>

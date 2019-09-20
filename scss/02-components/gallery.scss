@@ -158,32 +158,35 @@ ul.svelte-6pleld li.svelte-6pleld {
 
 /* Slider styles
  *============================================================================*/
-
-.left {
-  position:absolute;
-  top: 47%;
-  width: 40px;
-  height: 40px;
-  left: 2%;
-  z-index: 20;
-  cursor:pointer;
-  @media screen and (max-width: 700px) {
-    width: 25px;
-    height: 25px;
-  }
-}
-
-.right {
-  cursor:pointer;
-  position:absolute;
-  top: 47%;
-  right: 2%;
+.left.svelte-6pleld {
+  left: -60px!important;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
   width: 40px;
   height: 40px;
   z-index: 20;
-  @media screen and (max-width: 700px) {
-    width: 25px;
-    height: 25px;
+  @media (max-width: 1270px) {
+    left: 0!important;
+  }
+}
+.right.svelte-6pleld {
+  right: -60px!important;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 20;
+  @media (max-width: 1270px) {
+    right: 0!important;
   }
 }
 
+.control {
+  width: 40px;
+  position: absolute;
+  height: 40px;
+  right: 0;
+  top: 0;
+}

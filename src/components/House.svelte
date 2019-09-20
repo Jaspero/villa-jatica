@@ -41,17 +41,13 @@
 <style>
 
 
-.right {
-    right: -75px;}
-          @media (max-width: 1270px) {
-            .right {
-                right: 0; } }
-.left {
-    left: -75px;}
-          @media (max-width: 1270px) {
-            .left {
-                left: 0; } }
 
+#house {
+  background-image: url("../../assets/images/exterier-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .grid {
   max-width: 1200px;
@@ -61,8 +57,8 @@
 
 
 
-<section id="house" class="relative">
-<div class="grid m-y-l">
+<section id="house" class="relative bg-light">
+<div class="grid p-y-l">
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">House</h1>
     </div>
@@ -85,13 +81,13 @@
                 {/if}
             <div class="m-t-m w-full relative">
                 <Carousel perPage="{1}" class="relative">
-                    <span class="control left" slot="left-control">
+                    <span class="control flex ai-center jc-center" slot="left-control">
                         <img src="assets/icons/left-arrow.svg">
                     </span>
                         {#each slider as slide}
                                  <img src="{slide}" alt="Gallery view" class="obj-cover  gallery-image">
                         {/each}
-                    <span class="control right" slot="right-control">
+                    <span class="control flex ai-center jc-center" slot="right-control">
                         <img src="assets/icons/right-arrow.svg">
                     </span>
                 </Carousel>

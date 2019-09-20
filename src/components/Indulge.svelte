@@ -40,27 +40,12 @@
   max-width: 1200px;
 }
 
-.right {
-    right: -75px;}
-          @media (max-width: 1270px) {
-            .right {
-              right: 0px } }
-.left {
-    left: -75px;}
-      @media (max-width: 1270px) {
-        .left {
-          left: 0px } }
-
-
-
-
-
 </style>
 
 
 
-<section id="indulge" class="relative">
-<div class="grid m-y-l">
+<section id="indulge" class="relative bg-light">
+<div class="grid p-y-l">
         <div class="col-12 ta-left">
             <h1 class="headline relative c-dark p-b-s">INDULGE</h1>
         </div>
@@ -89,13 +74,13 @@
 
             <div class="m-t-m w-full relative">
                 <Carousel perPage="{1}" class="relative">
-                    <span class="control left" slot="left-control">
+                    <span class="control flex ai-center jc-center" slot="left-control">
                         <img src="assets/icons/left-arrow.svg">
                     </span>
                         {#each indulgeSlider as slide}
                             <img src="{slide}" alt="Gallery view" class="obj-cover  gallery-image">
                         {/each}
-                <span class="control right" slot="right-control">
+                <span class="control flex ai-center jc-center" slot="right-control">
                         <img src="assets/icons/right-arrow.svg">
                     </span>
                 </Carousel>

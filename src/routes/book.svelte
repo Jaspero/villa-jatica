@@ -117,16 +117,16 @@ select  {
             </div>
             <div class="field">
                 <label for="name" class="c-dark"><i>Full name*</i></label>
-                <input class="w-full input" type="text" id="name">
+                <input class="w-full input" id="name">
                 <span class="error-message"></span>
             </div>
             <div class="field m-y-s">
                 <label for="email" class="c-dark"><i>Email*</i></label>
-                <input class="w-full input" type="text" id="email">
+                <input class="w-full input" id="email">
             </div>
             <div class="field">
                 <label for="phone" class="c-dark"><i>Phone*</i></label>
-                <input class="w-full input" type="text" id="phone">
+                <input class="w-full input" id="phone">
             </div>
             <div class="field m-y-s">
                 <label for="people" class="c-dark"><i>People*</i></label>

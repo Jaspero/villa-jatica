@@ -53,18 +53,14 @@
 }
 
 
-.location {
-    position:absolute;
-    top:67%;
-    left: 55%;
-}
+
 
 
 
 </style>
 
 
-<section id="location" class="m-y-l relative">
+<section id="location" class="p-y-l relative bg-light">
     <div class="grid">
         <div class="col-6 col-s-12 ">
             <h1 class="c-dark relative p-b-s m-y-m headline">LOCATION</h1>

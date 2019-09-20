@@ -326,31 +326,36 @@ ul.svelte-6pleld li.svelte-6pleld {
 
 /* Slider styles
  *============================================================================*/
-.left {
-  position: absolute;
-  top: 47%;
-  width: 40px;
-  height: 40px;
-  left: 2%;
-  z-index: 20;
-  cursor: pointer; }
-  @media screen and (max-width: 700px) {
-    .left {
-      width: 25px;
-      height: 25px; } }
-
-.right {
+.left.svelte-6pleld {
+  left: -60px !important;
   cursor: pointer;
   position: absolute;
-  top: 47%;
-  right: 2%;
+  top: 50%;
   width: 40px;
   height: 40px;
   z-index: 20; }
-  @media screen and (max-width: 700px) {
-    .right {
-      width: 25px;
-      height: 25px; } }
+  @media (max-width: 1270px) {
+    .left.svelte-6pleld {
+      left: 0 !important; } }
+
+.right.svelte-6pleld {
+  right: -60px !important;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 20; }
+  @media (max-width: 1270px) {
+    .right.svelte-6pleld {
+      right: 0 !important; } }
+
+.control {
+  width: 40px;
+  position: absolute;
+  height: 40px;
+  right: 0;
+  top: 0; }
 
 /* Header styles
  *============================================================================*/
@@ -1319,6 +1324,10 @@ ul.svelte-6pleld li.svelte-6pleld {
 
 /* Custom styles
  *============================================================================*/
+.intro {
+  position: fixed;
+  top: 55%; }
+
 .z-index {
   z-index: 10; }
 
@@ -1329,6 +1338,7 @@ ul.svelte-6pleld li.svelte-6pleld {
   font-size: 20px; }
 
 .heading {
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   font-size: 120px; }
 
 .visible {
@@ -1344,12 +1354,6 @@ ul.svelte-6pleld li.svelte-6pleld {
   overflow: hidden;
   height: 0; }
 
-.bla {
-  position: fixed;
-  right: 0;
-  bottom: 24.8rem;
-  left: 0; }
-
 .headline {
   font-size: 70px;
   font-weight: 700; }
@@ -1364,7 +1368,10 @@ ul.svelte-6pleld li.svelte-6pleld {
   z-index: 2; }
 
 .location {
-  cursor: pointer; }
+  cursor: pointer;
+  position: absolute;
+  top: 67%;
+  left: 55%; }
 
 /* Parallax,features,price
  *============================================================================*/
@@ -1446,7 +1453,9 @@ ul.svelte-6pleld li.svelte-6pleld {
   .book {
     height: calc(100vh - 40px); }
   .ta-center-s {
-    text-align: center; } }
+    text-align: center; }
+  .subheading {
+    font-size: 25px !important; } }
 
 /* Flatpicker
  *============================================================================*/
