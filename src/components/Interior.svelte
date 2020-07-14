@@ -1,38 +1,15 @@
 
 
 <script>
+        import Carousel from '@beyonk/svelte-carousel'
 
-    const interiorSlider = [
-        'assets/images/interior2.jpg',
-        'assets/images/interior3.jpg',
-        'assets/images/interior4.jpg'
-    ];
-
-    let activeIndex = 0;
-
-
-    function slideRightInterior() {
-        const imageSlider = document.querySelector('#slider-image-interior');
-
-        if (activeIndex < interiorSlider.length - 1) {
-            activeIndex++
-        } else {
-            activeIndex = 0;
-        }
-        imageSlider.src = interiorSlider[activeIndex]
-    }
-
-
-    function slideLeftInterior() {
-        const imageSlider = document.querySelector('#slider-image-interior');
-
-        if (activeIndex > 0) {
-            activeIndex--;
-        } else {
-            activeIndex = interiorSlider.length - 1;
-        }
-        imageSlider.src = interiorSlider[activeIndex]
-    }
+    export let interior;
+    export let interiorExpand;
+    export let interiorExpand1;
+    export let interiorBedroom;
+    export let interiorSlider = [];
+    export let interiorImg = [];
+    export let interiorImg1 = [];
 
     let readMore = true;
 
@@ -84,13 +61,20 @@
 }
 
 
+#interior {
+  background-image: url("../../assets/images/exterier-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 
 </style>
 
 
 
 <section id="interior" class="relative">
-<div class="grid m-y-l">
+<div class="grid p-y-l">
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">Interior</h1>
     </div>
@@ -100,10 +84,10 @@
         </div>
         <div class="col-7 flex fw-wrap col-s-12">
                 <h5 class="c-dark m-t-s  ta-left">BEAUTY OF MINIMALISM</h5>
-                <p class="font-secondary m-y-s italic-text">The interior of the house is all new and contemporary, with carefully chosen furniture and unobtrusive colours. The open plan upper floor with kitchen, dining room, and living room is spacious and with its four French windows offering wonderful views of the sea, the entire section is full of light throughout the day.</p>
+                <p class="font-secondary m-y-s italic-text">{interior}</p>
                 <div class="expand font-secondary italic-text">
-                    <p>In the kitchen, one will find all the necessary appliances and gadgets needed for a home cooked meal. The dining section has a table that seats 6 people, and its abundant daylight comes through a glass wall that leads to the balcony facing west, equipped with beautiful comfortable lounges for relaxation in the setting sun.</p>
-                    <p class="m-y-s">There is absolute formative minimalism throughout the house, not to disturb the beauty of the very construction. Thus, all the installations, from stone washbasin to glass shelves, carefully chosen lighting or flooring, custom made dining table or wardrobes are all the result of contemplation with aim to provide luxury and at the same time not impose any overwhelming contents on your holidays.</p>
+                    <p>{interiorExpand}</p>
+                    <p class="m-y-s">{interiorExpand1}</p>
                 </div>
                 {#if readMore}
                 <a on:click={expandText} class="c-accent"><i>...Read more</i></a>
@@ -112,22 +96,34 @@
                 Show less
                 </a>
                 {/if}
-            <div class="gallery m-t-m w-full relative">
-            <img src="assets/icons/left-arrow.svg" on:click={slideLeftInterior} class="left">
-            <img id="slider-image-interior" src={interiorSlider[0]} alt="" class="w-full obj-cover" style="height: 500px">
-            <img src="assets/icons/right-arrow.svg" on:click={slideRightInterior} class="right">
+            <div class="m-t-m w-full relative">
+                 <Carousel perPage="{1}" class="relative">
+                    <span class="control flex ai-center jc-center" slot="left-control">
+                        <img src="assets/icons/left-arrow.svg">
+                    </span>
+                        {#each interiorSlider as slide}
+                            <img src="{slide}" alt="Gallery view" class="obj-cover  gallery-image">
+                        {/each}
+                    <span class="control flex ai-center jc-center" slot="right-control">
+                        <img src="assets/icons/right-arrow.svg">
+                    </span>
+                 </Carousel>
             </div>
         </div>
     </div>
-    <div class="col-8 flex m-t-l col-s-12 fw-wrap circle-container">
-        <div class="col-6 br-circle interior-1 col-xs-12">
+    <div class="w-full flex ai-center fw-wrap">
+        <div class="col-8 flex m-t-l col-s-12 fw-wrap circle-container">
+            <div class="col-6 ta-center-s col-xs-12">
+            <img src="{interiorImg}" alt="interior image" class="round-img">
+            </div>
+            <div class="col-6 ta-center-s col-xs-12">
+            <img src="{interiorImg1}" alt="interior image" class="round-img">
+            </div>
         </div>
-        <div class="col-6 br-circle interior-2 m-l-m col-xs-12">
-        </div>
-    </div>
-    <div class="col-4 m-t-l col-s-12">
-        <h5>BEDROOMS</h5>
-        <p class="font-secondary italic-text m-y-s">The lower floor accommodates three bedrooms: one double master bedroom and two single bedrooms (with extra bed available in each), bathroom and two toilettes. Furniture is custom made and charming, enabling sufficient space for belongings. The master bedroom has direct access to the terrace and swimming pool, a lovely detail for your pleasure!</p>
+        <div class="col-4 m-t-l col-s-12">
+            <h5 class="w-full">BEDROOMS</h5>
+            <p class="font-secondary italic-text m-y-s">{interiorBedroom}</p>
+         </div>
      </div>
 </div>
 </section>

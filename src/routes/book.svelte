@@ -1,5 +1,6 @@
 <script>
 import { fade } from 'svelte/transition';
+ import { form } from 'svelte-forms';
 
     if (process.browser) {
         flatpickr(document.getElementById('Date'), {
@@ -7,6 +8,39 @@ import { fade } from 'svelte/transition';
                 mode: "range",
         });
     }
+
+
+function validation() {
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var phone = document.getElementById('phone').value;
+  var people = document.getElementById('people').value;
+  var error = document.querySelectorAll('error-message');
+  var text;
+  
+  
+  if (name.length <6 ) {
+      text = "Please enter valid name";
+      error.innerHTML = text;
+      return false;
+  }
+    if (isNaN(phone)|| phone.length != 10) {
+        text = text.innerHTML = "Please enter valid phone";
+        return false;
+    }
+      if (email.indexOf("@" === -1 || email.length < 6)) {
+          text = "Please enter valid email";
+          error.innerHTML = text;
+          return false;
+      }
+
+    return false;
+}
+
+
+
+
+
 
 </script>
 
@@ -19,7 +53,7 @@ import { fade } from 'svelte/transition';
 <style>
 
 .col-7 {
-    background-image: url("../../assets/images/exterior-1.jpg");
+    background-image: url("../../assets/images/exterior.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,7 +92,9 @@ select  {
     border: none;
 }
 
-
+.error-message {
+    color: red;
+}
 
 
 </style>
@@ -74,25 +110,27 @@ select  {
     <div class="flex jc-center fw-wrap form-container">
         <div class="col-5 bg-primary p-a-l col-s-12">
             <p class="c-dark">Please use the contact form below to send us your booking request. We will get back with you with confirmation promptly (during local working hours).</p>
+            <form id="form" class="w-full" on:submit|preventDefault={validation}>
             <div class="field m-y-s">
                 <label for="Date" class="c-dark"><i>Check in/Check out</i></label>
-                <input class="w-full input" name="check" id="Date">
+                <input class="w-full input"  id="Date">
             </div>
             <div class="field">
                 <label for="name" class="c-dark"><i>Full name*</i></label>
-                <input class="w-full input" type="text" name="name" id="name">
+                <input class="w-full input" id="name">
+                <span class="error-message"></span>
             </div>
             <div class="field m-y-s">
                 <label for="email" class="c-dark"><i>Email*</i></label>
-                <input class="w-full input" type="text" name="email" id="email">
+                <input class="w-full input" id="email">
             </div>
             <div class="field">
                 <label for="phone" class="c-dark"><i>Phone*</i></label>
-                <input class="w-full input" type="text" name="phone" id="phone">
+                <input class="w-full input" id="phone">
             </div>
             <div class="field m-y-s">
                 <label for="people" class="c-dark"><i>People*</i></label>
-                <select name="people" id="people" class="c-dark input w-full">
+                <select  id="people" class="c-dark input w-full">
                     <option style="display: none"></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -104,10 +142,14 @@ select  {
             </div>
             <div class="field">
                 <label for="message" class="c-dark"><i>Additional Information</i></label>
-                <textarea name="message" id="message" cols="30" rows="10" class="w-full b-0"></textarea>
+                <textarea  id="message" cols="30" rows="10" class="w-full b-0"></textarea>
             </div>
             <div class="w-full ta-left m-t-s">
                  <button class="btn bg-accent br-rounded">SEND MESSAGE</button>
+            </div>
+            </form>
+            <div class="grid">
+adsa
             </div>
         </div>
         <div class="col-7 relative flex jc-center ai-center hide-s">

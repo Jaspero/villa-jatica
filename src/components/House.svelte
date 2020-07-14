@@ -1,13 +1,15 @@
-
 <script>
+    export let house;
+    export let expand;
+    export let outdoor;
+    export let outdoorExpand;
+    export let outdoorExpand1;
+    export let slider = [];
 
+
+    import Carousel from '@beyonk/svelte-carousel'
     let readMore = true;
-    const sliderExterior = [
-        'assets/images/interior.jpg',
-        'assets/images/exterior.jpg',
-        'assets/images/nature.jpg'
-    ];
-    let actIndex = 0;
+
 
     function expandText() {
       readMore = false;
@@ -31,27 +33,6 @@
             });
     }
 
-    function slideRight() {
-        const sliderImage = document.querySelector('#slider-image');
-
-        if (actIndex < sliderExterior.length - 1) {
-            actIndex++
-        } else {
-            actIndex = 0;
-        }
-        sliderImage.src = sliderExterior[actIndex]
-    }
-
-    function slideLeft() {
-        const sliderImage = document.querySelector('#slider-image');
-
-        if (actIndex > 0) {
-            actIndex--;
-        } else {
-            actIndex = sliderExterior.length - 1;
-        }
-        sliderImage.src = sliderExterior[actIndex]
-    }
 
 
 </script>
@@ -61,6 +42,13 @@
 
 
 
+#house {
+  background-image: url("../../assets/images/exterier-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .grid {
   max-width: 1200px;
 }
@@ -69,8 +57,8 @@
 
 
 
-<section id="house" class="relative">
-<div class="grid m-y-l">
+<section id="house" class="relative bg-light">
+<div class="grid p-y-l">
     <div class="col-12 ta-left">
         <h1 class="headline relative c-dark p-b-s">House</h1>
     </div>
@@ -80,9 +68,9 @@
         </div>
         <div class="col-7 flex fw-wrap col-s-12">
                 <h5 class="c-dark m-t-s ta-left">AWESOME PLACE TO ENJOY</h5>
-                <p class="font-secondary italic-text m-y-s">With its spectacular views of the sea and islands, the mountain and blue Mediterranean skies, this newly renovated house is a combination of traditional Dalmatian architecture and modern interventions, built with respect for and appreciation of the tradition, thus resulting in a new construction having that charming old Dalmatian feel. The exterior stones in warm light beige tone and blue window shutters are in complete harmony with the blue sea, rocky mountain and the surrounding Mediterranean vegetation.</p>
+                <p class="font-secondary italic-text m-y-s">{house}</p>
                 <div class="expand italic-text">
-                <p class="font-secondary">You can also visit the town of Ston, famous for the remnants of medieval defensive walls, a historical monument of distant past often called "the European Walls of China," winding for 5 kilometres all the way to Mali Ston, a village famous for its seashell cuisine, especially oysters and mussels. A trip to the south will bring you to the town of Dubrovnik, certainly the most famous Croatian spot on global scale, as well as UNESCO World Heritage Site.</p>
+                <p class="font-secondary">{expand}</p>
                 </div>
                 {#if readMore}
                 <a on:click={expandText} class="c-accent m-t-s font-secondary"><i>...Read more</i></a>
@@ -91,23 +79,31 @@
                 Show less
                 </a>
                 {/if}
-            <div class="gallery m-t-m w-full relative">
-                <img src="assets/icons/left-arrow.svg" on:click={slideLeft} class="left">
-                <img id="slider-image" src={sliderExterior[0]} alt="" class="w-full obj-cover" style="height: 500px">
-                <img src="assets/icons/right-arrow.svg" on:click={slideRight} class="right">
+            <div class="m-t-m w-full relative">
+                <Carousel perPage="{1}" class="relative">
+                    <span class="control flex ai-center jc-center" slot="left-control">
+                        <img src="assets/icons/left-arrow.svg">
+                    </span>
+                        {#each slider as slide}
+                                 <img src="{slide}" alt="Gallery view" class="obj-cover  gallery-image">
+                        {/each}
+                    <span class="control flex ai-center jc-center" slot="right-control">
+                        <img src="assets/icons/right-arrow.svg">
+                    </span>
+                </Carousel>
             </div>
         </div>
     </div>
     <div class="flex jc-between w-full m-t-m ai-center fw-wrap">
-        <div class="col-7 col-s-12">
+        <div class="col-7 col-s-12 ta-center">
             <img src="assets/images/group.png" alt="Group fo exterior pictures">
         </div>
         <div class="col-5 col-s-12">
             <h5>OUTDOOR PLEASURE</h5>
-            <p class="m-y-s italic-text font-secondary">The exterior extends on three levels. The swimming pool (4.5x7.5m) with endless view is accompanied by a roofed terrace and lounges, as well as two swings.</p>
+            <p class="m-y-s italic-text font-secondary">{outdoor}</p>
             <div class="expand italic-text font-secondary">
-            <p class="">The sunny terrace or pool lounge with open fireplace table is on the level below, and in deep shade, beneath the house, there is an unexpected jewel - fully equipped outdoor kitchen with dining table made of stone seating 12 people, small garden with culinary herbs, large stone masonry barbecue and even more, a tavern having fully equipped kitchenette with dishwasher, double fridge with ice maker and dining table seating 8 people.</p>
-            <p class=" m-y-s">The entire section of the outdoor kitchen is roofed, therefore protected from the midday sunlight and an excellent choice for dining outside.</p>
+            <p class="">{outdoorExpand}</p>
+            <p class=" m-y-s">{outdoorExpand1}</p>
             </div>
             {#if readMore}
             <a on:click={expandText} class="c-accent font-secondary"><i>...Read more</i></a>
